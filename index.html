@@ -5,69 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Komponisten Quiz</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #1e3c72; color: white; margin: 0; padding: 20px; }
-    .container { max-width: 700px; margin: 40px auto; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; }
-    h1 { text-align: center; }
-    .composer-image { width: 100%; max-width: 350px; height: 280px; object-fit: cover; border-radius: 15px; display: block; margin: 20px auto; border: 5px solid white; }
-    button { width: 100%; padding: 15px; margin: 8px 0; font-size: 1.1rem; border-radius: 10px; background: rgba(255,255,255,0.2); color: white; border: none; }
-    button:hover { background: rgba(255,255,255,0.3); }
-    button.correct { background: #4ade80; color: black; }
-    button.wrong { background: #f87171; }
-    .hidden { display: none; }
+    body { font-family: Arial, sans-serif; background: #0f2b5c; color: white; margin: 0; padding: 20px; }
+    .box { max-width: 700px; margin: 40px auto; background: rgba(255,255,255,0.15); padding: 30px; border-radius: 20px; text-align: center; }
+    img { width: 320px; height: 280px; object-fit: cover; border-radius: 15px; border: 6px solid white; margin: 20px 0; }
+    button { display: block; width: 100%; padding: 15px; margin: 10px 0; font-size: 1.1rem; border-radius: 10px; background: rgba(255,255,255,0.2); color: white; border: none; }
+    button:hover { background: rgba(255,255,255,0.35); }
+    .correct { background: #4ade80 !important; color: black; }
+    .wrong { background: #f87171 !important; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="box">
     <h1>🎼 Komponisten Quiz</h1>
-    <p style="text-align:center;">Wie gut kennst du die Klassik?</p>
+    <p>Wie gut kennst du die Klassik?</p>
 
-    <div id="quizScreen">
-      <p><strong>Frage <span id="current">1</span>/5</strong></p>
-      <img id="image" class="composer-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg">
-      <div id="question" style="font-size:1.3rem; text-align:center; margin:20px 0;"></div>
-      <div id="options"></div>
+    <div id="quiz">
+      <p><strong>Frage <span id="nr">1</span>/5</strong></p>
+      <img id="bild" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg">
+      <p id="frage" style="font-size:1.3rem; margin:20px 0;"></p>
+      <div id="antworten"></div>
     </div>
 
-    <div id="result" class="hidden" style="text-align:center; font-size:1.5rem;"></div>
+    <div id="ende" style="display:none; font-size:1.5rem;"></div>
   </div>
 
   <script>
-    const questions = [
-      { q: "Wer komponierte die Mondscheinsonate?", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Mozart", "Beethoven", "Bach", "Chopin"], correct: 1 },
-      { q: "Welcher Komponist wurde taub?", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Beethoven", "Mozart", "Bach", "Chopin"], correct: 0 },
-      { q: "Wo wurde Mozart geboren?", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Wolfgang-amadeus-mozart_1.jpg/800px-Wolfgang-amadeus-mozart_1.jpg", options: ["Wien", "Berlin", "Salzburg", "Paris"], correct: 2 },
-      { q: "Welcher Komponist schrieb 'Die vier Jahreszeiten'?", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Antonio_Vivaldi.jpg/800px-Antonio_Vivaldi.jpg", options: ["Vivaldi", "Bach", "Mozart", "Beethoven"], correct: 0 }
+    const fragen = [
+      { frage: "Wer komponierte die Mondscheinsonate?", bild: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", antworten: ["Mozart", "Beethoven", "Bach", "Chopin"], richtig: 1 },
+      { frage: "Welcher Komponist wurde taub?", bild: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", antworten: ["Beethoven", "Mozart", "Bach", "Chopin"], richtig: 0 },
+      { frage: "Wo wurde Mozart geboren?", bild: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Wolfgang-amadeus-mozart_1.jpg/800px-Wolfgang-amadeus-mozart_1.jpg", antworten: ["Wien", "Berlin", "Salzburg", "Paris"], richtig: 2 },
+      { frage: "Welcher Komponist schrieb 'Die vier Jahreszeiten'?", bild: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Antonio_Vivaldi.jpg/800px-Antonio_Vivaldi.jpg", antworten: ["Vivaldi", "Bach", "Mozart", "Beethoven"], richtig: 0 }
     ];
 
-    let current = 0;
-    let score = 0;
+    let aktuell = 0;
+    let punkte = 0;
 
-    function showQuestion() {
-      document.getElementById("question").innerHTML = questions[current].q;
-      document.getElementById("image").src = questions[current].img;
-      document.getElementById("current").innerHTML = current + 1;
+    function zeigeFrage() {
+      document.getElementById("nr").textContent = aktuell + 1;
+      document.getElementById("bild").src = fragen[aktuell].bild;
+      document.getElementById("frage").textContent = fragen[aktuell].frage;
 
       let html = "";
-      questions[current].options.forEach((opt, i) => {
-        html += `<button onclick="answer(${i})">${opt}</button>`;
+      fragen[aktuell].antworten.forEach((text, i) => {
+        html += `<button onclick="check(${i})">${text}</button>`;
       });
-      document.getElementById("options").innerHTML = html;
+      document.getElementById("antworten").innerHTML = html;
     }
 
-    function answer(i) {
-      if (i === questions[current].correct) score++;
-      
-      current++;
-      if (current < questions.length) {
-        showQuestion();
+    function check(gewählt) {
+      if (gewählt === fragen[aktuell].richtig) punkte++;
+
+      aktuell++;
+      if (aktuell < fragen.length) {
+        zeigeFrage();
       } else {
-        document.getElementById("quizScreen").classList.add("hidden");
-        document.getElementById("result").classList.remove("hidden");
-        document.getElementById("result").innerHTML = `Fertig!<br>Du hast ${score}/${questions.length} richtig!`;
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("ende").style.display = "block";
+        document.getElementById("ende").innerHTML = `Fertig!<br><br>Du hast ${punkte}/${fragen.length} richtig!`;
       }
     }
 
-    showQuestion();
+    zeigeFrage();
   </script>
 </body>
 </html>
