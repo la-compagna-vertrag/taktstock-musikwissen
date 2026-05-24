@@ -89,16 +89,11 @@
 
   <script>
     const questions = [
-      { question: "Wer komponierte die 'Mondscheinsonate'?", image: "Mozart.jpg", options: ["Mozart", "Beethoven", "Bach", "Chopin"], correct: 1 },
-      { question: "Welcher Komponist wurde taub?", image: "Mozart.jpg", options: ["Beethoven", "Brahms", "Schubert", "Vivaldi"], correct: 0 },
-      { question: "Welches Werk stammt von Antonio Vivaldi?", image: "vivaldi.webp", options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"], correct: 1 },
-      { question: "In welcher Stadt wurde Mozart geboren?", image: "Mozart.jpg", options: ["Wien", "Berlin", "Salzburg", "Paris"], correct: 2 },
-      { question: "Welcher Komponist ist bekannt für Walzer?", image: "chopin.jpg", options: ["Debussy", "Chopin", "Tschaikowsky", "Ravel"], correct: 1 },
-      { question: "Wer komponierte 'Also sprach Zarathustra'?", image: "rstrauss.jpg", options: ["Richard Strauss", "Wagner", "Mahler", "Berlioz"], correct: 0 },
-      { question: "Wer gilt als 'Vater der Sinfonie'?", image: "jhaydn.jpg", options: ["Joseph Haydn", "Bach", "Händel", "Mendelssohn"], correct: 0 },
-      { question: "Welches Instrument spielte Liszt virtuos?", image: "liszt.png", options: ["Geige", "Klavier", "Cello", "Flöte"], correct: 1 },
-      { question: "Wer komponierte den Hochzeitsmarsch?", image: "mendelssohn.jpg", options: ["Schumann", "Mendelssohn", "Berlioz", "Saint-Saëns"], correct: 1 },
-      { question: "Welcher Komponist schrieb viele Sinfonien?", image: "brahms.jpg", options: ["Brahms", "Beethoven", "Mahler", "Bruckner"], correct: 0 }
+      { question: "Wer komponierte die 'Mondscheinsonate'?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Mozart", "Beethoven", "Bach", "Chopin"], correct: 1 },
+      { question: "Welcher Komponist wurde taub?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Beethoven", "Brahms", "Schubert", "Vivaldi"], correct: 0 },
+      { question: "Welches Werk stammt von Antonio Vivaldi?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Antonio_Vivaldi.jpg/800px-Antonio_Vivaldi.jpg", options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"], correct: 1 },
+      { question: "In welcher Stadt wurde Mozart geboren?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Wolfgang-amadeus-mozart_1.jpg/800px-Wolfgang-amadeus-mozart_1.jpg", options: ["Wien", "Berlin", "Salzburg", "Paris"], correct: 2 },
+      { question: "Welcher Komponist ist bekannt für Walzer?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Frederic_Chopin_photo.jpeg/800px-Frederic_Chopin_photo.jpeg", options: ["Debussy", "Chopin", "Tschaikowsky", "Ravel"], correct: 1 }
     ];
 
     let currentQuestion = 0;
@@ -163,9 +158,7 @@
       document.getElementById('resultScreen').classList.remove('hidden');
 
       const percentage = Math.round((score / questions.length) * 100);
-      let comment = percentage >= 90 ? "🎉 Du bist ein echter Klassik-Experte!" :
-                    percentage >= 70 ? "Sehr gut! Du kennst dich richtig aus." :
-                    percentage >= 50 ? "Nicht schlecht!" : "Mehr Klassik hören empfohlen 😊";
+      let comment = percentage >= 80 ? "🎉 Sehr gut! Du bist ein Klassik-Kenner!" : "Nicht schlecht! Weiter so 😊";
 
       document.getElementById('scoreText').innerHTML = `Du hast <strong>${score}/${questions.length}</strong> richtig! (${percentage}%)`;
       document.getElementById('comment').textContent = comment;
