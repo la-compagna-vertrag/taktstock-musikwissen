@@ -35,16 +35,8 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
-    .question {
-      font-size: 1.35rem;
-      margin: 20px 0 25px;
-      text-align: center;
-    }
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+    .question { font-size: 1.35rem; margin: 20px 0 25px; text-align: center; }
+    .options { display: flex; flex-direction: column; gap: 12px; }
     button {
       padding: 16px;
       font-size: 1.1rem;
@@ -55,28 +47,12 @@
       cursor: pointer;
       transition: all 0.3s;
     }
-    button:hover {
-      background: rgba(255,255,255,0.35);
-      transform: translateX(8px);
-    }
+    button:hover { background: rgba(255,255,255,0.35); transform: translateX(8px); }
     button.correct { background: #4ade80 !important; color: black; }
     button.wrong { background: #f87171 !important; }
 
-    .progress {
-      height: 10px;
-      background: rgba(255,255,255,0.3);
-      border-radius: 5px;
-      margin: 20px 0;
-    }
-    .progress-bar {
-      height: 100%;
-      background: #60a5fa;
-      border-radius: 5px;
-      width: 0%;
-      transition: width 0.4s;
-    }
-
-    .result { text-align: center; font-size: 1.4rem; }
+    .progress { height: 10px; background: rgba(255,255,255,0.3); border-radius: 5px; margin: 20px 0; }
+    .progress-bar { height: 100%; background: #60a5fa; border-radius: 5px; width: 0%; transition: width 0.4s; }
     .hidden { display: none; }
   </style>
 </head>
@@ -107,25 +83,22 @@
       <h2>Dein Ergebnis</h2>
       <div class="result" id="scoreText"></div>
       <p id="comment" style="font-size:1.3rem; margin:25px 0;"></p>
-      
-      <button onclick="restartQuiz()" style="padding:15px 30px; font-size:1.1rem;">
-        Quiz neu starten
-      </button>
+      <button onclick="restartQuiz()" style="padding:15px 30px; font-size:1.1rem;">Quiz neu starten</button>
     </div>
   </div>
 
   <script>
     const questions = [
-      { question: "Wer komponierte die 'Mondscheinsonate'?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Johann Sebastian Bach", "Frédéric Chopin"], correct: 1 },
-      { question: "Welcher Komponist wurde taub und komponierte trotzdem weiter?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["Ludwig van Beethoven", "Johannes Brahms", "Franz Schubert", "Antonio Vivaldi"], correct: 0 },
-      { question: "Welches Werk stammt von Antonio Vivaldi?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Antonio_Vivaldi.jpg/800px-Antonio_Vivaldi.jpg", options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"], correct: 1 },
-      { question: "In welcher Stadt wurde Wolfgang Amadeus Mozart geboren?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Wolfgang-amadeus-mozart_1.jpg/800px-Wolfgang-amadeus-mozart_1.jpg", options: ["Wien", "Berlin", "Salzburg", "Paris"], correct: 2 },
-      { question: "Welcher Komponist ist bekannt für seine Polonaisen und Walzer?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Frederic_Chopin_photo.jpeg/800px-Frederic_Chopin_photo.jpeg", options: ["Claude Debussy", "Frédéric Chopin", "Pyotr Tschaikowski", "George Gershwin"], correct: 1 },
-      { question: "Wer komponierte 'Also sprach Zarathustra'?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Richard_Strauss.jpg/800px-Richard_Strauss.jpg", options: ["Richard Strauss", "Richard Wagner", "Gustav Mahler", "Hector Berlioz"], correct: 0 },
-      { question: "Wie viele Sinfonien schrieb Ludwig van Beethoven?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/800px-Beethoven.jpg", options: ["5", "7", "9", "11"], correct: 2 },
-      { question: "Welcher Komponist gilt als 'Vater der Sinfonie'?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Joseph_Haydn.jpg/800px-Joseph_Haydn.jpg", options: ["Joseph Haydn", "Johann Sebastian Bach", "Georg Friedrich Händel", "Felix Mendelssohn"], correct: 0 },
-      { question: "Welches Instrument spielte Franz Liszt virtuos?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Franz_Liszt.jpg/800px-Franz_Liszt.jpg", options: ["Geige", "Klavier", "Cello", "Flöte"], correct: 1 },
-      { question: "Wer komponierte den Hochzeitsmarsch?", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Felix_Mendelssohn_1845.jpg/800px-Felix_Mendelssohn_1845.jpg", options: ["Robert Schumann", "Felix Mendelssohn Bartholdy", "Hector Berlioz", "Camille Saint-Saëns"], correct: 1 }
+      { question: "Wer komponierte die 'Mondscheinsonate'?", image: "beethoven.jpg", options: ["Mozart", "Beethoven", "Bach", "Chopin"], correct: 1 },
+      { question: "Welcher Komponist wurde taub?", image: "beethoven.jpg", options: ["Beethoven", "Brahms", "Schubert", "Vivaldi"], correct: 0 },
+      { question: "Welches Werk stammt von Antonio Vivaldi?", image: "vivaldi.webp", options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"], correct: 1 },
+      { question: "In welcher Stadt wurde Mozart geboren?", image: "Mozart.jpg", options: ["Wien", "Berlin", "Salzburg", "Paris"], correct: 2 },
+      { question: "Welcher Komponist ist bekannt für Walzer und Polonaisen?", image: "chopin.jpg", options: ["Debussy", "Chopin", "Tschaikowsky", "Gershwin"], correct: 1 },
+      { question: "Wer komponierte 'Also sprach Zarathustra'?", image: "rstrauss.jpg", options: ["Richard Strauss", "Wagner", "Mahler", "Berlioz"], correct: 0 },
+      { question: "Wie viele Sinfonien schrieb Beethoven?", image: "beethoven.jpg", options: ["5", "7", "9", "11"], correct: 2 },
+      { question: "Wer gilt als 'Vater der Sinfonie'?", image: "jhaydn.jpg", options: ["Joseph Haydn", "Bach", "Händel", "Mendelssohn"], correct: 0 },
+      { question: "Welches Instrument spielte Franz Liszt virtuos?", image: "liszt.png", options: ["Geige", "Klavier", "Cello", "Flöte"], correct: 1 },
+      { question: "Wer komponierte den Hochzeitsmarsch?", image: "mendelssohn.jpg", options: ["Schumann", "Mendelssohn", "Berlioz", "Saint-Saëns"], correct: 1 }
     ];
 
     let currentQuestion = 0;
@@ -192,8 +165,7 @@
       const percentage = Math.round((score / questions.length) * 100);
       let comment = percentage >= 90 ? "🎉 Du bist ein echter Klassik-Experte!" :
                     percentage >= 70 ? "Sehr gut! Du kennst dich richtig aus." :
-                    percentage >= 50 ? "Nicht schlecht! Etwas Übung würde helfen." :
-                    "Du hast noch Potenzial! Mehr Klassik hören empfohlen 😊";
+                    percentage >= 50 ? "Nicht schlecht!" : "Mehr Klassik hören empfohlen 😊";
 
       document.getElementById('scoreText').innerHTML = `Du hast <strong>${score}/${questions.length}</strong> richtig! (${percentage}%)`;
       document.getElementById('comment').textContent = comment;
