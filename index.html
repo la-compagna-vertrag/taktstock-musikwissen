@@ -3,152 +3,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Komponisten Quiz</title>
+  <title>Komponisten Quiz - Wie gut kennst du die Klassik?</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0f2b5c;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
       margin: 0;
       padding: 20px;
     }
 
-    .box {
-      max-width: 700px;
+    .container {
+      max-width: 720px;
       margin: 40px auto;
-      background: rgba(255,255,255,0.15);
-      padding: 30px;
+      background: rgba(255,255,255,0.1);
       border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .composer-image {
+      width: 100%;
+      max-width: 340px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 6px solid rgba(255,255,255,0.4);
+      display: block;
+      margin: 20px auto 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .question {
+      font-size: 1.35rem;
+      margin: 20px 0 25px;
       text-align: center;
     }
 
-    img {
-      width: 320px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 15px;
-      border: 6px solid white;
-      margin: 20px 0;
-      background: rgba(255,255,255,0.2);
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
     button {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
+      padding: 16px;
       font-size: 1.1rem;
-      border-radius: 10px;
+      border: none;
+      border-radius: 12px;
       background: rgba(255,255,255,0.2);
       color: white;
-      border: none;
       cursor: pointer;
+      transition: all 0.3s;
     }
 
     button:hover {
       background: rgba(255,255,255,0.35);
+      transform: translateX(8px);
     }
 
-    .correct {
+    button:disabled {
+      cursor: default;
+      opacity: 0.9;
+    }
+
+    button.correct {
       background: #4ade80 !important;
       color: black;
     }
 
-    .wrong {
+    button.wrong {
       background: #f87171 !important;
+      color: black;
+    }
+
+    .progress {
+      height: 10px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 5px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: #60a5fa;
+      border-radius: 5px;
+      width: 0%;
+      transition: width 0.4s;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .result {
+      font-size: 2rem;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .error-message {
+      text-align: center;
+      color: #fecaca;
+      font-size: 0.95rem;
+      margin-top: -15px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
+  <div class="container">
     <h1>🎼 Komponisten Quiz</h1>
-    <p>Wie gut kennst du die Klassik?</p>
+    <p class="subtitle">Wie gut kennst du die großen Meister der Klassik?</p>
 
-    <div id="quiz">
-      <p><strong>Frage <span id="nr">1</span>/<span id="total"></span></strong></p>
-
-      <img
-        id="bild"
-        referrerpolicy="no-referrer"
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg"
-        alt="Komponist"
-      >
-
-      <p id="frage" style="font-size:1.3rem; margin:20px 0;"></p>
-      <div id="antworten"></div>
+    <div id="startScreen">
+      <button onclick="startQuiz()" style="font-size:1.4rem; padding:20px 40px; width:100%; background:#3b82f6;">
+        Quiz starten
+      </button>
     </div>
 
-    <div id="ende" style="display:none; font-size:1.5rem;"></div>
+    <div id="quizScreen" class="hidden">
+      <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+      </div>
+
+      <p>
+        <strong>Frage <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span></strong>
+      </p>
+
+      <img id="composerImage" class="composer-image" src="" alt="Komponist">
+      <div id="imageError" class="error-message hidden"></div>
+
+      <div class="question" id="questionText"></div>
+      <div class="options" id="options"></div>
+
+      <button onclick="nextQuestion()" id="nextBtn" class="hidden" style="margin-top:20px; width:100%;">
+        Nächste Frage →
+      </button>
+    </div>
+
+    <div id="resultScreen" class="hidden">
+      <h2 style="text-align:center;">Dein Ergebnis</h2>
+      <div class="result" id="scoreText"></div>
+      <p id="comment" style="font-size:1.3rem; margin:25px 0; text-align:center;"></p>
+      <button onclick="restartQuiz()" style="padding:15px 30px; font-size:1.1rem; width:100%;">
+        Quiz neu starten
+      </button>
+    </div>
   </div>
 
   <script>
-    const fragen = [
+    const questions = [
       {
-        frage: "Wer komponierte die Mondscheinsonate?",
-        bild: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg",
-        antworten: ["Mozart", "Beethoven", "Bach", "Chopin"],
-        richtig: 1
+        question: "Wer komponierte die 'Mondscheinsonate'?",
+        image: "beethoven.jpg",
+        options: ["Mozart", "Beethoven", "Bach", "Chopin"],
+        correct: 1
       },
       {
-        frage: "Welcher Komponist wurde taub?",
-        bild: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Beethoven.jpg",
-        antworten: ["Beethoven", "Mozart", "Bach", "Chopin"],
-        richtig: 0
+        question: "Welcher Komponist wurde taub?",
+        image: "beethoven.jpg",
+        options: ["Beethoven", "Brahms", "Schubert", "Vivaldi"],
+        correct: 0
       },
       {
-        frage: "Wo wurde Mozart geboren?",
-        bild: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Wolfgang-amadeus-mozart_1.jpg",
-        antworten: ["Wien", "Berlin", "Salzburg", "Paris"],
-        richtig: 2
+        question: "Welches Werk stammt von Antonio Vivaldi?",
+        image: "vivaldi.jpg",
+        options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"],
+        correct: 1
       },
       {
-        frage: "Welcher Komponist schrieb 'Die vier Jahreszeiten'?",
-        bild: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Antonio_Vivaldi.jpg",
-        antworten: ["Vivaldi", "Bach", "Mozart", "Beethoven"],
-        richtig: 0
+        question: "In welcher Stadt wurde Mozart geboren?",
+        image: "mozart.jpg",
+        options: ["Wien", "Berlin", "Salzburg", "Paris"],
+        correct: 2
+      },
+      {
+        question: "Welcher Komponist ist bekannt für Walzer und Polonaisen?",
+        image: "chopin.jpg",
+        options: ["Debussy", "Chopin", "Tschaikowsky", "Gershwin"],
+        correct: 1
+      },
+      {
+        question: "Wer komponierte 'Also sprach Zarathustra'?",
+        image: "rstrauss.jpg",
+        options: ["Richard Strauss", "Wagner", "Mahler", "Berlioz"],
+        correct: 0
+      },
+      {
+        question: "Wie viele Sinfonien schrieb Beethoven?",
+        image: "beethoven.jpg",
+        options: ["5", "7", "9", "11"],
+        correct: 2
+      },
+      {
+        question: "Wer gilt als 'Vater der Sinfonie'?",
+        image: "jhaydn.jpg",
+        options: ["Joseph Haydn", "Bach", "Händel", "Mendelssohn"],
+        correct: 0
+      },
+      {
+        question: "Welches Instrument spielte Franz Liszt virtuos?",
+        image: "liszt.jpg",
+        options: ["Geige", "Klavier", "Cello", "Flöte"],
+        correct: 1
+      },
+      {
+        question: "Wer komponierte den Hochzeitsmarsch?",
+        image: "mendelssohn.jpg",
+        options: ["Schumann", "Mendelssohn", "Berlioz", "Saint-Saëns"],
+        correct: 1
       }
     ];
 
-    let aktuell = 0;
-    let punkte = 0;
+    let currentQuestion = 0;
+    let score = 0;
 
-    document.getElementById("total").textContent = fragen.length;
+    document.getElementById("totalQuestions").textContent = questions.length;
 
-    function zeigeFrage() {
-      document.getElementById("nr").textContent = aktuell + 1;
+    function startQuiz() {
+      document.getElementById("startScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("quizScreen").classList.remove("hidden");
 
-      const bild = document.getElementById("bild");
-      bild.src = fragen[aktuell].bild;
-      bild.alt = "Bild zu: " + fragen[aktuell].frage;
+      currentQuestion = 0;
+      score = 0;
 
-      document.getElementById("frage").textContent = fragen[aktuell].frage;
+      showQuestion();
+    }
 
-      let html = "";
-      fragen[aktuell].antworten.forEach((text, i) => {
-        html += `<button onclick="check(${i})">${text}</button>`;
+    function showQuestion() {
+      const q = questions[currentQuestion];
+
+      document.getElementById("questionText").textContent = q.question;
+      document.getElementById("currentQuestion").textContent = currentQuestion + 1;
+
+      const imageError = document.getElementById("imageError");
+      imageError.classList.add("hidden");
+      imageError.textContent = "";
+
+      const img = document.getElementById("composerImage");
+      img.src = q.image;
+      img.alt = "Bild: " + q.image;
+
+      img.onerror = function() {
+        console.error("Bild nicht gefunden:", q.image);
+        imageError.textContent = "Bild nicht gefunden: " + q.image;
+        imageError.classList.remove("hidden");
+      };
+
+      img.onload = function() {
+        imageError.classList.add("hidden");
+      };
+
+      const progress = ((currentQuestion + 1) / questions.length) * 100;
+      document.getElementById("progress").style.width = progress + "%";
+
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+
+      q.options.forEach((option, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => selectAnswer(index, btn);
+        optionsDiv.appendChild(btn);
       });
 
-      document.getElementById("antworten").innerHTML = html;
+      document.getElementById("nextBtn").classList.add("hidden");
     }
 
-    function check(gewaehlt) {
-      if (gewaehlt === fragen[aktuell].richtig) {
-        punkte++;
-      }
+    function selectAnswer(index, button) {
+      const correctIndex = questions[currentQuestion].correct;
+      const buttons = document.querySelectorAll(".options button");
 
-      aktuell++;
+      buttons.forEach(btn => {
+        btn.disabled = true;
+      });
 
-      if (aktuell < fragen.length) {
-        zeigeFrage();
+      if (index === correctIndex) {
+        button.classList.add("correct");
+        score++;
       } else {
-        document.getElementById("quiz").style.display = "none";
-        document.getElementById("ende").style.display = "block";
-        document.getElementById("ende").innerHTML =
-          `Fertig!<br><br>Du hast ${punkte}/${fragen.length} richtig!`;
+        button.classList.add("wrong");
+        buttons[correctIndex].classList.add("correct");
+      }
+
+      document.getElementById("nextBtn").classList.remove("hidden");
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        showResult();
       }
     }
 
-    zeigeFrage();
+    function showResult() {
+      document.getElementById("quizScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.remove("hidden");
+
+      const percentage = Math.round((score / questions.length) * 100);
+
+      let comment = "";
+
+      if (percentage >= 90) {
+        comment = "🎉 Du bist ein echter Klassik-Experte!";
+      } else if (percentage >= 70) {
+        comment = "Sehr gut! Du kennst dich richtig aus.";
+      } else if (percentage >= 50) {
+        comment = "Nicht schlecht!";
+      } else {
+        comment = "Mehr Klassik hören empfohlen 😊";
+      }
+
+      document.getElementById("scoreText").innerHTML =
+        `Du hast <strong>${score}/${questions.length}</strong> richtig! (${percentage}%)`;
+
+      document.getElementById("comment").textContent = comment;
+    }
+
+    function restartQuiz() {
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("startScreen").classList.remove("hidden");
+    }
   </script>
 </body>
 </html>
