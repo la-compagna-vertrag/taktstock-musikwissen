@@ -268,6 +268,13 @@
       font-weight: 700;
       font-size: 1.2rem;
       margin-top: 16px;
+      box-shadow: 0 10px 22px rgba(37,99,235,0.28);
+    }
+
+    .primary-btn:hover:not(:disabled) {
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37,99,235,0.36);
     }
 
     .secondary-btn {
@@ -602,7 +609,7 @@
   Bestnoten zurücksetzen
 </button>
 
-<p class="version">Version 1.4 – Ergebnis & Lernpfad optimiert</p>
+<p class="version">Version 1.4.1 – Button- und Lernpfad-Politur</p>
 </section>
 
 
@@ -1522,7 +1529,7 @@
         return {
           title: "🏆 Maestro-Modus",
           comment: "Perfekt! Du hast dieses Level souverän abgeschlossen.",
-          suggestion: "Nächstes Ziel: Spiele ein anderes Level — oder wiederhole dieses Level mit neuer Reihenfolge."
+          suggestion: "Nächstes Ziel: Starte das nächste Level — oder wiederhole dieses Level mit neuer Reihenfolge."
         };
       }
 
@@ -1604,7 +1611,7 @@
       document.getElementById("previewScreen").classList.remove("hidden");
 
       document.getElementById("previewBadge").textContent = "Level " + level.id + " · " + meta.type;
-      document.getElementById("previewHeading").textContent = meta.icon + " Dein nächstes Lernlevel";
+      document.getElementById("previewHeading").textContent = "Dein nächstes Lernlevel";
       document.getElementById("previewTitle").textContent = level.title;
       document.getElementById("previewDescription").textContent = level.description;
       document.getElementById("previewMeta").innerHTML = `
