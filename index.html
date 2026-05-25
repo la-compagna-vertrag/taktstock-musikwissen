@@ -377,6 +377,19 @@
       line-height: 1.45;
     }
 
+    .result-box {
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .result-rank {
+      letter-spacing: 0.01em;
+    }
+
+    .primary-btn.hidden {
+      display: none;
+    }
+
     .level-meta {
       display: flex;
       flex-wrap: wrap;
@@ -589,7 +602,7 @@
   Bestnoten zurücksetzen
 </button>
 
-<p class="version">Version 1.3 – Level-Vorschau & Lernziele</p>
+<p class="version">Version 1.4 – Ergebnis & Lernpfad optimiert</p>
 </section>
 
 
@@ -664,7 +677,8 @@
         <div class="next-suggestion" id="nextSuggestion"></div>
       </div>
 
-      <button onclick="restartCurrentLevel()" class="primary-btn">Dieses Level nochmals spielen</button>
+      <button onclick="startNextActiveLevel()" id="nextLevelBtn" class="primary-btn hidden">Nächstes Level starten →</button>
+      <button onclick="restartCurrentLevel()" class="secondary-btn">Dieses Level nochmals spielen</button>
       <button onclick="backToLevels()" class="secondary-btn">Zurück zur Level-Auswahl</button>
     </section>
   </main>
@@ -1590,7 +1604,7 @@
       document.getElementById("previewScreen").classList.remove("hidden");
 
       document.getElementById("previewBadge").textContent = "Level " + level.id + " · " + meta.type;
-      document.getElementById("previewHeading").textContent = meta.icon + " Bereit für die nächste Runde?";
+      document.getElementById("previewHeading").textContent = meta.icon + " Dein nächstes Lernlevel";
       document.getElementById("previewTitle").textContent = level.title;
       document.getElementById("previewDescription").textContent = level.description;
       document.getElementById("previewMeta").innerHTML = `
@@ -1726,7 +1740,7 @@
       document.getElementById("resultScreen").classList.remove("hidden");
 
       document.getElementById("resultLevelBadge").textContent = "Level " + level.id + " abgeschlossen";
-      document.getElementById("resultTitle").textContent = level.title;
+      document.getElementById("resultTitle").textContent = "Lernstand: " + level.title;
 
       const percentage = Math.round((score / currentLevelQuestions.length) * 100);
       const rank = getResultRank(percentage);
@@ -1752,7 +1766,40 @@
       }
 
       document.getElementById("comment").textContent = comment + " Du hast " + percentage + "% erreicht.";
-      document.getElementById("nextSuggestion").textContent = rank.suggestion;
+
+      const nextIndex = getNextActiveLevelIndex();
+      const nextButton = document.getElementById("nextLevelBtn");
+
+      if (nextIndex !== null) {
+        const nextLevel = levels[nextIndex];
+        const nextMeta = getLevelMeta(nextLevel.id);
+        nextButton.textContent = "Weiter zu Level " + nextLevel.id + " → " + nextLevel.title;
+        nextButton.classList.remove("hidden");
+        document.getElementById("nextSuggestion").textContent =
+          rank.suggestion + " Empfehlung: Als nächstes wartet Level " + nextLevel.id + " (" + nextMeta.type + ").";
+      } else {
+        nextButton.classList.add("hidden");
+        document.getElementById("nextSuggestion").textContent =
+          "Du hast alle aktiven Level erreicht. Das ist die vollständige Basisversion mit 100 Fragen — bereit für Wiederholung, Feinschliff oder spätere Premium-Erweiterungen.";
+      }
+    }
+
+    function getNextActiveLevelIndex() {
+      for (let i = currentLevelIndex + 1; i < levels.length; i++) {
+        if (levels[i].active) {
+          return i;
+        }
+      }
+      return null;
+    }
+
+    function startNextActiveLevel() {
+      const nextIndex = getNextActiveLevelIndex();
+      if (nextIndex === null) {
+        backToLevels();
+        return;
+      }
+      showLevelPreview(nextIndex);
     }
 
     function restartCurrentLevel() {
