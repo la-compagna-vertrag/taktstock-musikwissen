@@ -334,7 +334,7 @@
 
       <div class="level-grid" id="levelGrid"></div>
 
-      <p class="version">Version 3.2 – Erklärtexte</p>
+      <p class="version">Version 3.3 – Fragen und Antworten zufällig gemischt</p>
     </section>
 
     <section id="quizScreen" class="hidden">
@@ -674,6 +674,7 @@
     let score = 0;
     let answered = false;
     let currentLevelQuestions = [];
+    let currentOptions = [];
 
     function shuffleArray(array) {
       const shuffled = [...array];
@@ -686,6 +687,17 @@
       }
 
       return shuffled;
+    }
+
+    function prepareOptions(question) {
+      const optionsWithCorrectFlag = question.options.map((option, index) => {
+        return {
+          text: option,
+          isCorrect: index === question.correct
+        };
+      });
+
+      return shuffleArray(optionsWithCorrectFlag);
     }
 
     function renderLevelScreen() {
@@ -743,6 +755,7 @@
       const q = currentLevelQuestions[currentQuestion];
 
       answered = false;
+      currentOptions = prepareOptions(q);
 
       document.getElementById("questionText").textContent = q.question;
       document.getElementById("currentQuestion").textContent = currentQuestion + 1;
@@ -771,9 +784,9 @@
       const optionsDiv = document.getElementById("options");
       optionsDiv.innerHTML = "";
 
-      q.options.forEach((option, index) => {
+      currentOptions.forEach((option, index) => {
         const btn = document.createElement("button");
-        btn.textContent = option;
+        btn.textContent = option.text;
         btn.onclick = () => selectAnswer(index, btn);
         optionsDiv.appendChild(btn);
       });
@@ -787,7 +800,8 @@
       answered = true;
 
       const q = currentLevelQuestions[currentQuestion];
-      const correctIndex = q.correct;
+      const selectedOption = currentOptions[index];
+      const correctIndex = currentOptions.findIndex(option => option.isCorrect);
       const buttons = document.querySelectorAll(".options button");
       const feedback = document.getElementById("feedback");
 
@@ -795,7 +809,7 @@
         btn.disabled = true;
       });
 
-      if (index === correctIndex) {
+      if (selectedOption.isCorrect) {
         button.classList.add("correct");
         score++;
         feedback.innerHTML = `
