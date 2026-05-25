@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Komponisten Quiz</title>
+  <title>Maestro Quiz</title>
 
   <style>
     :root {
@@ -74,6 +74,55 @@
     }
 
     .center {
+      text-align: center;
+    }
+
+
+    .intro-card {
+      background: rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 20px;
+      margin: 18px 0 22px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .intro-card strong {
+      color: var(--gold);
+    }
+
+    .pill-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 700;
+    }
+
+    .pill span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .support-note {
+      background: rgba(250,204,21,0.12);
+      border: 1px solid rgba(250,204,21,0.22);
+      color: rgba(255,255,255,0.88);
+      border-radius: 16px;
+      padding: 13px 15px;
+      margin: 14px 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.45;
       text-align: center;
     }
 
@@ -314,7 +363,56 @@
         font-size: 2rem;
       }
 
-      .level-grid {
+  
+    .intro-card {
+      background: rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 20px;
+      margin: 18px 0 22px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .intro-card strong {
+      color: var(--gold);
+    }
+
+    .pill-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 700;
+    }
+
+    .pill span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .support-note {
+      background: rgba(250,204,21,0.12);
+      border: 1px solid rgba(250,204,21,0.22);
+      color: rgba(255,255,255,0.88);
+      border-radius: 16px;
+      padding: 13px 15px;
+      margin: 14px 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .level-grid {
         grid-template-columns: 1fr;
       }
 
@@ -332,13 +430,27 @@
 
 <body>
   <main class="app">
-    <h1>🎼 Komponisten Quiz</h1>
-    <p class="subtitle">Musikgeschichte, Werkkunde und ein bisschen Klassik-Nerd-Freude.</p>
+    <h1>🎼 Maestro Quiz</h1>
+    <p class="subtitle">Musikgeschichte · Werke · Komponisten · Gattungen</p>
 
     <section id="levelScreen">
       <div class="center">
-        <span class="badge">Wissens-Challenge</span>
+        <span class="badge">Basisversion · 100 Fragen</span>
         <h2>Wähle dein Level</h2>
+      </div>
+
+      <div class="intro-card">
+        Trainiere spielerisch dein Wissen über <strong>Klassik, Oper, Kirchenmusik, Formenlehre und Musikgeschichte</strong>.
+        Nach jeder Antwort bekommst du eine kurze Erklärung — ideal zum Wiederholen, Lernen und neugierig Weiterklicken.
+        <div class="pill-row">
+          <div class="pill">10 Level<span>von Einstieg bis Boss</span></div>
+          <div class="pill">100 Fragen<span>mit Erklärtexten</span></div>
+          <div class="pill">Shuffle-Modus<span>jedes Spiel neu</span></div>
+        </div>
+      </div>
+
+      <div class="support-note">
+        Kostenlose Basisversion. Eine erweiterte Lernversion mit zusätzlichen Fragen, Prüfungsmodus und Kategorien ist in Planung.
       </div>
 
      <div class="level-grid" id="levelGrid"></div>
@@ -347,7 +459,7 @@
   Bestnoten zurücksetzen
 </button>
 
-<p class="version">Version 10.0 – Boss-Level aktiviert</p>
+<p class="version">Version 1.1 – Maestro Quiz Prototyp · Basisversion</p>
 </section>
 
 <section id="quizScreen" class="hidden">
@@ -866,317 +978,317 @@
   ]
 },
       {
-  id: 7,
-  title: "Moderne & 20. Jahrhundert",
-  description: "Debussy, Ravel, Strawinsky, Schönberg, Cage.",
-  active: true,
-  questions: [
-    {
-      question: "Welcher Komponist wird häufig mit dem musikalischen Impressionismus verbunden?",
-      image: "debussy.jpg",
-      options: ["Claude Debussy", "Johannes Brahms", "Antonio Vivaldi", "Joseph Haydn"],
-      correct: 0,
-      explanation: "Claude Debussy wird oft mit dem musikalischen Impressionismus verbunden. Seine Musik arbeitet stark mit Klangfarben, schwebenden Harmonien und freieren Formen."
-    },
-    {
-      question: "Wer komponierte den berühmten 'Boléro'?",
-      image: "ravel.jpg",
-      options: ["Maurice Ravel", "Claude Debussy", "Erik Satie", "Gabriel Fauré"],
-      correct: 0,
-      explanation: "Maurice Ravels Boléro beruht auf einer fast durchgehenden rhythmischen und melodischen Wiederholung. Die Wirkung entsteht vor allem durch die stetig wachsende Orchestrierung."
-    },
-    {
-      question: "Welcher Komponist schrieb 'Le Sacre du printemps'?",
-      image: "stravinsky.jpg",
-      options: ["Igor Strawinsky", "Arnold Schönberg", "Sergei Prokofjew", "Dmitri Schostakowitsch"],
-      correct: 0,
-      explanation: "Igor Strawinskys Le Sacre du printemps wurde 1913 in Paris uraufgeführt und gilt als eines der Schlüsselwerke der musikalischen Moderne."
-    },
-    {
-      question: "Wer entwickelte die Zwölftontechnik?",
-      image: "schoenberg.jpg",
-      options: ["Arnold Schönberg", "Anton Webern", "Alban Berg", "John Cage"],
-      correct: 0,
-      explanation: "Arnold Schönberg entwickelte die Zwölftontechnik. Sie ordnet die zwölf Töne der chromatischen Skala in einer Reihe und wurde für die Musik des 20. Jahrhunderts sehr einflussreich."
-    },
-    {
-      question: "Welcher Komponist gehört zur Zweiten Wiener Schule?",
-      image: "webern.jpg",
-      options: ["Anton Webern", "Giuseppe Verdi", "Franz Schubert", "Anton Bruckner"],
-      correct: 0,
-      explanation: "Anton Webern gehört zusammen mit Arnold Schönberg und Alban Berg zur Zweiten Wiener Schule. Seine Musik ist oft extrem konzentriert, kurz und klanglich fein gearbeitet."
-    },
-    {
-      question: "Wer komponierte die Oper 'Wozzeck'?",
-      image: "albanberg.jpg",
-      options: ["Alban Berg", "Richard Strauss", "Paul Hindemith", "Benjamin Britten"],
-      correct: 0,
-      explanation: "Alban Bergs Wozzeck ist ein zentrales Werk des musikalischen Expressionismus. Die Oper verbindet moderne Tonsprache mit streng gearbeiteten Formen."
-    },
-    {
-      question: "Welcher Komponist ist besonders mit experimenteller Musik und dem Stück '4′33″' verbunden?",
-      image: "cage.jpg",
-      options: ["John Cage", "Carl Orff", "Edward Elgar", "Jean Sibelius"],
-      correct: 0,
-      explanation: "John Cage stellte die Frage, was überhaupt Musik sein kann. In 4′33″ erklingt kein absichtlich gespielter Ton; die Umgebungsgeräusche werden zum eigentlichen Ereignis."
-    },
-    {
-      question: "Wer komponierte 'Carmina Burana'?",
-      image: "orff.jpg",
-      options: ["Carl Orff", "Benjamin Britten", "Aaron Copland", "Leonard Bernstein"],
-      correct: 0,
-      explanation: "Carl Orffs Carmina Burana ist ein grosses szenisches Chorwerk. Der Eingangschor O Fortuna gehört zu den bekanntesten Chorstücken des 20. Jahrhunderts."
-    },
-    {
-      question: "Welcher amerikanische Komponist schrieb 'Appalachian Spring'?",
-      image: "copland.jpg",
-      options: ["Aaron Copland", "Leonard Bernstein", "George Gershwin", "John Cage"],
-      correct: 0,
-      explanation: "Aaron Copland entwickelte einen klaren, weiträumigen amerikanischen Orchesterstil. Appalachian Spring gehört zu seinen bekanntesten Werken."
-    },
-    {
-      question: "Wer komponierte das 'War Requiem'?",
-      image: "britten.jpg",
-      options: ["Benjamin Britten", "Dmitri Schostakowitsch", "Igor Strawinsky", "Maurice Ravel"],
-      correct: 0,
-      explanation: "Benjamin Brittens War Requiem verbindet den lateinischen Requiemtext mit Gedichten von Wilfred Owen. Es ist eines der bedeutenden pazifistischen Werke des 20. Jahrhunderts."
-    }
-  ]
-},
-     {
-  id: 8,
-  title: "Kirchenmusik & Chor",
-  description: "Messe, Motette, Passion, Oratorium.",
-  active: true,
-  questions: [
-    {
-      question: "Welche Gattung vertont normalerweise die festen Teile der katholischen Liturgie wie Kyrie, Gloria, Credo, Sanctus und Agnus Dei?",
-      image: "palestrina.jpg",
-      options: ["Messe", "Sinfonie", "Oper", "Nocturne"],
-      correct: 0,
-      explanation: "Die Messe vertont die zentralen festen Teile der Liturgie. Zu den klassischen Ordinariumsteilen gehören Kyrie, Gloria, Credo, Sanctus und Agnus Dei."
-    },
-    {
-      question: "Welche Gattung ist eine Vertonung der Totenmesse?",
-      image: "verdi.jpg",
-      options: ["Requiem", "Motette", "Walzer", "Scherzo"],
-      correct: 0,
-      explanation: "Das Requiem ist die musikalische Vertonung der Totenmesse. Berühmte Requiem-Vertonungen stammen unter anderem von Mozart, Verdi, Fauré und Britten."
-    },
-    {
-      question: "Welche Gattung erzählt musikalisch die Leidensgeschichte Jesu?",
-      image: "bach.jpg",
-      options: ["Passion", "Sonate", "Madrigal", "Etüde"],
-      correct: 0,
-      explanation: "Eine Passion vertont die Leidensgeschichte Jesu. Besonders im protestantischen Barock wurden Passionen mit Evangelientext, Chorälen, Arien und Chören ausgestaltet."
-    },
-    {
-      question: "Was unterscheidet ein Oratorium typischerweise von einer Oper?",
-      image: "handel.jpg",
-      options: ["Es ist meist konzertant und nicht szenisch gespielt", "Es hat nie einen Chor", "Es ist immer rein instrumental", "Es wird nur für Klavier geschrieben"],
-      correct: 0,
-      explanation: "Ein Oratorium ist meist ein grosses geistliches oder dramatisches Werk für Solisten, Chor und Orchester, wird aber normalerweise konzertant und nicht als Bühnenoper gespielt."
-    },
-    {
-      question: "Welche Gattung ist besonders eng mit mehrstimmiger geistlicher Vokalmusik verbunden?",
-      image: "schuetz.jpg",
-      options: ["Motette", "Konzertwalzer", "Klaviersonate", "Ouvertüre"],
-      correct: 0,
-      explanation: "Die Motette ist eine wichtige geistliche Vokalgattung. Besonders in Renaissance und Barock spielte sie in der Kirchenmusik eine zentrale Rolle."
-    },
-    {
-      question: "Was meint 'a cappella' im Chorkontext?",
-      image: "tallis.jpg",
-      options: ["Gesang ohne instrumentale Begleitung", "Gesang mit grossem Orchester", "Ein Werk nur für Orgel", "Eine Opernszene"],
-      correct: 0,
-      explanation: "A cappella bedeutet im heutigen Sprachgebrauch meist Chorgesang ohne instrumentale Begleitung. Der Begriff wird besonders häufig bei Vokalensembles und Chormusik verwendet."
-    },
-    {
-      question: "Welche Aussage beschreibt eine Kantate am besten?",
-      image: "bach.jpg",
-      options: ["Ein mehrsätziges Vokalwerk, oft mit Chor, Solisten und Instrumenten", "Eine reine Klavierübung", "Ein Tanz im Dreiertakt", "Eine kurze Orchesterouvertüre"],
-      correct: 0,
-      explanation: "Eine Kantate ist meist ein mehrsätziges Vokalwerk. Im Barock begegnet sie häufig mit Chor, Solisten, Rezitativen, Arien und Instrumentalbegleitung."
-    },
-    {
-      question: "Was ist ein Choral im protestantischen Kirchenmusik-Kontext?",
-      image: "bach.jpg",
-      options: ["Ein geistliches Gemeindelied", "Ein virtuoses Klavierstück", "Ein Opernfinale", "Eine italienische Tanzform"],
-      correct: 0,
-      explanation: "Ein Choral ist im protestantischen Kontext ein geistliches Gemeindelied. Bach verwendet Choräle oft als theologische und musikalische Säulen in Kantaten und Passionen."
-    },
-    {
-      question: "Welche Besetzung meint die Abkürzung SATB im Chor?",
-      image: "palestrina.jpg",
-      options: ["Sopran, Alt, Tenor, Bass", "Solo, Arie, Tutti, Bass", "Streicher, Alt, Trompete, Basso continuo", "Sopran, Akkord, Thema, Basslinie"],
-      correct: 0,
-      explanation: "SATB steht für Sopran, Alt, Tenor und Bass. Diese vierstimmige Grundbesetzung ist in der Chorliteratur besonders verbreitet."
-    },
-    {
-      question: "Welche Musikform ist besonders typisch für die Renaissance-Vokalpolyphonie?",
-      image: "palestrina.jpg",
-      options: ["Mehrstimmige, oft imitative Vokalmusik", "Elektronische Klangcollage", "Sinfonische Dichtung", "Klavierkonzert"],
-      correct: 0,
-      explanation: "Die Renaissance-Vokalpolyphonie arbeitet häufig mit mehreren selbständigen Stimmen und Imitation. Komponisten wie Palestrina oder Tallis stehen exemplarisch für diese Klangwelt."
-    }
-  ]
-},      
+        id: 7,
+        title: "Moderne & 20. Jahrhundert",
+        description: "Debussy, Ravel, Strawinsky, Schönberg, Cage.",
+        active: true,
+        questions: [
+          {
+            question: "Welcher Komponist wird häufig mit dem musikalischen Impressionismus verbunden?",
+            image: "debussy.jpg",
+            options: ["Claude Debussy", "Johannes Brahms", "Antonio Vivaldi", "Joseph Haydn"],
+            correct: 0,
+            explanation: "Claude Debussy wird oft mit dem musikalischen Impressionismus verbunden. Seine Musik arbeitet stark mit Klangfarben, schwebenden Harmonien und freieren Formen."
+          },
+          {
+            question: "Wer komponierte den berühmten 'Boléro'?",
+            image: "ravel.jpg",
+            options: ["Maurice Ravel", "Claude Debussy", "Erik Satie", "Gabriel Fauré"],
+            correct: 0,
+            explanation: "Maurice Ravels Boléro beruht auf einer fast durchgehenden rhythmischen und melodischen Wiederholung. Die Wirkung entsteht vor allem durch die stetig wachsende Orchestrierung."
+          },
+          {
+            question: "Welcher Komponist schrieb 'Le Sacre du printemps'?",
+            image: "stravinsky.jpg",
+            options: ["Igor Strawinsky", "Arnold Schönberg", "Sergei Prokofjew", "Dmitri Schostakowitsch"],
+            correct: 0,
+            explanation: "Igor Strawinskys Le Sacre du printemps wurde 1913 in Paris uraufgeführt und gilt als eines der Schlüsselwerke der musikalischen Moderne."
+          },
+          {
+            question: "Wer entwickelte die Zwölftontechnik?",
+            image: "schoenberg.jpg",
+            options: ["Arnold Schönberg", "Anton Webern", "Alban Berg", "John Cage"],
+            correct: 0,
+            explanation: "Arnold Schönberg entwickelte die Zwölftontechnik. Sie ordnet die zwölf Töne der chromatischen Skala in einer Reihe und wurde für die Musik des 20. Jahrhunderts sehr einflussreich."
+          },
+          {
+            question: "Welcher Komponist gehört zur Zweiten Wiener Schule?",
+            image: "webern.jpg",
+            options: ["Anton Webern", "Giuseppe Verdi", "Franz Schubert", "Anton Bruckner"],
+            correct: 0,
+            explanation: "Anton Webern gehört zusammen mit Arnold Schönberg und Alban Berg zur Zweiten Wiener Schule. Seine Musik ist oft extrem konzentriert, kurz und klanglich fein gearbeitet."
+          },
+          {
+            question: "Wer komponierte die Oper 'Wozzeck'?",
+            image: "albanberg.jpg",
+            options: ["Alban Berg", "Richard Strauss", "Paul Hindemith", "Benjamin Britten"],
+            correct: 0,
+            explanation: "Alban Bergs Wozzeck ist ein zentrales Werk des musikalischen Expressionismus. Die Oper verbindet moderne Tonsprache mit streng gearbeiteten Formen."
+          },
+          {
+            question: "Welcher Komponist ist besonders mit experimenteller Musik und dem Stück '4′33″' verbunden?",
+            image: "cage.jpg",
+            options: ["John Cage", "Carl Orff", "Edward Elgar", "Jean Sibelius"],
+            correct: 0,
+            explanation: "John Cage stellte die Frage, was überhaupt Musik sein kann. In 4′33″ erklingt kein absichtlich gespielter Ton; die Umgebungsgeräusche werden zum eigentlichen Ereignis."
+          },
+          {
+            question: "Wer komponierte 'Carmina Burana'?",
+            image: "orff.jpg",
+            options: ["Carl Orff", "Benjamin Britten", "Aaron Copland", "Leonard Bernstein"],
+            correct: 0,
+            explanation: "Carl Orffs Carmina Burana ist ein grosses szenisches Chorwerk. Der Eingangschor O Fortuna gehört zu den bekanntesten Chorstücken des 20. Jahrhunderts."
+          },
+          {
+            question: "Welcher amerikanische Komponist schrieb 'Appalachian Spring'?",
+            image: "copland.jpg",
+            options: ["Aaron Copland", "Leonard Bernstein", "George Gershwin", "John Cage"],
+            correct: 0,
+            explanation: "Aaron Copland entwickelte einen klaren, weiträumigen amerikanischen Orchesterstil. Appalachian Spring gehört zu seinen bekanntesten Werken."
+          },
+          {
+            question: "Wer komponierte das 'War Requiem'?",
+            image: "britten.jpg",
+            options: ["Benjamin Britten", "Dmitri Schostakowitsch", "Igor Strawinsky", "Maurice Ravel"],
+            correct: 0,
+            explanation: "Benjamin Brittens War Requiem verbindet den lateinischen Requiemtext mit Gedichten von Wilfred Owen. Es ist eines der bedeutenden pazifistischen Werke des 20. Jahrhunderts."
+          }
+        ]
+      },
       {
-  id: 9,
-  title: "Formen, Gattungen & Begriffe",
-  description: "Sonate, Sinfonie, Fuge, Variation, Konzert und mehr.",
-  active: true,
-  questions: [
-    {
-      question: "Welche Gattung ist typischerweise ein mehrsätziges Werk für Orchester?",
-      image: "beethoven.jpg",
-      options: ["Sinfonie", "Nocturne", "Motette", "Arie"],
-      correct: 0,
-      explanation: "Die Sinfonie ist in der Klassik und Romantik meist ein mehrsätziges Werk für Orchester. Typisch sind vier Sätze mit unterschiedlichen Charakteren und Tempi."
-    },
-    {
-      question: "Was bezeichnet eine Sonate im klassischen Sinn meistens?",
-      image: "mozart.jpg",
-      options: ["Ein mehrsätziges Instrumentalwerk", "Ein geistliches Chorwerk", "Eine Opernszene", "Ein Tanzlied"],
-      correct: 0,
-      explanation: "Eine Sonate ist meist ein mehrsätziges Instrumentalwerk, zum Beispiel für Klavier solo oder für ein Melodieinstrument mit Klavier. Die Sonate wurde besonders in Klassik und Romantik wichtig."
-    },
-    {
-      question: "Welche Form arbeitet besonders mit einem Thema, das nacheinander in verschiedenen Stimmen einsetzt?",
-      image: "bach.jpg",
-      options: ["Fuge", "Walzer", "Nocturne", "Ouvertüre"],
-      correct: 0,
-      explanation: "In einer Fuge wird ein Thema nacheinander von verschiedenen Stimmen aufgegriffen und kontrapunktisch verarbeitet. Johann Sebastian Bach gilt als einer der grössten Meister dieser Form."
-    },
-    {
-      question: "Was ist eine Variation?",
-      image: "brahms.jpg",
-      options: ["Eine veränderte Wiederholung eines Themas", "Ein Opernrezitativ", "Ein reines Schlagzeugstück", "Ein liturgischer Messteil"],
-      correct: 0,
-      explanation: "Bei Variationen wird ein Thema mehrfach wiederholt, aber jeweils verändert. Verändert werden können Melodie, Rhythmus, Harmonie, Tempo, Begleitung oder Charakter."
-    },
-    {
-      question: "Was ist ein Konzert im klassischen Sinn?",
-      image: "vivaldi.jpg",
-      options: ["Ein Werk mit solistischem Instrument und Orchester", "Ein Werk nur für Chor", "Eine Oper ohne Handlung", "Eine reine Tanzfolge"],
-      correct: 0,
-      explanation: "Ein Konzert stellt meist ein oder mehrere Soloinstrumente dem Orchester gegenüber. Besonders bekannt sind Klavierkonzerte, Violinkonzerte und die barocken Solokonzerte Vivaldis."
-    },
-    {
-      question: "Was meint 'Concerto grosso'?",
-      image: "corelli.jpg",
-      options: ["Ein barockes Konzert mit kleiner Solistengruppe und Orchester", "Eine romantische Klaviersonate", "Eine geistliche Messe", "Ein Opernfinale"],
-      correct: 0,
-      explanation: "Im Concerto grosso steht eine kleine Solistengruppe, das Concertino, einem grösseren Ensemble gegenüber. Diese Gattung ist typisch für den Barock."
-    },
-    {
-      question: "Welche Gattung ist eine Folge von Tänzen oder tanzartigen Sätzen?",
-      image: "handel.jpg",
-      options: ["Suite", "Sinfonische Dichtung", "Requiem", "Kanon"],
-      correct: 0,
-      explanation: "Eine Suite besteht aus mehreren Tänzen oder tanzartigen Sätzen. Im Barock finden sich häufig Sätze wie Allemande, Courante, Sarabande und Gigue."
-    },
-    {
-      question: "Was ist eine Ouvertüre?",
-      image: "rossini.jpg",
-      options: ["Ein eröffnendes Instrumentalstück", "Ein Schlusschor", "Ein geistliches Gemeindelied", "Eine Klavieretüde"],
-      correct: 0,
-      explanation: "Eine Ouvertüre ist ein eröffnendes Instrumentalstück, oft zu einer Oper, einem Oratorium oder einem Schauspiel. Manche Ouvertüren wurden später auch als Konzertstücke beliebt."
-    },
-    {
-      question: "Was ist der Unterschied zwischen Rezitativ und Arie in der Oper?",
-      image: "mozart.jpg",
-      options: ["Das Rezitativ treibt die Handlung voran, die Arie verweilt stärker im Ausdruck", "Die Arie ist immer gesprochen", "Das Rezitativ ist immer rein instrumental", "Es gibt keinen Unterschied"],
-      correct: 0,
-      explanation: "Das Rezitativ ist oft sprachähnlicher und bringt die Handlung voran. Die Arie ist meist melodischer ausgeformt und gibt einer Figur Raum für Gefühl, Reflexion oder virtuosen Ausdruck."
-    },
-    {
-      question: "Was ist eine sinfonische Dichtung?",
-      image: "liszt.jpg?v=3",
-      options: ["Ein einsätziges Orchesterwerk mit aussermusikalischem Programm", "Eine Messe für Chor", "Eine barocke Tanzsuite", "Ein Klavierlied ohne Text"],
-      correct: 0,
-      explanation: "Die sinfonische Dichtung ist ein meist einsätziges Orchesterwerk mit einem literarischen, bildlichen oder philosophischen Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert besonders stark."
-    }
-  ]
-},
-     {
-  id: 10,
-  title: "Boss-Level",
-  description: "Fies, aber fair. Die grosse Mischung aus Werken, Epochen, Gattungen und Stil.",
-  active: true,
-  questions: [
-    {
-      question: "Welcher Komponist steht besonders am Übergang von Renaissance zu Barock und ist für die frühe Oper wichtig?",
-      image: "monteverdi.jpg",
-      options: ["Claudio Monteverdi", "Giovanni Pierluigi da Palestrina", "Joseph Haydn", "Frédéric Chopin"],
-      correct: 0,
-      explanation: "Monteverdi steht genau an dieser stilgeschichtlichen Schwelle. Mit Werken wie L'Orfeo wurde er zu einer Schlüsselfigur der frühen Oper und des Frühbarock."
-    },
-    {
-      question: "Welches Werk gilt als Schlüsselwerk der musikalischen Moderne und wurde 1913 in Paris uraufgeführt?",
-      image: "stravinsky.jpg",
-      options: ["Le Sacre du printemps", "Die Moldau", "Ein deutsches Requiem", "Die vier Jahreszeiten"],
-      correct: 0,
-      explanation: "Le Sacre du printemps von Igor Strawinsky wurde 1913 uraufgeführt und gilt wegen Rhythmik, Harmonik und Klangsprache als ein Schlüsselwerk der Moderne."
-    },
-    {
-      question: "Welche Kombination ist korrekt?",
-      image: "bach.jpg",
-      options: ["Bach – Barock – Matthäus-Passion", "Mozart – Romantik – Boléro", "Verdi – Renaissance – Motette", "Debussy – Barock – Messiah"],
-      correct: 0,
-      explanation: "Johann Sebastian Bach gehört zum Barock, und die Matthäus-Passion ist eines seiner bedeutendsten geistlichen Werke."
-    },
-    {
-      question: "Welche Aussage beschreibt eine Fuge am besten?",
-      image: "bach.jpg",
-      options: ["Ein Thema wird nacheinander in verschiedenen Stimmen imitiert und verarbeitet", "Ein Solo singt eine Opernarie", "Ein Orchester spielt eine Tanzfolge", "Ein Chor singt ohne Text"],
-      correct: 0,
-      explanation: "Die Fuge ist eine kontrapunktische Form. Ein Thema erscheint nacheinander in verschiedenen Stimmen und wird kunstvoll weiterverarbeitet."
-    },
-    {
-      question: "Welche Komponisten gehören zur Zweiten Wiener Schule?",
-      image: "schoenberg.jpg",
-      options: ["Schönberg, Berg und Webern", "Haydn, Mozart und Beethoven", "Bach, Händel und Vivaldi", "Verdi, Puccini und Rossini"],
-      correct: 0,
-      explanation: "Die Zweite Wiener Schule umfasst vor allem Arnold Schönberg, Alban Berg und Anton Webern. Sie ist zentral für Atonalität, Expressionismus und Zwölftontechnik."
-    },
-    {
-      question: "Welche Gattung ist typischerweise konzertant, oft geistlich und nicht szenisch gespielt?",
-      image: "handel.jpg",
-      options: ["Oratorium", "Oper", "Ballett", "Sinfonie"],
-      correct: 0,
-      explanation: "Das Oratorium ist meist ein grosses Werk für Solisten, Chor und Orchester. Im Unterschied zur Oper wird es normalerweise nicht szenisch aufgeführt."
-    },
-    {
-      question: "Welche Zuordnung ist falsch?",
-      image: "ravel.jpg",
-      options: ["Ravel – Renaissance", "Debussy – Impressionismus", "Schönberg – Zwölftontechnik", "Strawinsky – Moderne"],
-      correct: 0,
-      explanation: "Ravel gehört nicht zur Renaissance, sondern zur Musik des späten 19. und frühen 20. Jahrhunderts. Er wird oft im Umfeld von Impressionismus und Moderne genannt."
-    },
-    {
-      question: "Welches Werk gehört besonders zur tschechischen Nationalmusik?",
-      image: "smetana.jpg",
-      options: ["Die Moldau", "Finlandia", "Peer Gynt", "Enigma Variations"],
-      correct: 0,
-      explanation: "Die Moldau von Bedřich Smetana ist Teil des Zyklus Mein Vaterland und wurde zu einem Symbol tschechischer Nationalmusik."
-    },
-    {
-      question: "Welche Aussage zu einem Requiem ist richtig?",
-      image: "verdi.jpg",
-      options: ["Es ist eine musikalische Vertonung der Totenmesse", "Es ist immer eine komische Oper", "Es ist ein Klavierstück ohne Text", "Es ist eine barocke Tanzsuite"],
-      correct: 0,
-      explanation: "Ein Requiem ist eine Vertonung der Totenmesse. Bekannte Requien stammen unter anderem von Mozart, Verdi, Fauré, Brahms in freierer Form und Britten."
-    },
-    {
-      question: "Welche Kombination passt am besten zum Begriff 'sinfonische Dichtung'?",
-      image: "liszt.jpg?v=3",
-      options: ["Programmmusik – Orchester – 19. Jahrhundert", "A-cappella – Messe – Renaissance", "Zwölftonreihe – Barock – Generalbass", "Opera buffa – Fuge – Choral"],
-      correct: 0,
-      explanation: "Die sinfonische Dichtung ist meist ein einsätziges Orchesterwerk mit aussermusikalischem Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert."
-    }
-  ]
-}
+        id: 8,
+        title: "Kirchenmusik & Chor",
+        description: "Messe, Motette, Passion, Oratorium.",
+        active: true,
+        questions: [
+          {
+            question: "Welche Gattung vertont normalerweise die festen Teile der katholischen Liturgie wie Kyrie, Gloria, Credo, Sanctus und Agnus Dei?",
+            image: "palestrina.jpg",
+            options: ["Messe", "Sinfonie", "Oper", "Nocturne"],
+            correct: 0,
+            explanation: "Die Messe vertont die zentralen festen Teile der Liturgie. Zu den klassischen Ordinariumsteilen gehören Kyrie, Gloria, Credo, Sanctus und Agnus Dei."
+          },
+          {
+            question: "Welche Gattung ist eine Vertonung der Totenmesse?",
+            image: "verdi.jpg",
+            options: ["Requiem", "Motette", "Walzer", "Scherzo"],
+            correct: 0,
+            explanation: "Das Requiem ist die musikalische Vertonung der Totenmesse. Berühmte Requiem-Vertonungen stammen unter anderem von Mozart, Verdi, Fauré und Britten."
+          },
+          {
+            question: "Welche Gattung erzählt musikalisch die Leidensgeschichte Jesu?",
+            image: "bach.jpg",
+            options: ["Passion", "Sonate", "Madrigal", "Etüde"],
+            correct: 0,
+            explanation: "Eine Passion vertont die Leidensgeschichte Jesu. Besonders im protestantischen Barock wurden Passionen mit Evangelientext, Chorälen, Arien und Chören ausgestaltet."
+          },
+          {
+            question: "Was unterscheidet ein Oratorium typischerweise von einer Oper?",
+            image: "handel.jpg",
+            options: ["Es ist meist konzertant und nicht szenisch gespielt", "Es hat nie einen Chor", "Es ist immer rein instrumental", "Es wird nur für Klavier geschrieben"],
+            correct: 0,
+            explanation: "Ein Oratorium ist meist ein grosses geistliches oder dramatisches Werk für Solisten, Chor und Orchester, wird aber normalerweise konzertant und nicht als Bühnenoper gespielt."
+          },
+          {
+            question: "Welche Gattung ist besonders eng mit mehrstimmiger geistlicher Vokalmusik verbunden?",
+            image: "schuetz.jpg",
+            options: ["Motette", "Konzertwalzer", "Klaviersonate", "Ouvertüre"],
+            correct: 0,
+            explanation: "Die Motette ist eine wichtige geistliche Vokalgattung. Besonders in Renaissance und Barock spielte sie in der Kirchenmusik eine zentrale Rolle."
+          },
+          {
+            question: "Was meint 'a cappella' im Chorkontext?",
+            image: "tallis.jpg",
+            options: ["Gesang ohne instrumentale Begleitung", "Gesang mit grossem Orchester", "Ein Werk nur für Orgel", "Eine Opernszene"],
+            correct: 0,
+            explanation: "A cappella bedeutet im heutigen Sprachgebrauch meist Chorgesang ohne instrumentale Begleitung. Der Begriff wird besonders häufig bei Vokalensembles und Chormusik verwendet."
+          },
+          {
+            question: "Welche Aussage beschreibt eine Kantate am besten?",
+            image: "bach.jpg",
+            options: ["Ein mehrsätziges Vokalwerk, oft mit Chor, Solisten und Instrumenten", "Eine reine Klavierübung", "Ein Tanz im Dreiertakt", "Eine kurze Orchesterouvertüre"],
+            correct: 0,
+            explanation: "Eine Kantate ist meist ein mehrsätziges Vokalwerk. Im Barock begegnet sie häufig mit Chor, Solisten, Rezitativen, Arien und Instrumentalbegleitung."
+          },
+          {
+            question: "Was ist ein Choral im protestantischen Kirchenmusik-Kontext?",
+            image: "bach.jpg",
+            options: ["Ein geistliches Gemeindelied", "Ein virtuoses Klavierstück", "Ein Opernfinale", "Eine italienische Tanzform"],
+            correct: 0,
+            explanation: "Ein Choral ist im protestantischen Kontext ein geistliches Gemeindelied. Bach verwendet Choräle oft als theologische und musikalische Säulen in Kantaten und Passionen."
+          },
+          {
+            question: "Welche Besetzung meint die Abkürzung SATB im Chor?",
+            image: "palestrina.jpg",
+            options: ["Sopran, Alt, Tenor, Bass", "Solo, Arie, Tutti, Bass", "Streicher, Alt, Trompete, Basso continuo", "Sopran, Akkord, Thema, Basslinie"],
+            correct: 0,
+            explanation: "SATB steht für Sopran, Alt, Tenor und Bass. Diese vierstimmige Grundbesetzung ist in der Chorliteratur besonders verbreitet."
+          },
+          {
+            question: "Welche Musikform ist besonders typisch für die Renaissance-Vokalpolyphonie?",
+            image: "palestrina.jpg",
+            options: ["Mehrstimmige, oft imitative Vokalmusik", "Elektronische Klangcollage", "Sinfonische Dichtung", "Klavierkonzert"],
+            correct: 0,
+            explanation: "Die Renaissance-Vokalpolyphonie arbeitet häufig mit mehreren selbständigen Stimmen und Imitation. Komponisten wie Palestrina oder Tallis stehen exemplarisch für diese Klangwelt."
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "Formen, Gattungen & Begriffe",
+        description: "Sonate, Sinfonie, Fuge, Variation, Konzert und mehr.",
+        active: true,
+        questions: [
+          {
+            question: "Welche Gattung ist typischerweise ein mehrsätziges Werk für Orchester?",
+            image: "beethoven.jpg",
+            options: ["Sinfonie", "Nocturne", "Motette", "Arie"],
+            correct: 0,
+            explanation: "Die Sinfonie ist in der Klassik und Romantik meist ein mehrsätziges Werk für Orchester. Typisch sind vier Sätze mit unterschiedlichen Charakteren und Tempi."
+          },
+          {
+            question: "Was bezeichnet eine Sonate im klassischen Sinn meistens?",
+            image: "mozart.jpg",
+            options: ["Ein mehrsätziges Instrumentalwerk", "Ein geistliches Chorwerk", "Eine Opernszene", "Ein Tanzlied"],
+            correct: 0,
+            explanation: "Eine Sonate ist meist ein mehrsätziges Instrumentalwerk, zum Beispiel für Klavier solo oder für ein Melodieinstrument mit Klavier. Die Sonate wurde besonders in Klassik und Romantik wichtig."
+          },
+          {
+            question: "Welche Form arbeitet besonders mit einem Thema, das nacheinander in verschiedenen Stimmen einsetzt?",
+            image: "bach.jpg",
+            options: ["Fuge", "Walzer", "Nocturne", "Ouvertüre"],
+            correct: 0,
+            explanation: "In einer Fuge wird ein Thema nacheinander von verschiedenen Stimmen aufgegriffen und kontrapunktisch verarbeitet. Johann Sebastian Bach gilt als einer der grössten Meister dieser Form."
+          },
+          {
+            question: "Was ist eine Variation?",
+            image: "brahms.jpg",
+            options: ["Eine veränderte Wiederholung eines Themas", "Ein Opernrezitativ", "Ein reines Schlagzeugstück", "Ein liturgischer Messteil"],
+            correct: 0,
+            explanation: "Bei Variationen wird ein Thema mehrfach wiederholt, aber jeweils verändert. Verändert werden können Melodie, Rhythmus, Harmonie, Tempo, Begleitung oder Charakter."
+          },
+          {
+            question: "Was ist ein Konzert im klassischen Sinn?",
+            image: "vivaldi.jpg",
+            options: ["Ein Werk mit solistischem Instrument und Orchester", "Ein Werk nur für Chor", "Eine Oper ohne Handlung", "Eine reine Tanzfolge"],
+            correct: 0,
+            explanation: "Ein Konzert stellt meist ein oder mehrere Soloinstrumente dem Orchester gegenüber. Besonders bekannt sind Klavierkonzerte, Violinkonzerte und die barocken Solokonzerte Vivaldis."
+          },
+          {
+            question: "Was meint 'Concerto grosso'?",
+            image: "corelli.jpg",
+            options: ["Ein barockes Konzert mit kleiner Solistengruppe und Orchester", "Eine romantische Klaviersonate", "Eine geistliche Messe", "Ein Opernfinale"],
+            correct: 0,
+            explanation: "Im Concerto grosso steht eine kleine Solistengruppe, das Concertino, einem grösseren Ensemble gegenüber. Diese Gattung ist typisch für den Barock."
+          },
+          {
+            question: "Welche Gattung ist eine Folge von Tänzen oder tanzartigen Sätzen?",
+            image: "handel.jpg",
+            options: ["Suite", "Sinfonische Dichtung", "Requiem", "Kanon"],
+            correct: 0,
+            explanation: "Eine Suite besteht aus mehreren Tänzen oder tanzartigen Sätzen. Im Barock finden sich häufig Sätze wie Allemande, Courante, Sarabande und Gigue."
+          },
+          {
+            question: "Was ist eine Ouvertüre?",
+            image: "rossini.jpg",
+            options: ["Ein eröffnendes Instrumentalstück", "Ein Schlusschor", "Ein geistliches Gemeindelied", "Eine Klavieretüde"],
+            correct: 0,
+            explanation: "Eine Ouvertüre ist ein eröffnendes Instrumentalstück, oft zu einer Oper, einem Oratorium oder einem Schauspiel. Manche Ouvertüren wurden später auch als Konzertstücke beliebt."
+          },
+          {
+            question: "Was ist der Unterschied zwischen Rezitativ und Arie in der Oper?",
+            image: "mozart.jpg",
+            options: ["Das Rezitativ treibt die Handlung voran, die Arie verweilt stärker im Ausdruck", "Die Arie ist immer gesprochen", "Das Rezitativ ist immer rein instrumental", "Es gibt keinen Unterschied"],
+            correct: 0,
+            explanation: "Das Rezitativ ist oft sprachähnlicher und bringt die Handlung voran. Die Arie ist meist melodischer ausgeformt und gibt einer Figur Raum für Gefühl, Reflexion oder virtuosen Ausdruck."
+          },
+          {
+            question: "Was ist eine sinfonische Dichtung?",
+            image: "liszt.jpg?v=3",
+            options: ["Ein einsätziges Orchesterwerk mit aussermusikalischem Programm", "Eine Messe für Chor", "Eine barocke Tanzsuite", "Ein Klavierlied ohne Text"],
+            correct: 0,
+            explanation: "Die sinfonische Dichtung ist ein meist einsätziges Orchesterwerk mit einem literarischen, bildlichen oder philosophischen Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert besonders stark."
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "Boss-Level",
+        description: "Fies, aber fair. Die grosse Mischung aus Werken, Epochen, Gattungen und Stil.",
+        active: true,
+        questions: [
+          {
+            question: "Welcher Komponist steht besonders am Übergang von Renaissance zu Barock und ist für die frühe Oper wichtig?",
+            image: "monteverdi.jpg",
+            options: ["Claudio Monteverdi", "Giovanni Pierluigi da Palestrina", "Joseph Haydn", "Frédéric Chopin"],
+            correct: 0,
+            explanation: "Monteverdi steht genau an dieser stilgeschichtlichen Schwelle. Mit Werken wie L'Orfeo wurde er zu einer Schlüsselfigur der frühen Oper und des Frühbarock."
+          },
+          {
+            question: "Welches Werk gilt als Schlüsselwerk der musikalischen Moderne und wurde 1913 in Paris uraufgeführt?",
+            image: "stravinsky.jpg",
+            options: ["Le Sacre du printemps", "Die Moldau", "Ein deutsches Requiem", "Die vier Jahreszeiten"],
+            correct: 0,
+            explanation: "Le Sacre du printemps von Igor Strawinsky wurde 1913 uraufgeführt und gilt wegen Rhythmik, Harmonik und Klangsprache als ein Schlüsselwerk der Moderne."
+          },
+          {
+            question: "Welche Kombination ist korrekt?",
+            image: "bach.jpg",
+            options: ["Bach – Barock – Matthäus-Passion", "Mozart – Romantik – Boléro", "Verdi – Renaissance – Motette", "Debussy – Barock – Messiah"],
+            correct: 0,
+            explanation: "Johann Sebastian Bach gehört zum Barock, und die Matthäus-Passion ist eines seiner bedeutendsten geistlichen Werke."
+          },
+          {
+            question: "Welche Aussage beschreibt eine Fuge am besten?",
+            image: "bach.jpg",
+            options: ["Ein Thema wird nacheinander in verschiedenen Stimmen imitiert und verarbeitet", "Ein Solo singt eine Opernarie", "Ein Orchester spielt eine Tanzfolge", "Ein Chor singt ohne Text"],
+            correct: 0,
+            explanation: "Die Fuge ist eine kontrapunktische Form. Ein Thema erscheint nacheinander in verschiedenen Stimmen und wird kunstvoll weiterverarbeitet."
+          },
+          {
+            question: "Welche Komponisten gehören zur Zweiten Wiener Schule?",
+            image: "schoenberg.jpg",
+            options: ["Schönberg, Berg und Webern", "Haydn, Mozart und Beethoven", "Bach, Händel und Vivaldi", "Verdi, Puccini und Rossini"],
+            correct: 0,
+            explanation: "Die Zweite Wiener Schule umfasst vor allem Arnold Schönberg, Alban Berg und Anton Webern. Sie ist zentral für Atonalität, Expressionismus und Zwölftontechnik."
+          },
+          {
+            question: "Welche Gattung ist typischerweise konzertant, oft geistlich und nicht szenisch gespielt?",
+            image: "handel.jpg",
+            options: ["Oratorium", "Oper", "Ballett", "Sinfonie"],
+            correct: 0,
+            explanation: "Das Oratorium ist meist ein grosses Werk für Solisten, Chor und Orchester. Im Unterschied zur Oper wird es normalerweise nicht szenisch aufgeführt."
+          },
+          {
+            question: "Welche Zuordnung ist falsch?",
+            image: "ravel.jpg",
+            options: ["Ravel – Renaissance", "Debussy – Impressionismus", "Schönberg – Zwölftontechnik", "Strawinsky – Moderne"],
+            correct: 0,
+            explanation: "Ravel gehört nicht zur Renaissance, sondern zur Musik des späten 19. und frühen 20. Jahrhunderts. Er wird oft im Umfeld von Impressionismus und Moderne genannt."
+          },
+          {
+            question: "Welches Werk gehört besonders zur tschechischen Nationalmusik?",
+            image: "smetana.jpg",
+            options: ["Die Moldau", "Finlandia", "Peer Gynt", "Enigma Variations"],
+            correct: 0,
+            explanation: "Die Moldau von Bedřich Smetana ist Teil des Zyklus Mein Vaterland und wurde zu einem Symbol tschechischer Nationalmusik."
+          },
+          {
+            question: "Welche Aussage zu einem Requiem ist richtig?",
+            image: "verdi.jpg",
+            options: ["Es ist eine musikalische Vertonung der Totenmesse", "Es ist immer eine komische Oper", "Es ist ein Klavierstück ohne Text", "Es ist eine barocke Tanzsuite"],
+            correct: 0,
+            explanation: "Ein Requiem ist eine Vertonung der Totenmesse. Bekannte Requien stammen unter anderem von Mozart, Verdi, Fauré, Brahms in freierer Form und Britten."
+          },
+          {
+            question: "Welche Kombination passt am besten zum Begriff 'sinfonische Dichtung'?",
+            image: "liszt.jpg?v=3",
+            options: ["Programmmusik – Orchester – 19. Jahrhundert", "A-cappella – Messe – Renaissance", "Zwölftonreihe – Barock – Generalbass", "Opera buffa – Fuge – Choral"],
+            correct: 0,
+            explanation: "Die sinfonische Dichtung ist meist ein einsätziges Orchesterwerk mit aussermusikalischem Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert."
+          }
+        ]
+      }
     ];
 
     let currentLevelIndex = 0;
@@ -1323,14 +1435,14 @@
         button.classList.add("correct");
         score++;
         feedback.innerHTML = `
-          <div>Richtig! Sehr schön. 🎉</div>
+          <div>Richtig! Sehr schön. 🎉 Kleiner Wissenspunkt eingesammelt.</div>
           <div class="explanation">${q.explanation}</div>
         `;
       } else {
         button.classList.add("wrong");
         buttons[correctIndex].classList.add("correct");
         feedback.innerHTML = `
-          <div>Fast — die grüne Antwort wäre richtig gewesen.</div>
+          <div>Fast — die grüne Antwort zeigt dir den richtigen Weg.</div>
           <div class="explanation">${q.explanation}</div>
         `;
       }
@@ -1371,15 +1483,15 @@
       let comment = "";
 
       if (percentage === 100) {
-        comment = "Perfekt! Maestro-Modus aktiviert. 🏆";
+        comment = "🏆 Maestro-Modus! Perfektes Level — das ist sattelfestes Musikwissen.";
       } else if (percentage >= 80) {
-        comment = "Stark! Das ist schon richtig sattelfestes Wissen.";
+        comment = "Sehr stark! Du bewegst dich sicher durch Werke, Begriffe und Epochen.";
       } else if (percentage >= 60) {
-        comment = "Sehr ordentlich. Da ist musikalisch schon einiges vorhanden.";
+        comment = "Solide Leistung! Die Grundlagen sitzen — jetzt beginnt die Feinarbeit.";
       } else if (percentage >= 40) {
-        comment = "Solider Anfang. Noch einmal spielen lohnt sich.";
+        comment = "Guter Anfang. Lies die Erklärungen bewusst mit — dein Score steigt schnell.";
       } else {
-        comment = "Da wartet noch ein kleines Musikgeschichte-Abenteuer auf dich.";
+        comment = "Lernmodus aktiviert: Jede Erklärung ist ein kleiner Baustein. Noch einmal spielen lohnt sich.";
       }
 
       if (score > oldBest) {
