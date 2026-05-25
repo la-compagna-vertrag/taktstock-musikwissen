@@ -346,10 +346,9 @@
   Bestnoten zurücksetzen
 </button>
 
-      <p class="version">Version 4.1 – Bestnoten zurücksetzen </p>
-    </section>
+    <p class="version">Version 6.0 – Barock & Alte Musik aktiviert</p>
 
-    <section id="quizScreen" class="hidden">
+      <section id="quizScreen" class="hidden">
       <div class="top-row">
         <span class="badge" id="levelBadge">Level</span>
         <strong>Frage <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span></strong>
@@ -786,13 +785,84 @@
     }
   ]
 },
-      {
-        id: 6,
-        title: "Barock & Alte Musik",
-        description: "Monteverdi, Palestrina, Schütz, Lully, Corelli.",
-        active: false,
-        questions: []
-      },
+     {
+  id: 6,
+  title: "Barock & Alte Musik",
+  description: "Monteverdi, Palestrina, Schütz, Lully, Corelli.",
+  active: true,
+  questions: [
+    {
+      question: "Wer komponierte die berühmte 'Marienvesper' von 1610?",
+      image: "monteverdi.jpg",
+      options: ["Monteverdi", "Palestrina", "Gabrieli", "Lully"],
+      correct: 0,
+      explanation: "Claudio Monteverdis Marienvesper von 1610 verbindet alte polyphone Tradition mit dem neuen expressiven Stil des Frühbarock. Sie ist eines der bedeutendsten geistlichen Werke ihrer Zeit."
+    },
+    {
+      question: "Welcher Komponist gilt als zentraler Vertreter der römischen Vokalpolyphonie der Renaissance?",
+      image: "palestrina.jpg",
+      options: ["Palestrina", "Monteverdi", "Schütz", "Purcell"],
+      correct: 0,
+      explanation: "Giovanni Pierluigi da Palestrina steht für eine klare, ausgewogene Vokalpolyphonie der Renaissance. Sein Stil wurde später oft als Ideal kirchenmusikalischer Satzkunst betrachtet."
+    },
+    {
+      question: "Wer komponierte 'Dido and Aeneas'?",
+      image: "purcell.jpg",
+      options: ["Purcell", "Händel", "Lully", "Monteverdi"],
+      correct: 0,
+      explanation: "Dido and Aeneas ist eine englische Barockoper von Henry Purcell. Besonders berühmt ist Didos Lamento, eines der ergreifendsten Stücke der frühen Operngeschichte."
+    },
+    {
+      question: "Welcher Komponist ist besonders mit der französischen Hofoper unter Ludwig XIV. verbunden?",
+      image: "lully.jpg",
+      options: ["Lully", "Corelli", "Vivaldi", "Buxtehude"],
+      correct: 0,
+      explanation: "Jean-Baptiste Lully prägte die französische Oper am Hof Ludwigs XIV. Er entwickelte die Tragédie lyrique und spielte eine zentrale Rolle im Musikleben von Versailles."
+    },
+    {
+      question: "Wer gilt als einer der wichtigsten Meister des Concerto grosso?",
+      image: "corelli.jpg",
+      options: ["Corelli", "Palestrina", "Schütz", "Cage"],
+      correct: 0,
+      explanation: "Arcangelo Corelli war ein bedeutender italienischer Violinist und Komponist. Seine Concerti grossi wurden stilbildend für die Instrumentalmusik des Barock."
+    },
+    {
+      question: "Welcher norddeutsche Komponist und Organist war ein wichtiger Vorgänger Bachs?",
+      image: "buxtehude.jpg",
+      options: ["Buxtehude", "Lully", "Rossini", "Elgar"],
+      correct: 0,
+      explanation: "Dieterich Buxtehude war ein bedeutender Organist und Komponist in Lübeck. Johann Sebastian Bach soll als junger Mann zu ihm gereist sein, um ihn zu hören."
+    },
+    {
+      question: "Wer komponierte die 'Musikalischen Exequien'?",
+      image: "schuetz.jpg",
+      options: ["Heinrich Schütz", "Johann Sebastian Bach", "Giovanni Gabrieli", "Georg Friedrich Händel"],
+      correct: 0,
+      explanation: "Heinrich Schütz schrieb die Musikalischen Exequien als geistliche Begräbnismusik. Er gilt als einer der wichtigsten deutschen Komponisten vor Bach."
+    },
+    {
+      question: "Welcher Komponist schrieb das Oratorium 'Messiah'?",
+      image: "handel.jpg",
+      options: ["Händel", "Bach", "Vivaldi", "Purcell"],
+      correct: 0,
+      explanation: "Georg Friedrich Händels Messiah ist eines der berühmtesten Oratorien der Musikgeschichte. Besonders bekannt ist der Halleluja-Chor."
+    },
+    {
+      question: "Welcher Komponist wird stark mit venezianischer Mehrchörigkeit verbunden?",
+      image: "ggabrieli.jpg",
+      options: ["Giovanni Gabrieli", "Joseph Haydn", "Franz Liszt", "Carl Orff"],
+      correct: 0,
+      explanation: "Giovanni Gabrieli wirkte an San Marco in Venedig. Seine mehrchörige Musik nutzt räumlich getrennte Klanggruppen und beeinflusste die Entwicklung des konzertierenden Stils."
+    },
+    {
+      question: "Welcher Bach-Sohn steht besonders für den empfindsamen Stil zwischen Barock und Klassik?",
+      image: "cpebach.jpg",
+      options: ["Carl Philipp Emanuel Bach", "Johann Christian Bach", "Wilhelm Friedemann Bach", "Johann Sebastian Bach"],
+      correct: 0,
+      explanation: "Carl Philipp Emanuel Bach war einer der wichtigsten Vertreter des empfindsamen Stils. Seine Musik steht zwischen barocker Tradition und klassischer Ausdruckswelt."
+    }
+  ]
+},
       {
         id: 7,
         title: "Moderne & 20. Jahrhundert",
