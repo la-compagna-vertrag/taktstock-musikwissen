@@ -547,28 +547,195 @@
 
     @media (max-width: 700px) {
       body {
-        padding: 12px;
+        padding: 10px;
       }
 
       .app {
-        margin: 10px auto;
-        padding: 22px;
-        border-radius: 22px;
+        margin: 8px auto;
+        padding: 18px 14px 22px;
+        border-radius: 20px;
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.95rem;
+        line-height: 1.15;
       }
 
-  
-    .intro-card {
-      background: rgba(0,0,0,0.16);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 22px;
-      padding: 20px;
-      margin: 18px 0 22px;
-      text-align: center;
-      line-height: 1.5;
+      h2 {
+        font-size: 1.65rem;
+      }
+
+      .subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 22px;
+      }
+
+      .badge {
+        font-size: 0.83rem;
+        padding: 6px 10px;
+      }
+
+      .intro-card,
+      .support-note,
+      .preview-card,
+      .result-box,
+      .about-card {
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .pill-row,
+      .preview-grid,
+      .result-stats,
+      .about-grid,
+      .level-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .level-card {
+        min-height: auto;
+        padding: 18px;
+      }
+
+      .level-card h3 {
+        font-size: 1.18rem;
+      }
+
+      .level-card p,
+      .preview-description,
+      .about-card p,
+      .about-item,
+      .learning-goal,
+      .support-note,
+      .intro-card {
+        font-size: 0.96rem;
+        line-height: 1.45;
+      }
+
+      .pill,
+      .preview-stat,
+      .result-stat,
+      .about-item {
+        padding: 12px;
+      }
+
+      .top-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .top-row strong,
+      .level-meta {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .composer-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 260px;
+        margin: 14px auto 14px;
+        border-width: 4px;
+        padding: 6px;
+      }
+
+      .question {
+        font-size: 1.2rem;
+        margin: 18px 0 16px;
+      }
+
+      .options {
+        gap: 10px;
+      }
+
+      button {
+        padding: 15px 14px;
+        font-size: 1rem;
+        border-radius: 14px;
+      }
+
+      .primary-btn {
+        font-size: 1.08rem;
+      }
+
+      .feedback {
+        font-size: 1rem;
+        min-height: 24px;
+      }
+
+      .explanation {
+        font-size: 0.96rem;
+        padding: 12px 14px;
+      }
+
+      .preview-title {
+        font-size: 1.35rem;
+      }
+
+      .score-big {
+        font-size: 2.5rem;
+      }
+
+      .result-comment {
+        font-size: 1.08rem;
+      }
+
+      .result-rank {
+        font-size: 1.15rem;
+      }
+
+      .version {
+        font-size: 0.75rem;
+        margin-top: 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 8px;
+      }
+
+      .app {
+        padding: 14px 12px 18px;
+        border-radius: 18px;
+      }
+
+      h1 {
+        font-size: 1.72rem;
+      }
+
+      h2 {
+        font-size: 1.45rem;
+      }
+
+      .subtitle {
+        font-size: 0.93rem;
+      }
+
+      .question {
+        font-size: 1.1rem;
+      }
+
+      button {
+        font-size: 0.98rem;
+        padding: 14px 12px;
+      }
+
+      .composer-image {
+        max-height: 220px;
+      }
+
+      .score-big {
+        font-size: 2.2rem;
+      }
+
+      .mini-tag,
+      .badge {
+        font-size: 0.76rem;
+      }
     }
 
     .intro-card strong {
@@ -693,7 +860,7 @@
   Bestnoten zurücksetzen
 </button>
 
-<p class="version">Version 1.5.1 – Textpolitur & Positionierung</p>
+<p class="version">Version 1.6 – Mobile Optimierung</p>
 </section>
 
 
