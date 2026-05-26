@@ -1,0 +1,31 @@
+{
+  "name": "Maestro Quiz – Allgemeines Musikwissen",
+  "short_name": "Maestro Quiz",
+  "description": "Spielerischer Trainer für allgemeines Musikwissen: Komponisten, Werke, Gattungen, Formenlehre und Musiktheorie-Grundlagen.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#102a5c",
+  "theme_color": "#102a5c",
+  "orientation": "portrait",
+  "lang": "de-CH",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "music",
+    "games"
+  ]
+}
