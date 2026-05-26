@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maestro Quiz – Musikgeschichte spielerisch lernen</title>
-  <meta name="description" content="Maestro Quiz ist ein spielerischer Musikgeschichte-Trainer mit 10 Leveln, 100 Fragen und kurzen Erklärungen zu Klassik, Oper, Kirchenmusik, Formenlehre und Werkkunde.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <meta name="theme-color" content="#102a5c">
-  <meta property="og:title" content="Maestro Quiz – Musikgeschichte spielerisch lernen">
-  <meta property="og:description" content="10 Level · 100 Fragen · kurze Erklärungen nach jeder Antwort. Ein spielerischer Lerntrainer für Klassikfans, Chorsänger:innen, Schüler:innen und angehende Musikstudierende.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Maestro Quiz">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Maestro Quiz – Allgemeines Musikwissen spielerisch lernen</title>
+  <meta name="description" content="Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen mit 10 Leveln, 100 Fragen und kurzen Erklärungen zu Komponisten, Werken, Gattungen, Musiktheorie-Grundlagen und Werkkunde.">
+  <meta name="theme-color" content="#102a5c">
+  <meta property="og:title" content="Maestro Quiz – Allgemeines Musikwissen spielerisch lernen">
+  <meta property="og:description" content="10 Level · 100 Fragen · kurze Erklärungen nach jeder Antwort. Ein spielerischer Lerntrainer für allgemeines Musikwissen, Klassik, Chor, Werkkunde und Musiktheorie-Grundlagen.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Maestro Quiz – Musikgeschichte spielerisch lernen">
-  <meta name="twitter:description" content="10 Level · 100 Fragen · Musikgeschichte, Werke, Komponisten und Gattungen spielerisch trainieren.">
+  <meta name="twitter:title" content="Maestro Quiz – Allgemeines Musikwissen spielerisch lernen">
+  <meta name="twitter:description" content="10 Level · 100 Fragen · Komponisten, Werke, Gattungen und Musiktheorie-Grundlagen spielerisch trainieren.">
 
   <style>
     :root {
@@ -543,6 +550,23 @@
     }
 
 
+
+    .install-note {
+      background: rgba(74,222,128,0.10);
+      border: 1px solid rgba(74,222,128,0.20);
+      color: rgba(255,255,255,0.88);
+      border-radius: 16px;
+      padding: 13px 15px;
+      margin: 14px 0 10px;
+      font-size: 0.94rem;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .install-note strong {
+      color: var(--green);
+    }
+
     .beta-note {
       background: rgba(96,165,250,0.12);
       border: 1px solid rgba(96,165,250,0.22);
@@ -1011,7 +1035,7 @@
 <body>
   <main class="app">
     <h1>🎼 Maestro Quiz</h1>
-    <p class="subtitle">Der spielerische Musikgeschichte-Trainer für Klassik, Chor & Werkkunde</p>
+    <p class="subtitle">Der spielerische Trainer für allgemeines Musikwissen</p>
 
     <section id="levelScreen">
       <div class="center">
@@ -1020,8 +1044,8 @@
       </div>
 
       <div class="intro-card">
-        Willkommen bei <strong>Maestro Quiz</strong>: Trainiere dein Wissen über <strong>Klassik, Oper,
-        Kirchenmusik, Formenlehre und Musikgeschichte</strong>. Nach jeder Antwort bekommst du eine kurze Erklärung —
+        Willkommen bei <strong>Maestro Quiz</strong>: Trainiere dein Wissen über <strong>Komponisten, Werke,
+        Gattungen, Formenlehre und Musiktheorie-Grundlagen</strong>. Nach jeder Antwort bekommst du eine kurze Erklärung —
         ideal zum Wiederholen und Lernen.
         <div class="pill-row">
           <div class="pill">10 Level<span>vom Einstieg bis zur Abschluss-Challenge</span></div>
@@ -1035,7 +1059,11 @@
       </div>
 
       <div class="beta-note">
-        <strong>Public Beta:</strong> Diese Basisversion ist spielbar und darf gerne getestet werden. Feedback zu Fragen, Schwierigkeitsgrad, Darstellung und Lernwert ist willkommen.
+        <strong>Public Beta:</strong> Diese Basisversion ist spielbar, mobil optimiert und als Web-App installierbar. Feedback zu Fragen, Schwierigkeitsgrad, Darstellung und Lernwert ist willkommen.
+      </div>
+
+      <div class="install-note">
+        <strong>Installierbar:</strong> Auf Android/Chrome über das Browser-Menü „Zum Startbildschirm hinzufügen“. So fühlt sich Maestro Quiz bereits wie eine kleine App an.
       </div>
 
      <div class="level-grid" id="levelGrid"></div>
@@ -1043,14 +1071,14 @@
       <div class="about-card">
         <h3>Über Maestro Quiz</h3>
         <p>
-          Maestro Quiz ist ein spielerischer Musikgeschichte-Trainer für Klassikfans, Chorsänger:innen,
-          Schüler:innen und angehende Musikstudierende. Die Basisversion verbindet Quizfragen, Lernziele
+          Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen – für Klassikfans, Chorsänger:innen,
+          Schüler:innen, Musikinteressierte und angehende Musikstudierende. Die Basisversion verbindet Quizfragen, Lernziele
           und kurze Erklärungen nach jeder Antwort.
         </p>
         <div class="about-grid">
           <div class="about-item">
             <strong>🎓 Lernziel</strong>
-            Grundwissen zu Komponisten, Werken, Epochen, Formen und Kirchenmusik festigen.
+            Grundwissen zu Komponisten, Werken, Gattungen, Formenlehre und Musiktheorie-Grundlagen festigen.
           </div>
           <div class="about-item">
             <strong>🎮 Spielprinzip</strong>
@@ -1071,10 +1099,10 @@
 </button>
 
 <div class="project-footer">
-  Maestro Quiz · Public Beta · kostenlose Basisversion mit 100 Fragen. Die erweiterte Lernversion mit zusätzlichen Kategorien, Prüfungsmodus und Lernstatistik ist in Planung.
+  Maestro Quiz · Public Beta · installierbare Web-App · kostenlose Basisversion mit 100 Fragen. Erweiterungen mit 200 und 500+ Fragen sind in Planung.
 </div>
 
-<p class="version">Version 1.7 – Public Beta</p>
+<p class="version">Version 1.8 – PWA/App-Vorbereitung</p>
 </section>
 
 
@@ -2301,6 +2329,14 @@
     }
 
     renderLevelScreen();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').catch(() => {
+          // Das Quiz funktioniert auch online, falls der Service Worker nicht geladen wird.
+        });
+      });
+    }
   </script>
 </body>
 </html>
