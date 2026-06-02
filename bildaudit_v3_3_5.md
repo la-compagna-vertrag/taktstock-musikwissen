@@ -1,0 +1,212 @@
+# Bildaudit v3.3.5
+
+Bildzuordnung wie v3.3.4; zusätzlich sind die Bildpfade robust repariert. Fragen verwenden jetzt einfache Dateinamen, und index.html sucht im Hauptordner, in images/ und in Bilder/.
+
+# Maestro Quiz v3.3.4 – Bildaudit
+Gesamtfragen: **400**
+Fragen mit neutralem Logo: **203**
+
+## Hinweis
+Das neutrale Logo ist korrekt für Theorie-, Praxis-, Instrumenten- und Begriffsfragen. Bei Komponisten-/Werkfragen sollte es nur vorkommen, wenn bewusst kein Hinweisbild gewünscht ist oder das Bild fehlt.
+
+## Logo-Fragen zur Kontrolle
+- L3-11 · Epochen & Stil · Welche Epoche verbindet man besonders mit Generalbass und Affektenlehre? → Barock
+- L3-15 · Epochen & Stil · Welche Epoche steht zeitlich vor dem Barock? → Renaissance
+- L3-16 · Epochen & Stil · Welche Epoche wird häufig mit gesteigerter Subjektivität, Naturbildern und Sehnsucht verbunden? → Romantik
+- L3-18 · Epochen & Stil · Welche Stilrichtung verwendet oft wiederholte Muster und langsame Veränderungen? → Minimal Music
+- L3-19 · Kirchenmusik & Chor · Welche Epoche brachte die Mehrchörigkeit der venezianischen Schule hervor? → Renaissance
+- L3-20 · Epochen & Stil · Welche Epoche liegt ungefähr zwischen Renaissance und Klassik? → Barock
+- L3-33 · Epochen & Stil · Welche Epoche folgt historisch ungefähr auf den Barock? → Klassik
+- L3-34 · Epochen & Stil · Welche Epoche verbindet man oft mit grossen Gefühlen und Naturbildern? → Romantik
+- L3-37 · Epochen & Stil · Welche Musikrichtung arbeitet häufig mit Wiederholung und kleinen Veränderungen? → Minimal Music
+- L3-38 · Epochen & Stil · Welche Epoche liegt ungefähr vor dem Barock? → Renaissance
+- L4-11 · Formen & Gattungen · Was ist eine Passacaglia? → Variationsform über Bassmodell
+- L4-12 · Formen & Gattungen · Was bezeichnet ein „Rondo“? → Wiederkehr eines Hauptteils
+- L4-13 · Formen & Gattungen · Was ist ein Madrigal? → Mehrstimmiges weltliches Vokalstück
+- L4-14 · Formen & Gattungen · Was ist eine Suite? → Folge mehrerer Tanz- oder Charakterstücke
+- L4-15 · Oper & Musiktheater · Was ist ein Rezitativ? → Sprechnahe Gesangsform in Oper/Oratorium
+- L4-16 · Formen & Gattungen · Was ist ein Divertimento? → Unterhaltendes mehrsätziges Instrumentalwerk
+- L4-17 · Formen & Gattungen · Was bedeutet „Da capo“ in einer Arie? → Zurück zum Anfang
+- L4-18 · Kirchenmusik & Chor · Was ist eine Kantate? → Mehrteiliges Vokalwerk mit Instrumenten
+- L4-19 · Formen & Gattungen · Was ist ein Scherzo? → Schneller, oft humorvoller Satz
+- L4-20 · Formen & Gattungen · Was ist eine Toccata? → Virtuoses Instrumentalstück
+- L4-25 · Oper & Musiktheater · Was ist ein „Libretto“? → Textbuch einer Oper oder eines Oratoriums
+- L4-26 · Kirchenmusik & Chor · Was bedeutet „cantus firmus“? → Vorgegebene Melodie als Grundlage
+- L4-27 · Kirchenmusik & Chor · Was ist eine Choralmotette? → Motette auf Grundlage eines Chorals
+- L4-28 · Kirchenmusik & Chor · Was bedeutet „antiphonal“ im Chorsingen? → Wechselgesang zwischen Gruppen
+- L4-29 · Kirchenmusik & Chor · Was ist ein Introitus? → Eingangsgesang der Messe
+- L4-30 · Kirchenmusik & Chor · Was ist ein Graduale? → Messgesang zwischen Lesungen
+- L4-31 · Oper & Musiktheater · Was ist eine Arie? → Ein solistisches Gesangsstück in Oper oder Oratorium
+- L4-32 · Oper & Musiktheater · Was ist ein Rezitativ? → Sprechähnlicher Gesang
+- L4-36 · Oper & Musiktheater · Welche Stimmlage singt oft jugendliche Heldinnen oder lyrische Frauenrollen? → Sopran
+- L4-37 · Oper & Musiktheater · Was bezeichnet ein Ensemble in der Oper? → Eine Szene mit mehreren gleichzeitig singenden Figuren
+- L4-40 · Oper & Musiktheater · Was ist ein Libretto? → Der Text einer Oper
+- L5-21 · Kirchenmusik & Chor · Was bedeutet „responsorial“? → Wechsel zwischen Vorsänger und Antwortgruppe
+- L5-22 · Kirchenmusik & Chor · Was ist ein „Credo“ in der Messe? → Glaubensbekenntnis
+- L5-23 · Kirchenmusik & Chor · Was bezeichnet „Basso continuo“ in barocker Kirchenmusik? → fortlaufende Bass- und Harmoniestütze
+- L5-24 · Kirchenmusik & Chor · Was ist ein „Offertorium“? → Gesang zur Gabenbereitung
+- L5-25 · Kirchenmusik & Chor · Was ist ein „Vesperpsalm“? → Psalm im Abendgebet
+- L5-27 · Formen & Gattungen · Was ist ein „Charakterstück“? → kurzes Stück mit bestimmter Stimmung oder Idee
+- L5-28 · Formen & Gattungen · Was bedeutet „Variationsform“? → Ein Thema wird verändert wiederholt
+- L5-29 · Formen & Gattungen · Was ist eine „Ouvertüre“? → Eröffnungsstück zu Oper oder Konzertwerk
+- L5-30 · Formen & Gattungen · Was ist eine „Etüde“? → Übungs- oder Konzertstück mit technischem Schwerpunkt
+- L5-35 · Musikleben & Praxis · Was ist die Aufgabe der Konzertmeisterin oder des Konzertmeisters im Orchester? → Führung der ersten Violinen und wichtige Vermittlung zum Dirigat
+- L5-36 · Musikleben & Praxis · Was ist ein Laienchor? → Chor mit nicht-beruflichen Sänger:innen
+- L5-37 · Musikleben & Praxis · Was bedeutet „Uraufführung“? → Erste öffentliche Aufführung eines Werkes
+- L5-38 · Musikleben & Praxis · Was ist ein Dirigent? → Musikalischer Leiter eines Ensembles
+- L5-39 · Musikleben & Praxis · Was ist eine Partitur? → Notentext mit allen Stimmen eines Werkes
+- L5-40 · Musikleben & Praxis · Was ist eine Generalprobe? → Letzte grosse Probe vor der Aufführung
+- L6-11 · Instrumente & Besetzungen · Was bedeuten „con sordino“ und „senza sordino“ bei Streichinstrumenten? → mit Dämpfer / ohne Dämpfer
+- L6-12 · Kirchenmusik & Chor · Welcher Text gehört fest zum lateinischen Messordinarium? → Kyrie
+- L6-13 · Kirchenmusik & Chor · Welcher Satz gehört nicht zum gewöhnlichen Messordinarium? → Magnificat
+- L6-14 · Kirchenmusik & Chor · Was ist ein Choral im evangelischen Kontext? → Gemeindelied
+- L6-15 · Kirchenmusik & Chor · Was bedeutet „divisi“ in Chornoten? → Eine Stimmgruppe teilt sich auf
+- L6-16 · Kirchenmusik & Chor · Was ist ein Requiem? → Totenmesse
+- L6-17 · Kirchenmusik & Chor · Welcher Lobgesang beginnt mit „Magnificat anima mea Dominum“? → Magnificat
+- L6-18 · Kirchenmusik & Chor · Was ist ein „Stabat Mater“? → Geistlicher Text über Maria unter dem Kreuz
+- L6-19 · Kirchenmusik & Chor · Was ist ein „Te Deum“? → Feierlicher lateinischer Lobgesang
+- L6-20 · Kirchenmusik & Chor · Was bezeichnet „Psalmvertonung“? → Musikalische Vertonung eines biblischen Psalms
+- L6-22 · Formen & Gattungen · Was ist ein „Impromptu“? → Charakterstück mit improvisatorischem Eindruck
+- L6-23 · Formen & Gattungen · Was bezeichnet „Thema mit Variationen“? → Thema wird mehrfach verändert
+- L6-24 · Formen & Gattungen · Was ist eine „Serenade“? → oft unterhaltendes mehrsätziges Werk
+- L6-25 · Formen & Gattungen · Was ist ein „Liedzyklus“? → Sammlung zusammengehöriger Lieder
+- L6-27 · Epochen & Stil · Welche Stilrichtung steht oft für extreme Ausdrucksspannung und Auflösung der traditionellen Tonalität? → Expressionismus
+- L6-30 · Oper & Musiktheater · Welche Stilrichtung der Oper betont schönen Gesang und Virtuosität? → Belcanto
+- L6-31 · Hören & Begriffe · Was bedeutet allegro? → schnell
+- L6-32 · Hören & Begriffe · Was bedeutet adagio? → langsam
+- L6-33 · Hören & Begriffe · Was bedeutet legato? → gebunden
+- L6-34 · Hören & Begriffe · Was bedeutet staccato? → kurz und getrennt
+- L6-35 · Hören & Begriffe · Was ist ein Takt? → Ein rhythmischer Abschnitt mit regelmässiger Betonung
+- L6-36 · Hören & Begriffe · Was bedeutet Auftakt? → Unvollständiger Takt vor dem ersten Volltakt
+- L6-37 · Hören & Begriffe · Was bedeutet ritardando? → langsamer werden
+- L6-38 · Hören & Begriffe · Was bedeutet accelerando? → schneller werden
+- L6-39 · Hören & Begriffe · Was bedeutet Da capo? → Von Anfang an wiederholen
+- L6-40 · Hören & Begriffe · Was bedeutet Fine in Noten? → Ende
+- L7-11 · Musiktheorie-Basics · Wie viele Halbtöne hat eine reine Quinte? → 7
+- L7-12 · Musiktheorie-Basics · Wie viele Halbtöne hat eine grosse Terz? → 4
+- L7-13 · Musiktheorie-Basics · Welches Intervall liegt zwischen C und F? → Quarte
+- L7-14 · Musiktheorie-Basics · Welche Tonart hat drei Kreuze? → A-Dur
+- L7-15 · Musiktheorie-Basics · Welche Tonart hat zwei B? → B-Dur
+- L7-16 · Hören & Begriffe · Was bedeutet „legato“? → Gebunden
+- L7-17 · Hören & Begriffe · Was bedeutet „staccato“? → Kurz getrennt
+- L7-18 · Hören & Begriffe · Was bedeutet „crescendo“? → Lauter werden
+- L7-19 · Hören & Begriffe · Was bedeutet „diminuendo“? → Leiser werden
+- L7-20 · Musiktheorie-Basics · Was ist eine Synkope? → Betonungsverschiebung
+- L7-21 · Epochen & Stil · Was bedeutet „atonal“ vereinfacht gesagt? → ohne festes tonales Zentrum
+- L7-22 · Epochen & Stil · Welche Epoche entwickelte die Sonatenhauptsatzform besonders stark weiter? → Klassik
+- L7-23 · Epochen & Stil · Welche Richtung ist mit Komponisten wie Steve Reich und Philip Glass verbunden? → Minimal Music
+- L7-24 · Epochen & Stil · Was meint „Historismus“ in der Musik grob? → bewusster Rückgriff auf ältere Stile
+- L7-25 · Epochen & Stil · Welche Epoche ist besonders mit höfischen Tänzen, Generalbass und Concerto grosso verbunden? → Barock
+- L7-26 · Instrumente & Besetzungen · Was ist ein Englischhorn? → tieferes Oboeninstrument
+- L7-27 · Instrumente & Besetzungen · Welches Instrument ist die tiefere Schwester der Oboe? → Englischhorn
+- L7-28 · Instrumente & Besetzungen · Welches Instrument spielt häufig die Basslinie im Barock-Continuo? → Violoncello
+- L7-30 · Instrumente & Besetzungen · Welches Instrument gehört zu den Doppelrohrblattinstrumenten? → Oboe
+- L7-31 · Musiktheorie-Basics · Wie viele Halbtöne hat eine Oktave? → 12
+- L7-32 · Musiktheorie-Basics · Welches Intervall umfasst acht Tonstufen? → Oktave
+- L7-33 · Musiktheorie-Basics · Was bedeutet forte? → laut
+- L7-34 · Musiktheorie-Basics · Was bedeutet piano? → leise
+- L7-35 · Musiktheorie-Basics · Was bedeutet crescendo? → lauter werden
+- L7-36 · Musiktheorie-Basics · Was bedeutet diminuendo? → leiser werden
+- L7-37 · Musiktheorie-Basics · Welche Tonart hat ein Kreuz als Vorzeichen? → G-Dur
+- L7-38 · Musiktheorie-Basics · Welche Tonart hat ein b als Vorzeichen? → F-Dur
+- L7-39 · Musiktheorie-Basics · Was ist ein Dreiklang? → Akkord aus drei verschiedenen Tönen
+- L7-40 · Musiktheorie-Basics · Was ist eine Dur-Tonleiter? → Tonleiter mit charakteristischer grosser Terz
+- L8-1 · Formen & Gattungen · Welche Gattung vertont normalerweise die festen Teile der katholischen Liturgie wie Kyrie, Gloria, Credo, Sanctus und Agnus Dei? → Messe
+- L8-4 · Kirchenmusik & Chor · Was unterscheidet ein Oratorium typischerweise von einer Oper? → Es ist meist konzertant und nicht szenisch gespielt
+- L8-5 · Formen & Gattungen · Welche Gattung ist besonders eng mit mehrstimmiger geistlicher Vokalmusik verbunden? → Motette
+- L8-6 · Kirchenmusik & Chor · Was meint 'a cappella' im Chorkontext? → Gesang ohne instrumentale Begleitung
+- L8-7 · Kirchenmusik & Chor · Welche Aussage beschreibt eine Kantate am besten? → Ein mehrsätziges Vokalwerk, oft mit Chor, Solisten und Instrumenten
+- L8-9 · Kirchenmusik & Chor · Welche Besetzung meint die Abkürzung SATB im Chor? → Sopran, Alt, Tenor, Bass
+- L8-11 · Instrumente & Besetzungen · Zu welcher Instrumentenfamilie gehört die Oboe? → Holzbläser
+- L8-12 · Instrumente & Besetzungen · Welches Instrument verwendet ein Doppelrohrblatt? → Fagott
+- L8-13 · Instrumente & Besetzungen · Welches Instrument ist das tiefste reguläre Streichinstrument im Sinfonieorchester? → Kontrabass
+- L8-14 · Instrumente & Besetzungen · Welches Blechblasinstrument besitzt meist einen Zug? → Posaune
+- L8-15 · Instrumente & Besetzungen · Welches Instrument ist ein Tasteninstrument mit gezupften Saiten? → Cembalo
+- L8-16 · Instrumente & Besetzungen · Welches Instrument kann besonders lange Töne durch Luftreservoir und Tasten erzeugen? → Orgel
+- L8-17 · Instrumente & Besetzungen · Welches Schlaginstrument kann bestimmte Tonhöhen spielen und wird mit Pedal gestimmt? → Pauke
+- L8-18 · Instrumente & Besetzungen · Welches Instrument gehört zu den tiefen Holzblasinstrumenten? → Kontrafagott
+- L8-19 · Instrumente & Besetzungen · Welches Instrument ist eine tiefer klingende Bauform der Klarinette? → Bassklarinette
+- L8-20 · Instrumente & Besetzungen · Welches Instrument spielt im Orchester häufig die Stimmgabel-Rolle beim Einstimmen? → Oboe
+- L8-21 · Instrumente & Besetzungen · Was bedeutet „pizzicato“ bei Streichinstrumenten? → gezupft
+- L8-22 · Instrumente & Besetzungen · Was bedeutet „arco“ bei Streichinstrumenten? → mit dem Bogen
+- L8-23 · Instrumente & Besetzungen · Welches Instrument gehört nicht zu den klassischen Holzbläsern des Sinfonieorchesters? → Saxophon
+- L8-24 · Instrumente & Besetzungen · Was ist ein „Register“ bei der Orgel? → Klangfarbe/Pfeifenreihe
+- L8-25 · Instrumente & Besetzungen · Welche Besetzung entspricht dem klassischen Streichquartett? → zwei Violinen, Viola, Violoncello
+- L8-26 · Musiktheorie-Basics · Was ist eine Kadenz in der Harmonielehre? → Schlusswendung von Akkorden
+- L8-27 · Musiktheorie-Basics · Welche Stufe ist in C-Dur die Dominante? → G
+- L8-28 · Musiktheorie-Basics · Welche Stufe ist in C-Dur die Subdominante? → F
+- L8-29 · Musiktheorie-Basics · Was ist ein Leitton in Dur? → siebte Stufe mit Zug zur Tonika
+- L8-30 · Musiktheorie-Basics · Was ist eine enharmonische Verwechslung? → derselbe Ton anders benannt
+- L8-31 · Kirchenmusik & Chor · In welcher Sprache sind viele klassische Messvertonungen geschrieben? → Latein
+- L8-32 · Kirchenmusik & Chor · Was ist ein Magnificat? → Der Lobgesang Marias
+- L8-34 · Kirchenmusik & Chor · Was ist ein Psalm? → Ein biblischer Gebets- oder Gesangstext
+- L8-35 · Kirchenmusik & Chor · Was meint „gemischter Chor“? → Chor mit Frauen- und Männerstimmen
+- L8-36 · Kirchenmusik & Chor · Was bedeutet homophon im Chorsatz? → Die Stimmen bewegen sich rhythmisch weitgehend gemeinsam
+- L8-37 · Kirchenmusik & Chor · Welcher Teil gehört typischerweise zur Messe? → Kyrie
+- L8-38 · Kirchenmusik & Chor · Was ist ein Orgelpunkt? → Ein lang gehaltener Ton, oft im Bass
+- L8-39 · Kirchenmusik & Chor · Was ist ein Kanon? → Stimmen setzen nacheinander mit derselben Melodie ein
+- L8-40 · Kirchenmusik & Chor · Welche Stimme liegt im gemischten Chor meist am tiefsten? → Bass
+- L9-1 · Formen & Gattungen · Welche Gattung ist typischerweise ein mehrsätziges Werk für Orchester? → Sinfonie
+- L9-2 · Formen & Gattungen · Was bezeichnet eine Sonate im klassischen Sinn meistens? → Ein mehrsätziges Instrumentalwerk
+- L9-4 · Formen & Gattungen · Was ist eine Variation? → Eine veränderte Wiederholung eines Themas
+- L9-6 · Formen & Gattungen · Was meint 'Concerto grosso'? → Ein barockes Konzert mit kleiner Solistengruppe und Orchester
+- L9-7 · Formen & Gattungen · Welche Gattung ist eine Folge von Tänzen oder tanzartigen Sätzen? → Suite
+- L9-8 · Formen & Gattungen · Was ist eine Ouvertüre? → Ein eröffnendes Instrumentalstück
+- L9-9 · Oper & Musiktheater · Was ist der Unterschied zwischen Rezitativ und Arie in der Oper? → Das Rezitativ treibt die Handlung voran, die Arie verweilt stärker im Ausdruck
+- L9-11 · Musikleben & Praxis · Was macht ein Konzertmeister oder eine Konzertmeisterin im Orchester? → Führt die ersten Violinen und vermittelt zur Leitung
+- L9-12 · Musikleben & Praxis · Was bedeutet „Stimmton A = 440 Hz“? → Referenzton zum Stimmen
+- L9-13 · Musikleben & Praxis · Was ist eine Generalprobe? → Letzte grosse Probe vor der Aufführung
+- L9-14 · Musikleben & Praxis · Was bedeutet „Besetzung“ in der Musikpraxis? → Welche Stimmen/Instrumente benötigt werden
+- L9-15 · Formen & Gattungen · Was ist eine Kadenz im Solokonzert? → Virtuose solistische Passage
+- L9-16 · Musikleben & Praxis · Was bedeutet „vom Blatt spielen“? → Ohne vorheriges Üben direkt lesen und spielen
+- L9-17 · Hören & Begriffe · Was bezeichnet „Intonation“? → Genauigkeit der Tonhöhe
+- L9-18 · Musikleben & Praxis · Was ist ein Stimmführer im Chor? → Leitende Person einer Stimme
+- L9-19 · Musikleben & Praxis · Was ist ein Programmheft? → Begleittext zum Konzert
+- L9-20 · Hören & Begriffe · Was bedeutet „Tutti“? → Alle zusammen
+- L9-21 · Musiktheorie-Basics · Welche Taktart hat drei Viertel pro Takt? → 3/4
+- L9-22 · Musiktheorie-Basics · Was bedeutet „alla breve“? → meist Zweiertakt mit halber Note als Zähleinheit
+- L9-23 · Musiktheorie-Basics · Was ist eine Triole? → drei Noten im Raum von zwei gleichwertigen Noten
+- L9-24 · Musiktheorie-Basics · Was bedeutet „chromatisch“? → in Halbtonschritten
+- L9-25 · Musiktheorie-Basics · Was bedeutet „diatonisch“? → innerhalb einer Tonleiter
+- L9-26 · Musikleben & Praxis · Was bedeutet „Transposition“? → Übertragung in eine andere Tonhöhe oder Tonart
+- L9-27 · Musikleben & Praxis · Was ist ein „Korrepetitor“? → musikalischer Begleiter und Probenpartner am Klavier
+- L9-28 · Musikleben & Praxis · Was bedeutet „Einsingen“ im Chor nicht? → Ein vollständiges Durchsingen des Konzertprogramms
+- L9-29 · Musikleben & Praxis · Was ist eine „Stimmprobe“? → Probe einer einzelnen Chor- oder Instrumentengruppe
+- L9-30 · Musikleben & Praxis · Was ist ein sinnvoller Zweck eines Probenplans? → Prioritäten, Zeit und schwierige Stellen gezielt zu strukturieren
+- L9-31 · Formen & Gattungen · Wie nennt man eine klassische Form mit Exposition, Durchführung und Reprise? → Sonatenhauptsatzform
+- L9-33 · Formen & Gattungen · Welche Form ist typisch, wenn ein Hauptthema immer wiederkehrt und von Zwischenteilen unterbrochen wird? → Rondo
+- L9-34 · Formen & Gattungen · Wie nennt man eine Folge von stilisierten Tänzen, besonders im Barock? → Suite
+- L9-35 · Formen & Gattungen · Welche Gattung ist im Barock oft für zwei Oberstimmen und Basso continuo geschrieben? → Triosonate
+- L9-36 · Formen & Gattungen · Wie nennt man ein virtuoses Übungs- oder Vortragsstück, oft für Klavier? → Etüde
+- L9-37 · Formen & Gattungen · Welche Gattung bezeichnet ein mehrstimmiges weltliches Vokalstück, besonders in Renaissance und Frühbarock? → Madrigal
+- L9-38 · Formen & Gattungen · Wie nennt man ein freies, oft improvisatorisch wirkendes Instrumentalstück? → Fantasie
+- L9-39 · Formen & Gattungen · Welche Gattung ist ein kurzes lyrisches Klavierstück, besonders in der Romantik? → Charakterstück
+- L9-40 · Formen & Gattungen · Was ist ein Streichquartett? → Zwei Violinen, Viola und Violoncello
+- L10-4 · Formen & Gattungen · Welche Aussage beschreibt eine Fuge am besten? → Ein Thema wird nacheinander in verschiedenen Stimmen imitiert und verarbeitet
+- L10-6 · Oper & Musiktheater · Welche Gattung ist typischerweise konzertant, oft geistlich und nicht szenisch gespielt? → Oratorium
+- L10-11 · Hören & Begriffe · Welche Aussage beschreibt eine homophone Satzweise am besten? → Die Stimmen bewegen sich meist gemeinsam im gleichen oder ähnlichen Rhythmus
+- L10-12 · Hören & Begriffe · Was bedeutet „polyphon“? → Mehrere selbständige Stimmen
+- L10-13 · Hören & Begriffe · Was ist ein Ostinato? → Wiederholtes musikalisches Muster
+- L10-15 · Hören & Begriffe · Was bedeutet „Klangfarbe“? → Charakter des Klangs
+- L10-16 · Hören & Begriffe · Was ist ein Thema in der Musik? → Prägnanter musikalischer Gedanke
+- L10-17 · Musiktheorie-Basics · Was ist eine Sequenz? → Wiederholung eines Motivs auf anderer Tonhöhe
+- L10-18 · Hören & Begriffe · Was bedeutet „konsonant“ im musikalischen Sinn? → Ruhig/zusammenklingend wirkend
+- L10-19 · Hören & Begriffe · Was bedeutet „dissonant“ im musikalischen Sinn? → Spannungsreich/reibend wirkend
+- L10-20 · Hören & Begriffe · Was ist ein Cluster? → Dicht nebeneinanderliegende Töne
+- L10-21 · Hören & Begriffe · Was bedeutet „Tremolo“? → schnelle Wiederholung oder Wechselbewegung
+- L10-22 · Hören & Begriffe · Was bedeutet „Vibrato“? → leichte Tonhöhenschwankung zur Klangbelebung
+- L10-23 · Hören & Begriffe · Was ist ein „Glissando“? → gleitende Bewegung zwischen Tönen
+- L10-24 · Hören & Begriffe · Was bedeutet „sforzato“? → plötzlich betont
+- L10-25 · Hören & Begriffe · Was bedeutet „subito piano“? → plötzlich leise
+- L10-26 · Hören & Begriffe · Was bedeutet „rubato“? → freier Umgang mit Tempo
+- L10-27 · Hören & Begriffe · Was ist eine „Klangfläche“? → ausgedehnter, flächiger Klangzustand
+- L10-28 · Hören & Begriffe · Was bedeutet „monophon“? → einstimmig
+- L10-29 · Formen & Gattungen · Was ist ein „Kanon“? → versetzte Nachahmung derselben Melodie
+- L10-30 · Hören & Begriffe · Was bedeutet „Unisono“? → alle singen oder spielen dieselbe Tonhöhe/Melodie
+- L10-31 · Instrumente & Besetzungen · Welches Instrument gehört zu den Holzbläsern? → Oboe
+- L10-32 · Instrumente & Besetzungen · Welches Instrument gehört zu den Blechbläsern? → Horn
+- L10-33 · Instrumente & Besetzungen · Welches Instrument ist das tiefste Streichinstrument im Orchester? → Kontrabass
+- L10-34 · Instrumente & Besetzungen · Welche Instrumente bilden ein klassisches Klaviertrio? → Klavier, Violine, Violoncello
+- L10-35 · Instrumente & Besetzungen · Welche Stimme ist höher: Tenor oder Bass? → Tenor
+- L10-36 · Instrumente & Besetzungen · Welches Instrument verwendet ein Doppelrohrblatt? → Oboe
+- L10-37 · Instrumente & Besetzungen · Welches Instrument ist ein Tasteninstrument? → Klavier

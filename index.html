@@ -10,15 +10,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Maestro Quiz">
   <meta name="mobile-web-app-capable" content="yes">
-  <title>Maestro Quiz – Allgemeines Musikwissen spielerisch lernen</title>
-  <meta name="description" content="Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen mit 10 Leveln, 100 Fragen und kurzen Erklärungen zu Komponisten, Werken, Gattungen, Musiktheorie-Grundlagen und Werkkunde.">
+  <title>Maestro Quiz – Allgemeines Musikwissen als Freemium-Lernapp</title>
+  <meta name="description" content="Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen: 30 Fragen gratis, 300 Fragen in der Lernversion und 500+ Fragen als Premium-Ausbau geplant.">
   <meta name="theme-color" content="#102a5c">
   <meta property="og:title" content="Maestro Quiz – Allgemeines Musikwissen spielerisch lernen">
-  <meta property="og:description" content="10 Level · 100 Fragen · kurze Erklärungen nach jeder Antwort. Ein spielerischer Lerntrainer für allgemeines Musikwissen, Klassik, Chor, Werkkunde und Musiktheorie-Grundlagen.">
+  <meta property="og:description" content="30 Fragen gratis · 300 Fragen Lernversion · 500+ Premium-Ausbau geplant. Ein spielerischer Lerntrainer für allgemeines Musikwissen.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Maestro Quiz – Allgemeines Musikwissen spielerisch lernen">
-  <meta name="twitter:description" content="10 Level · 100 Fragen · Komponisten, Werke, Gattungen und Musiktheorie-Grundlagen spielerisch trainieren.">
+  <meta name="twitter:title" content="Maestro Quiz – Allgemeines Musikwissen als Freemium-Lernapp">
+  <meta name="twitter:description" content="30 Fragen gratis, 300 Fragen Lernversion und 500+ Premium-Ausbau geplant.">
 
   <style>
     :root {
@@ -127,6 +127,27 @@
       font-size: 0.85rem;
       font-weight: 500;
       margin-top: 3px;
+    }
+
+
+    .offer-button {
+      width: 100%;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      cursor: pointer;
+    }
+
+    .offer-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+      border-color: rgba(255, 215, 0, 0.55);
+    }
+
+    .offer-button:focus-visible {
+      outline: 3px solid rgba(255, 215, 0, 0.8);
+      outline-offset: 4px;
     }
 
     .support-note {
@@ -601,6 +622,385 @@
       margin-top: 24px;
     }
 
+
+
+
+    .learning-overview {
+      background: rgba(0,0,0,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 22px;
+      padding: 18px;
+      margin: 20px 0 16px;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .learning-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      padding: 14px;
+      line-height: 1.4;
+      min-width: 0;
+    }
+
+    .learning-card.emphasized {
+      border-color: rgba(250,204,21,0.34);
+      background: rgba(250,204,21,0.11);
+    }
+
+    .learning-card strong {
+      display: block;
+      color: var(--gold);
+      margin-bottom: 6px;
+      font-size: 1.02rem;
+    }
+
+    .learning-card span {
+      display: block;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.92rem;
+    }
+
+    .freemium-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 18px 0 12px;
+    }
+
+    .offer-card {
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      padding: 16px;
+      line-height: 1.45;
+      min-height: 170px;
+    }
+
+    .offer-card.highlight {
+      border-color: rgba(74,222,128,0.35);
+      background: rgba(74,222,128,0.10);
+    }
+
+    .offer-card.locked-offer {
+      border-color: rgba(250,204,21,0.30);
+      background: rgba(250,204,21,0.10);
+    }
+
+    .offer-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+    }
+
+    .offer-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.95rem;
+    }
+
+    .price-tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.18);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    .category-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      margin: 16px 0 8px;
+    }
+
+    .category-chip {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 14px;
+      padding: 11px 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .category-chip:hover,
+    .category-chip:focus-visible {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+      outline: none;
+    }
+
+    .locked-hint {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(250,204,21,0.12);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .level-card.locked {
+      opacity: 0.72;
+      cursor: pointer;
+      border-color: rgba(250,204,21,0.22);
+    }
+
+    .level-card.locked:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+      background: rgba(250,204,21,0.10);
+    }
+
+    .freemium-note {
+      background: rgba(96,165,250,0.12);
+      border: 1px solid rgba(96,165,250,0.22);
+      color: rgba(255,255,255,0.88);
+      border-radius: 16px;
+      padding: 13px 15px;
+      margin: 14px 0 10px;
+      font-size: 0.94rem;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .freemium-note strong {
+      color: var(--gold);
+    }
+
+
+    .start-hero {
+      margin: 18px 0 16px;
+      padding: 18px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #06121f;
+      font-weight: 900;
+      font-size: 1.18rem;
+      width: 100%;
+      box-shadow: 0 16px 34px rgba(34,197,94,0.30);
+      border: 1px solid rgba(255,255,255,0.22);
+      text-align: center;
+    }
+
+    .start-hero span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(6,18,31,0.78);
+    }
+
+    .start-hero:hover:not(:disabled) {
+      background: linear-gradient(135deg, #4ade80, #16a34a);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 20px 42px rgba(34,197,94,0.38);
+    }
+
+    .start-helper {
+      margin: -2px 0 14px;
+      text-align: center;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.93rem;
+      line-height: 1.4;
+    }
+
+    .start-helper strong {
+      color: var(--gold);
+    }
+
+    .level-card.start-level {
+      border-color: rgba(74,222,128,0.42);
+      background: rgba(74,222,128,0.09);
+      box-shadow: 0 12px 26px rgba(34,197,94,0.10);
+    }
+
+    .start-ribbon {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(74,222,128,0.18);
+      color: #86efac;
+      font-size: 0.78rem;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .start-callout {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(74,222,128,0.14);
+      color: #86efac;
+      font-weight: 900;
+      font-size: 0.92rem;
+    }
+
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      margin: 0 auto 14px;
+      max-width: 680px;
+    }
+
+    .category-hub {
+      background: rgba(0,0,0,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 18px;
+      margin: 22px 0 18px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .category-card {
+      text-align: left;
+      width: 100%;
+      min-height: 138px;
+      padding: 15px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.10);
+      color: white;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    }
+
+    .category-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.35;
+      font-size: 0.9rem;
+    }
+
+    .category-card .category-status {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(250,204,21,0.16);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .category-card.free-category {
+      border-color: rgba(74,222,128,0.28);
+      background: rgba(74,222,128,0.08);
+    }
+
+    .category-card.free-category .category-status {
+      background: rgba(74,222,128,0.18);
+      color: #86efac;
+    }
+
+    .mode-note {
+      background: rgba(96,165,250,0.12);
+      border: 1px solid rgba(96,165,250,0.22);
+      border-radius: 16px;
+      padding: 13px 15px;
+      margin-top: 14px;
+      text-align: center;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.45;
+      font-size: 0.93rem;
+    }
+
+    .mode-note strong {
+      color: var(--gold);
+    }
+
+    .exam-preview {
+      background: linear-gradient(145deg, rgba(15,23,42,0.20), rgba(37,99,235,0.16));
+      border: 1px solid rgba(250,204,21,0.26);
+      border-radius: 22px;
+      padding: 18px;
+      margin: 22px 0 18px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .exam-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0 14px;
+    }
+
+    .exam-step {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .exam-step span {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255,255,255,0.76);
+      font-size: 0.82rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .exam-preview-button {
+      width: 100%;
+      border: 1px solid rgba(250,204,21,0.34);
+      background: rgba(250,204,21,0.16);
+      color: var(--gold);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+    }
+
+    .exam-preview-button:hover {
+      background: rgba(250,204,21,0.24);
+      transform: translateY(-2px);
+    }
+
+
     .hidden {
       display: none;
     }
@@ -848,6 +1248,27 @@
       margin-top: 3px;
     }
 
+
+    .offer-button {
+      width: 100%;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      cursor: pointer;
+    }
+
+    .offer-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+      border-color: rgba(255, 215, 0, 0.55);
+    }
+
+    .offer-button:focus-visible {
+      outline: 3px solid rgba(255, 215, 0, 0.8);
+      outline-offset: 4px;
+    }
+
     .support-note {
       background: rgba(250,204,21,0.12);
       border: 1px solid rgba(250,204,21,0.22);
@@ -1001,6 +1422,16 @@
         padding: 13px 12px;
       }
 
+
+
+      .exam-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .exam-step {
+        font-size: 0.9rem;
+      }
+
       .version {
         font-size: 0.68rem;
       }
@@ -1029,6 +1460,222 @@
       }
     }
 
+
+
+    /* v2.2.3 responsive card polish: prevents category overflow and fixes mobile grids */
+    .category-grid,
+    .exam-steps,
+    .category-preview {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .category-grid {
+      grid-template-columns: repeat(4, minmax(145px, 1fr));
+      align-items: stretch;
+    }
+
+    .category-card,
+    .category-chip,
+    .exam-step {
+      box-sizing: border-box;
+      min-width: 0;
+      overflow-wrap: break-word;
+      word-break: normal;
+      hyphens: auto;
+    }
+
+    .category-card {
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .category-card h3 {
+      line-height: 1.18;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .category-card p {
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .category-card .category-status {
+      max-width: 100%;
+      white-space: normal;
+      line-height: 1.15;
+      align-self: flex-start;
+    }
+
+    .exam-steps {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 900px) {
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .category-grid,
+      .exam-steps,
+      .category-preview {
+        grid-template-columns: 1fr !important;
+      }
+
+      .category-hub,
+      .exam-preview {
+        padding: 14px;
+        border-radius: 18px;
+      }
+
+      .category-card {
+        min-height: auto;
+        padding: 14px;
+      }
+
+      .category-card h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 7px;
+      }
+
+      .category-card p {
+        font-size: 0.86rem;
+        line-height: 1.35;
+      }
+
+      .category-card .category-status {
+        margin-top: 10px;
+        font-size: 0.75rem;
+        padding: 5px 8px;
+      }
+
+      .exam-step {
+        width: 100%;
+        padding: 13px;
+      }
+
+      .exam-preview-button {
+        width: 100%;
+      }
+    }
+
+
+    /* v2.2.4 layout cleanup: readable category cards, no internal footer notes */
+    .category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .category-card {
+      min-height: 132px;
+      padding: 16px;
+    }
+
+    .category-card h3 {
+      font-size: 1.03rem;
+      line-height: 1.22;
+      margin-bottom: 8px;
+      hyphens: none;
+    }
+
+    .category-card p {
+      font-size: 0.92rem;
+      line-height: 1.38;
+      hyphens: none;
+    }
+
+    .category-card .category-status {
+      white-space: nowrap;
+      line-height: 1.1;
+      font-size: 0.76rem;
+    }
+
+    .category-preview {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .category-chip {
+      hyphens: none;
+      word-break: normal;
+      overflow-wrap: normal;
+      min-height: 58px;
+    }
+
+    @media (max-width: 760px) {
+      .category-grid,
+      .category-preview,
+      .exam-steps {
+        grid-template-columns: 1fr !important;
+      }
+
+      .category-card {
+        min-height: auto;
+      }
+
+      .category-card .category-status {
+        white-space: normal;
+      }
+    }
+
+
+    .access-test-banner {
+      margin: 0.95rem 0 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 215, 0, 0.55);
+      background: rgba(255, 215, 0, 0.12);
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .access-test-banner strong {
+      color: #ffd700;
+    }
+
+    .category-card .category-action {
+      display: block;
+      margin-top: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    .category-card.free-category {
+      border-color: rgba(80, 230, 140, 0.65);
+      background: rgba(45, 132, 128, 0.34);
+    }
+
+    .category-card.free-category .category-status {
+      background: rgba(70, 220, 120, 0.28);
+      color: #7dffb0;
+    }
+
+  
+    .offer-card.active-tier-card {
+      border-color: rgba(74,222,128,0.85);
+      box-shadow: 0 0 0 3px rgba(74,222,128,0.16), 0 14px 28px rgba(0,0,0,0.18);
+      background: rgba(34,197,94,0.16);
+    }
+
+    .offer-card.preview-tier-card {
+      opacity: 0.94;
+    }
+
+    .price-tag.active-tier-tag {
+      background: rgba(34,197,94,0.28);
+      color: #bbf7d0;
+      border: 1px solid rgba(74,222,128,0.35);
+    }
+
   </style>
 </head>
 
@@ -1039,58 +1686,149 @@
 
     <section id="levelScreen">
       <div class="center">
-        <span class="badge">Basisversion · 100 Fragen</span>
-        <h2>Wähle dein Level</h2>
+        <span class="badge" id="accessBadge">30 Fragen gratis · 300 Fragen Lernversion</span>
+        <h2>Wähle deinen Einstieg</h2>
       </div>
 
       <div class="intro-card">
-        Willkommen bei <strong>Maestro Quiz</strong>: Trainiere dein Wissen über <strong>Komponisten, Werke,
-        Gattungen, Formenlehre und Musiktheorie-Grundlagen</strong>. Nach jeder Antwort bekommst du eine kurze Erklärung —
-        ideal zum Wiederholen und Lernen.
+        Willkommen bei <strong>Maestro Quiz</strong>: Trainiere dein <strong>allgemeines Musikwissen</strong> über
+        <strong>Komponisten, Werke, Gattungen, Formenlehre, Instrumente und Musiktheorie-Grundlagen</strong>. 
+        Die ersten 30 Fragen sind frei spielbar; die Lernversion ist als 200-Fragen-Ausbau vorbereitet.
         <div class="pill-row">
-          <div class="pill">10 Level<span>vom Einstieg bis zur Abschluss-Challenge</span></div>
-          <div class="pill">100 Fragen<span>mit Mini-Erklärungen</span></div>
-          <div class="pill">Shuffle-Modus<span>Fragen & Antworten jedes Mal neu</span></div>
+          <div class="pill">30 Fragen gratis<span>3 Level zum Ausprobieren</span></div>
+          <div class="pill">300 Fragen<span>Lernversion · CHF 5 geplant</span></div>
+          <div class="pill">500+ Fragen<span>Premium-Ausbau · CHF 20 geplant</span></div>
         </div>
       </div>
 
-      <div class="support-note">
-        Kostenlose Basisversion mit 100 Fragen. Eine erweiterte Lernversion mit 500+ Fragen, Prüfungsmodus und Lernstatistik ist geplant.
+      <button type="button" class="start-hero" onclick="startFreeMode()" aria-label="Gratis spielen starten">
+        ▶ Hier starten: Gratis spielen
+        <span>Level 1 öffnen · 30 Fragen gratis · keine Anmeldung</span>
+      </button>
+      <div class="start-helper">
+        Du willst direkt loslegen? <strong>Der grüne Startbutton</strong> führt dich sofort ins erste freie Level.
       </div>
 
-      <div class="beta-note">
-        <strong>Public Beta:</strong> Diese Basisversion ist spielbar, mobil optimiert und als Web-App installierbar. Feedback zu Fragen, Schwierigkeitsgrad, Darstellung und Lernwert ist willkommen.
+      <div id="accessTestBanner" class="access-test-banner hidden"></div>
+
+      <div class="freemium-grid">
+        <button type="button" class="offer-card highlight offer-button" onclick="startFreeMode()">
+          <h3>🎁 Gratis spielen</h3>
+          <p>Level 1–3 mit 30 Fragen, kurzen Erklärungen und Bestnoten. Ideal zum Kennenlernen.</p>
+          <span class="price-tag">▶ Jetzt gratis starten</span>
+        </button>
+        <button type="button" id="learningOfferCard" class="offer-card locked-offer offer-button" onclick="showLearningVersionInfo()">
+          <h3 id="learningOfferTitle">🔒 Lernversion</h3>
+          <p>300 Fragen in 10 Leveln: Allgemeines Musikwissen für Schule, Chor, Unterricht und Selbsttest.</p>
+          <span class="price-tag" id="learningOfferTag">CHF 5 einmalig · 300 Fragen geplant</span>
+        </button>
+        <button type="button" id="premiumOfferCard" class="offer-card locked-offer offer-button" onclick="showPremiumInfo()">
+          <h3 id="premiumOfferTitle">🚀 Premium</h3>
+          <p>500+ Fragen, vertiefte Kategorien, Prüfungsmodus, Lernstatistik und gezielte Wiederholung.</p>
+          <span class="price-tag" id="premiumOfferTag">CHF 20 einmalig · 500+ geplant</span>
+        </button>
+      </div>
+
+
+      <section class="learning-overview" aria-label="Lernversion und Premium-Ausbau">
+        <h2 class="section-title">Lernversion & Premium-Ausbau</h2>
+        <p class="section-subtitle">
+          Die App ist jetzt auf drei Stufen vorbereitet: gratis einsteigen, mit 300 Fragen lernen und später mit 500+ Fragen vertiefen.
+        </p>
+        <div class="learning-grid">
+          <div class="learning-card">
+            <strong>🎁 Gratis</strong>
+            <span>30 Fragen · 3 Level · Kategorien & Prüfungsmodus zum Kennenlernen</span>
+          </div>
+          <div class="learning-card emphasized">
+            <strong>🎓 Lernversion</strong>
+            <span>300 Fragen · 10 Level · erweiterte Kategorien · CHF 5 geplant</span>
+          </div>
+          <div class="learning-card">
+            <strong>🚀 Premium</strong>
+            <span>500+ Fragen · Lernstatistik · Wiederholen falscher Antworten · CHF 20 geplant</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="support-note">
+        Die ersten 30 Fragen sind frei spielbar. Die Lernversion ist als 200-Fragen-Ausbau vorbereitet; Premium ist als 500+-Fragen-Ausbau geplant.
+      </div>
+
+      <div class="freemium-note">
+        <strong>Lernversion & Premium:</strong> Gesperrte Bereiche zeigen bereits die geplante Struktur. Zahlung und Freischaltung sind noch nicht aktiv.
       </div>
 
       <div class="install-note">
-        <strong>Installierbar:</strong> Auf Android/Chrome über das Browser-Menü „Zum Startbildschirm hinzufügen“. So fühlt sich Maestro Quiz bereits wie eine kleine App an.
+        <strong>Installierbar:</strong> Auf Android/Chrome und Desktop-Chrome als Web-App nutzbar.
       </div>
 
-     <div class="level-grid" id="levelGrid"></div>
+      <section class="category-hub" aria-label="Kategorien-Vorschau">
+        <h2 class="section-title">Nach Kategorien üben</h2>
+        <p class="section-subtitle" id="categorySubtitle">
+          Wähle eine Kategorie und übe gezielt. In der Gratisversion erscheinen freie Fragen; im Lernversion-Test stehen die erweiterten 300 Fragen bereit.
+        </p>
+        <div class="category-grid" id="categoryGrid"></div>
+        <div class="mode-note">
+          <strong>Hinweis:</strong> Im normalen Modus nutzt du die 30 Gratisfragen. Über den internen Lernversion-Test kannst du die 200-Fragen-Struktur prüfen.
+        </div>
+      </section>
+
+
+
+      <section class="exam-preview" aria-label="Prüfungsmodus-Vorschau">
+        <h2 class="section-title">Prüfungsmodus-Vorschau</h2>
+        <p class="section-subtitle">
+          Der Prüfungsmodus ist in der Gratisversion spielbar und wächst im Lernversion-Test auf eine grössere Zufallsauswahl aus der 200-Fragen-Struktur.
+        </p>
+        <div class="exam-steps">
+          <div class="exam-step">10–20 Zufallsfragen<span>je nach Modus</span></div>
+          <div class="exam-step">Ohne Soforthilfe<span>erst lösen, dann auswerten</span></div>
+          <div class="exam-step">Auswertung<span>Punkte, Prozent und Themenhinweis</span></div>
+        </div>
+        <button type="button" class="exam-preview-button" onclick="startFreeExamMode()">
+          🏆 Gratis-Prüfungsmodus starten
+        </button>
+      </section>
+
+      <h2 class="section-title">Level-Auswahl</h2>
+      <p class="section-subtitle" id="levelSubtitle">Gratis spielbar sind Level 1–3. Im Lernversion-Test sind alle 10 Level und 300 Fragen verfügbar.</p>
+      <div class="level-grid" id="levelGrid"></div>
 
       <div class="about-card">
         <h3>Über Maestro Quiz</h3>
         <p>
           Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen – für Klassikfans, Chorsänger:innen,
-          Schüler:innen, Musikinteressierte und angehende Musikstudierende. Die Basisversion verbindet Quizfragen, Lernziele
-          und kurze Erklärungen nach jeder Antwort.
+          Schüler:innen, Musikinteressierte und angehende Musikstudierende. Die App verbindet Quizfragen, Lernziele,
+          Kategorienmodus und Prüfungsmodus zu einem kompakten Lernwerkzeug.
         </p>
+
+        <div class="category-preview" aria-label="Kategorien-Vorschau im Überblick">
+          <button type="button" class="category-chip" data-category-index="0">🎼 Komponisten</button>
+          <button type="button" class="category-chip" data-category-index="1">📚 Werkkunde</button>
+          <button type="button" class="category-chip" data-category-index="2">🕰️ Epochen & Stil</button>
+          <button type="button" class="category-chip" data-category-index="3">🧠 Formen & Gattungen</button>
+          <button type="button" class="category-chip" data-category-index="4">🎭 Oper & Musiktheater</button>
+          <button type="button" class="category-chip" data-category-index="5">🎶 Chor & Kirche</button>
+          <button type="button" class="category-chip" data-category-index="6">🎹 Musiktheorie-Basics</button>
+          <button type="button" class="category-chip" data-category-index="7">🎻 Instrumente</button>
+          <button type="button" class="category-chip" data-category-index="8">🎟️ Musikleben</button>
+          <button type="button" class="category-chip" data-category-index="9">👂 Hören & Begriffe</button>
+        </div>
+
         <div class="about-grid">
           <div class="about-item">
             <strong>🎓 Lernziel</strong>
-            Grundwissen zu Komponisten, Werken, Gattungen, Formenlehre und Musiktheorie-Grundlagen festigen.
+            Grundwissen zu Komponisten, Werken, Epochen, Formen, Chor, Oper und Musiktheorie-Grundlagen festigen.
           </div>
           <div class="about-item">
             <strong>🎮 Spielprinzip</strong>
-            10 Level mit zufälligen Fragen und Antworten, Bestnoten und direktem Feedback.
+            Zufällige Fragen und Antworten, direkte Rückmeldung, kurze Erklärungen und Bestnoten.
           </div>
           <div class="about-item">
             <strong>🚀 Ausblick</strong>
-            Geplant ist eine erweiterte Lernversion mit 500+ Fragen, Prüfungsmodus, Kategorien und Lernstatistik.
+            Geplant sind Lernversion, Premium-Fragebank, Kategorienmodus, Prüfungsmodus und Lernstatistik.
           </div>
-        </div>
-        <div class="about-small">
-          Kostenlose Basisversion · 100 Fragen · ideal zum Wiederholen, Ausprobieren und als Grundlage für eine erweiterte Lernversion.
         </div>
       </div>
 
@@ -1098,11 +1836,8 @@
   Bestnoten zurücksetzen
 </button>
 
-<div class="project-footer">
-  Maestro Quiz · Public Beta · installierbare Web-App · kostenlose Basisversion mit 100 Fragen. Erweiterungen mit 200 und 500+ Fragen sind in Planung.
-</div>
 
-<p class="version">Version 1.8 – PWA/App-Vorbereitung</p>
+<p class="version">Version 3.3.5 – Bildpfade robust repariert</p>
 </section>
 
 
@@ -1178,794 +1913,306 @@
       </div>
 
       <button onclick="startNextActiveLevel()" id="nextLevelBtn" class="primary-btn hidden">Nächstes Level starten →</button>
-      <button onclick="restartCurrentLevel()" class="secondary-btn">Dieses Level nochmals spielen</button>
+      <button onclick="restartCurrentLevel()" id="restartBtn" class="secondary-btn">Dieses Level nochmals spielen</button>
       <button onclick="backToLevels()" class="secondary-btn">Zurück zur Level-Auswahl</button>
     </section>
   </main>
 
+  <script src="questions.js?v=335"></script>
+
   <script>
-    const levels = [
-      {
-        id: 1,
-        title: "Die grossen Klassiker",
-        description: "Ein Einstieg mit den bekanntesten Namen, Werken und Bildern.",
-        active: true,
-        questions: [
-          {
-            question: "Wer komponierte die 'Mondscheinsonate'?",
-            image: "beethoven.jpg",
-            options: ["Mozart", "Beethoven", "Bach", "Chopin"],
-            correct: 1,
-            explanation: "Die sogenannte Mondscheinsonate ist Beethovens Klaviersonate Nr. 14 cis-Moll op. 27 Nr. 2. Der berühmte Beiname stammt nicht von Beethoven selbst."
-          },
-          {
-            question: "Welcher Komponist wurde im Laufe seines Lebens zunehmend taub?",
-            image: "beethoven.jpg",
-            options: ["Beethoven", "Brahms", "Schubert", "Vivaldi"],
-            correct: 0,
-            explanation: "Beethoven verlor ab etwa seinem späten 20er-Lebensalter zunehmend sein Gehör. Trotzdem komponierte er später einige seiner bedeutendsten Werke."
-          },
-          {
-            question: "Welches Werk stammt von Antonio Vivaldi?",
-            image: "vivaldi.jpg",
-            options: ["Die Zauberflöte", "Die vier Jahreszeiten", "Eine kleine Nachtmusik", "Die Unvollendete"],
-            correct: 1,
-            explanation: "Die vier Jahreszeiten sind vier Violinkonzerte von Vivaldi. Sie gehören zu den bekanntesten Programmmusik-Werken des Barock."
-          },
-          {
-            question: "In welcher Stadt wurde Mozart geboren?",
-            image: "mozart.jpg",
-            options: ["Wien", "Berlin", "Salzburg", "Paris"],
-            correct: 2,
-            explanation: "Mozart wurde 1756 in Salzburg geboren. Wien wurde später einer seiner wichtigsten Wirkungsorte."
-          },
-          {
-            question: "Welcher Komponist ist besonders bekannt für Nocturnes, Mazurken und Polonaisen?",
-            image: "chopin.jpg",
-            options: ["Debussy", "Chopin", "Tschaikowsky", "Gershwin"],
-            correct: 1,
-            explanation: "Chopin schrieb fast ausschliesslich für Klavier. Nocturnes, Mazurken, Polonaisen und Etüden gehören zu seinen zentralen Gattungen."
-          },
-          {
-            question: "Wer komponierte 'Also sprach Zarathustra'?",
-            image: "rstrauss.jpg",
-            options: ["Richard Strauss", "Wagner", "Mahler", "Berlioz"],
-            correct: 0,
-            explanation: "Also sprach Zarathustra ist eine sinfonische Dichtung von Richard Strauss. Der Anfang ist besonders durch den Film 2001: A Space Odyssey berühmt geworden."
-          },
-          {
-            question: "Wie viele Sinfonien schrieb Beethoven?",
-            image: "beethoven.jpg",
-            options: ["5", "7", "9", "11"],
-            correct: 2,
-            explanation: "Beethoven schrieb neun Sinfonien. Die Neunte mit Chorfinale wurde zu einem Schlüsselwerk der Musikgeschichte."
-          },
-          {
-            question: "Wer gilt oft als 'Vater der Sinfonie'?",
-            image: "jhaydn.jpg",
-            options: ["Joseph Haydn", "Bach", "Händel", "Mendelssohn"],
-            correct: 0,
-            explanation: "Joseph Haydn prägte die klassische Sinfonie entscheidend. Er schrieb über hundert Sinfonien und entwickelte die Gattung enorm weiter."
-          },
-          {
-            question: "Welches Instrument spielte Franz Liszt virtuos?",
-            image: "liszt.jpg?v=3",
-            options: ["Geige", "Klavier", "Cello", "Flöte"],
-            correct: 1,
-            explanation: "Liszt war einer der berühmtesten Klaviervirtuosen des 19. Jahrhunderts. Seine Werke erweiterten die technischen Möglichkeiten des Klaviers enorm."
-          },
-          {
-            question: "Wer komponierte den berühmten Hochzeitsmarsch aus 'Ein Sommernachtstraum'?",
-            image: "mendelssohn.jpg",
-            options: ["Schumann", "Mendelssohn", "Berlioz", "Saint-Saëns"],
-            correct: 1,
-            explanation: "Der bekannte Hochzeitsmarsch stammt von Felix Mendelssohn Bartholdy aus seiner Musik zu Shakespeares Ein Sommernachtstraum."
-          }
-        ]
+    // Zentrale Freischaltungslogik ab Version 2.7
+    // -------------------------------------------------------
+    // Aktuell bleibt Maestro Quiz bewusst in der Gratis-Beta.
+    // Für spätere Tests kann currentTier intern auf "learning" oder "premium" gesetzt werden,
+    // ohne die ganze App-Logik umzubauen.
+    const ACCESS_TIERS = {
+      free: {
+        label: "Gratis",
+        price: "gratis",
+        maxLevel: 3,
+        questionTiers: ["free"],
+        categoryMode: true,
+        examMode: true,
+        examQuestionCount: 10
       },
-      {
-        id: 2,
-        title: "Werke & Komponisten",
-        description: "Jetzt wird es etwas mehr Werkkunde: Wer schrieb welches berühmte Werk?",
-        active: true,
-        questions: [
-          {
-            question: "Wer komponierte die 'Matthäus-Passion'?",
-            image: "bach.jpg",
-            options: ["Johann Sebastian Bach", "Georg Friedrich Händel", "Heinrich Schütz", "Antonio Vivaldi"],
-            correct: 0,
-            explanation: "Die Matthäus-Passion ist eines der grössten geistlichen Werke Johann Sebastian Bachs und ein Höhepunkt protestantischer Passionsmusik."
-          },
-          {
-            question: "Wer komponierte die Oper 'La Traviata'?",
-            image: "verdi.jpg",
-            options: ["Puccini", "Rossini", "Verdi", "Bizet"],
-            correct: 2,
-            explanation: "La Traviata ist eine Oper von Giuseppe Verdi. Sie gehört zusammen mit Rigoletto und Il trovatore zu seinen populärsten Opern."
-          },
-          {
-            question: "Welcher Komponist schrieb 'Die Moldau'?",
-            image: "smetana.jpg",
-            options: ["Dvořák", "Smetana", "Grieg", "Sibelius"],
-            correct: 1,
-            explanation: "Die Moldau stammt von Bedřich Smetana und ist Teil des Zyklus Mein Vaterland. Das Werk beschreibt musikalisch den Lauf des Flusses Moldau."
-          },
-          {
-            question: "Von wem stammt der berühmte 'Boléro'?",
-            image: "ravel.jpg",
-            options: ["Debussy", "Ravel", "Fauré", "Bizet"],
-            correct: 1,
-            explanation: "Der Boléro von Maurice Ravel basiert auf einer fast hypnotischen Wiederholung eines rhythmischen und melodischen Modells mit wachsender Orchestrierung."
-          },
-          {
-            question: "Wer komponierte 'Carmina Burana'?",
-            image: "orff.jpg",
-            options: ["Carl Orff", "Benjamin Britten", "Igor Strawinsky", "Paul Hindemith"],
-            correct: 0,
-            explanation: "Carmina Burana ist ein szenisches Chorwerk von Carl Orff. Besonders der Satz O Fortuna wurde weltberühmt."
-          },
-          {
-            question: "Wer komponierte das Musical 'West Side Story'?",
-            image: "bernstein.jpg",
-            options: ["Leonard Bernstein", "George Gershwin", "Aaron Copland", "Kurt Weill"],
-            correct: 0,
-            explanation: "West Side Story stammt von Leonard Bernstein. Das Werk verbindet Musical, Opernähe, Jazz, lateinamerikanische Rhythmen und sinfonische Klangsprache."
-          },
-          {
-            question: "Wer schrieb 'Ein deutsches Requiem'?",
-            image: "brahms.jpg",
-            options: ["Brahms", "Bruckner", "Mahler", "Schumann"],
-            correct: 0,
-            explanation: "Ein deutsches Requiem ist ein grosses Chor- und Orchesterwerk von Johannes Brahms. Der Text basiert auf deutschsprachigen Bibelstellen."
-          },
-          {
-            question: "Wer komponierte 'Le Sacre du printemps'?",
-            image: "stravinsky.jpg",
-            options: ["Ravel", "Strawinsky", "Prokofjew", "Schostakowitsch"],
-            correct: 1,
-            explanation: "Le Sacre du printemps von Igor Strawinsky löste 1913 in Paris einen legendären Skandal aus und wurde zu einem Schlüsselwerk der musikalischen Moderne."
-          },
-          {
-            question: "Wer komponierte den Opernzyklus 'Der Ring des Nibelungen'?",
-            image: "wagner.jpg",
-            options: ["Richard Wagner", "Richard Strauss", "Giuseppe Verdi", "Giacomo Puccini"],
-            correct: 0,
-            explanation: "Der Ring des Nibelungen ist ein vierteiliger Opernzyklus von Richard Wagner. Er besteht aus Rheingold, Walküre, Siegfried und Götterdämmerung."
-          },
-          {
-            question: "Zu welchem Komponisten gehört die Schauspielmusik 'Peer Gynt'?",
-            image: "grieg.jpg",
-            options: ["Sibelius", "Grieg", "Dvořák", "Elgar"],
-            correct: 1,
-            explanation: "Peer Gynt ist Schauspielmusik von Edvard Grieg zu einem Drama von Henrik Ibsen. Morgenstimmung und In der Halle des Bergkönigs sind besonders bekannt."
-          }
-        ]
+      learning: {
+        label: "Lernversion",
+        price: "CHF 5",
+        maxLevel: 10,
+        questionTiers: ["free", "learning"],
+        categoryMode: true,
+        examMode: true,
+        examQuestionCount: 20
       },
-      {
-        id: 3,
-        title: "Epochen & Stil",
-        description: "Barock, Klassik, Romantik, Moderne: erkennst du die Zusammenhänge?",
-        active: true,
-        questions: [
-          {
-            question: "Johann Sebastian Bach gehört hauptsächlich zu welcher Epoche?",
-            image: "bach.jpg",
-            options: ["Renaissance", "Barock", "Klassik", "Romantik"],
-            correct: 1,
-            explanation: "Bach ist einer der zentralen Komponisten des Barock. Seine Musik verbindet kontrapunktische Kunst, Generalbassdenken und starke geistliche Tradition."
-          },
-          {
-            question: "Wolfgang Amadeus Mozart ist ein zentraler Komponist welcher Epoche?",
-            image: "mozart.jpg",
-            options: ["Barock", "Wiener Klassik", "Impressionismus", "Moderne"],
-            correct: 1,
-            explanation: "Mozart gehört zusammen mit Haydn und Beethoven zur Wiener Klassik. Klarheit, Balance und formale Eleganz sind wichtige Merkmale."
-          },
-          {
-            question: "Frédéric Chopin wird vor allem welcher Epoche zugeordnet?",
-            image: "chopin.jpg",
-            options: ["Renaissance", "Barock", "Romantik", "Avantgarde"],
-            correct: 2,
-            explanation: "Chopin ist ein zentraler Komponist der Romantik. Seine Musik verbindet Virtuosität, poetischen Ausdruck und eine stark persönliche Klangsprache."
-          },
-          {
-            question: "Claude Debussy wird besonders mit welcher Stilrichtung verbunden?",
-            image: "debussy.jpg",
-            options: ["Impressionismus", "Wiener Klassik", "Renaissance", "Minimal Music"],
-            correct: 0,
-            explanation: "Debussy wird oft mit dem musikalischen Impressionismus verbunden. Charakteristisch sind schwebende Harmonien, Klangfarben und freiere Formverläufe."
-          },
-          {
-            question: "Arnold Schönberg ist eng verbunden mit welcher musikalischen Entwicklung?",
-            image: "schoenberg.jpg",
-            options: ["Generalbass", "Sonatenhauptsatzform", "Zwölftontechnik", "Gregorianik"],
-            correct: 2,
-            explanation: "Schönberg entwickelte die Zwölftontechnik. Sie wurde zu einer zentralen Kompositionstechnik der musikalischen Moderne."
-          },
-          {
-            question: "Giovanni Pierluigi da Palestrina steht besonders für welche Epoche?",
-            image: "palestrina.jpg",
-            options: ["Renaissance", "Romantik", "Expressionismus", "Klassik"],
-            correct: 0,
-            explanation: "Palestrina gilt als einer der wichtigsten Vertreter der Vokalpolyphonie der Renaissance. Sein Name steht oft für klare, ausgewogene Kirchenmusik."
-          },
-          {
-            question: "Claudio Monteverdi steht musikgeschichtlich besonders an der Schwelle zwischen ...",
-            image: "monteverdi.jpg",
-            options: ["Mittelalter und Renaissance", "Renaissance und Barock", "Klassik und Romantik", "Romantik und Moderne"],
-            correct: 1,
-            explanation: "Monteverdi steht am Übergang von Renaissance zu Barock. Er ist besonders wichtig für die frühe Oper und den neuen expressiven Stil um 1600."
-          },
-          {
-            question: "Igor Strawinsky gehört vor allem zur Musik welcher Zeit?",
-            image: "stravinsky.jpg",
-            options: ["Barock", "Wiener Klassik", "20. Jahrhundert / Moderne", "Renaissance"],
-            correct: 2,
-            explanation: "Strawinsky ist eine Schlüsselfigur der Musik des 20. Jahrhunderts. Seine Werke reichen vom russischen Ballettstil über Neoklassizismus bis zur seriellen Phase."
-          },
-          {
-            question: "Joseph Haydn gilt als wichtiger Vertreter welcher Epoche?",
-            image: "jhaydn.jpg",
-            options: ["Wiener Klassik", "Impressionismus", "Spätromantik", "Renaissance"],
-            correct: 0,
-            explanation: "Haydn ist einer der Hauptvertreter der Wiener Klassik. Er prägte Sinfonie, Streichquartett und Sonatenform entscheidend."
-          },
-          {
-            question: "John Cage wird besonders mit welcher Richtung verbunden?",
-            image: "cage.jpg",
-            options: ["Kirchenmusik der Renaissance", "Experimentelle Musik / Avantgarde", "Frühbarocke Oper", "Wiener Klassik"],
-            correct: 1,
-            explanation: "John Cage steht für experimentelle Musik und Avantgarde. Er arbeitete mit Zufall, Stille, Geräuschen und erweiterten Vorstellungen von Musik."
-          }
-        ]
-      },
-      {
-  id: 4,
-  title: "Oper & Musiktheater",
-  description: "Von Mozart bis Puccini: Bühne frei.",
-  active: true,
-  questions: [
-    {
-      question: "Wer komponierte die Oper 'Don Giovanni'?",
-      image: "mozart.jpg",
-      options: ["Mozart", "Rossini", "Verdi", "Puccini"],
-      correct: 0,
-      explanation: "Don Giovanni ist eine Oper von Wolfgang Amadeus Mozart auf ein Libretto von Lorenzo Da Ponte. Sie verbindet Komödie, Tragik und psychologische Tiefe."
-    },
-    {
-      question: "Wer komponierte die Oper 'Carmen'?",
-      image: "bizet.jpg",
-      options: ["Bizet", "Verdi", "Puccini", "Gounod"],
-      correct: 0,
-      explanation: "Carmen stammt von Georges Bizet. Die Oper wurde nach ihrer Uraufführung 1875 zunächst umstritten aufgenommen, gehört heute aber zu den meistgespielten Opern überhaupt."
-    },
-    {
-      question: "Wer komponierte 'La Bohème'?",
-      image: "puccini.jpg",
-      options: ["Rossini", "Puccini", "Verdi", "Bellini"],
-      correct: 1,
-      explanation: "La Bohème ist eine Oper von Giacomo Puccini. Sie erzählt vom Leben junger Künstler in Paris und gehört zu den zentralen Werken des Verismo-nahen Opernrepertoires."
-    },
-    {
-      question: "Wer komponierte 'Il barbiere di Siviglia'?",
-      image: "rossini.jpg",
-      options: ["Rossini", "Mozart", "Donizetti", "Bellini"],
-      correct: 0,
-      explanation: "Der Barbier von Sevilla ist eine Opera buffa von Gioachino Rossini. Besonders bekannt ist Figaros Auftrittsarie 'Largo al factotum'."
-    },
-    {
-      question: "Wer komponierte 'Der Ring des Nibelungen'?",
-      image: "wagner.jpg",
-      options: ["Richard Strauss", "Richard Wagner", "Verdi", "Bruckner"],
-      correct: 1,
-      explanation: "Der Ring des Nibelungen ist Richard Wagners monumentaler vierteiliger Opernzyklus. Er besteht aus Rheingold, Walküre, Siegfried und Götterdämmerung."
-    },
-    {
-      question: "Wer komponierte 'Der Rosenkavalier'?",
-      image: "rstrauss.jpg",
-      options: ["Richard Wagner", "Richard Strauss", "Gustav Mahler", "Arnold Schönberg"],
-      correct: 1,
-      explanation: "Der Rosenkavalier ist eine Oper von Richard Strauss auf ein Libretto von Hugo von Hofmannsthal. Sie verbindet spätromantischen Klang mit nostalgischem Walzerzauber."
-    },
-    {
-      question: "Wer komponierte die Oper 'Wozzeck'?",
-      image: "albanberg.jpg",
-      options: ["Alban Berg", "Anton Webern", "Arnold Schönberg", "Paul Hindemith"],
-      correct: 0,
-      explanation: "Wozzeck ist eine Oper von Alban Berg und ein Schlüsselwerk des musikalischen Expressionismus. Sie basiert auf Georg Büchners Dramenfragment Woyzeck."
-    },
-    {
-      question: "Wer komponierte 'Dido and Aeneas'?",
-      image: "purcell.jpg",
-      options: ["Henry Purcell", "Georg Friedrich Händel", "Claudio Monteverdi", "Jean-Baptiste Lully"],
-      correct: 0,
-      explanation: "Dido and Aeneas ist eine englische Barockoper von Henry Purcell. Besonders berühmt ist Didos Lamento 'When I am laid in earth'."
-    },
-    {
-      question: "Wer gilt als einer der wichtigsten frühen Opernkomponisten um 1600?",
-      image: "monteverdi.jpg",
-      options: ["Monteverdi", "Palestrina", "Bach", "Haydn"],
-      correct: 0,
-      explanation: "Claudio Monteverdi ist eine Schlüsselfigur der frühen Oper. Sein Orfeo von 1607 gehört zu den frühesten bis heute bedeutenden Opern der Musikgeschichte."
-    },
-    {
-      question: "Welche Oper stammt von Giuseppe Verdi?",
-      image: "verdi.jpg",
-      options: ["Aida", "La Bohème", "Carmen", "Der Rosenkavalier"],
-      correct: 0,
-      explanation: "Aida ist eine Oper von Giuseppe Verdi. Sie wurde 1871 in Kairo uraufgeführt und ist besonders für ihre grossen Chorszenen und die Triumphszene bekannt."
-    }
-  ]
-},
-     {
-  id: 5,
-  title: "Romantik & Nationalstile",
-  description: "Chopin, Dvořák, Grieg, Sibelius und mehr.",
-  active: true,
-  questions: [
-    {
-      question: "Welcher Komponist schrieb besonders viele Mazurken, Polonaisen und Nocturnes?",
-      image: "chopin.jpg",
-      options: ["Chopin", "Schumann", "Liszt", "Brahms"],
-      correct: 0,
-      explanation: "Frédéric Chopin ist eng mit dem Klavier und mit polnisch geprägten Gattungen wie Mazurka und Polonaise verbunden. Seine Musik ist ein Kernbestand der romantischen Klavierliteratur."
-    },
-    {
-      question: "Wer komponierte die 'Slawischen Tänze'?",
-      image: "dvorak.jpg",
-      options: ["Dvořák", "Smetana", "Grieg", "Sibelius"],
-      correct: 0,
-      explanation: "Antonín Dvořák schrieb die Slawischen Tänze zunächst für Klavier zu vier Händen und später in Orchesterfassung. Sie verbinden romantische Tonsprache mit slawisch inspirierten Tanzcharakteren."
-    },
-    {
-      question: "Welcher Komponist schrieb die sinfonische Dichtung 'Die Moldau'?",
-      image: "smetana.jpg",
-      options: ["Smetana", "Dvořák", "Janáček", "Grieg"],
-      correct: 0,
-      explanation: "Die Moldau stammt von Bedřich Smetana und ist Teil des Zyklus Mein Vaterland. Das Werk gilt als Symbol tschechischer Nationalmusik."
-    },
-    {
-      question: "Wer komponierte die Schauspielmusik 'Peer Gynt'?",
-      image: "grieg.jpg",
-      options: ["Grieg", "Sibelius", "Elgar", "Dvořák"],
-      correct: 0,
-      explanation: "Edvard Grieg schrieb die Musik zu Henrik Ibsens Schauspiel Peer Gynt. Stücke wie Morgenstimmung und In der Halle des Bergkönigs wurden weltberühmt."
-    },
-    {
-      question: "Welcher Komponist schrieb 'Finlandia'?",
-      image: "sibelius.jpg",
-      options: ["Sibelius", "Grieg", "Nielsen", "Elgar"],
-      correct: 0,
-      explanation: "Finlandia ist eine sinfonische Dichtung von Jean Sibelius und wurde zu einem musikalischen Symbol finnischer Identität."
-    },
-    {
-      question: "Wer komponierte die 'Bilder einer Ausstellung'?",
-      image: "mussorgsky.jpg",
-      options: ["Mussorgsky", "Rimsky-Korsakow", "Tschaikowsky", "Rachmaninoff"],
-      correct: 0,
-      explanation: "Modest Mussorgsky schrieb Bilder einer Ausstellung ursprünglich für Klavier. Besonders bekannt ist auch die Orchesterfassung von Maurice Ravel."
-    },
-    {
-      question: "Welcher Komponist schrieb die 'Enigma Variations'?",
-      image: "elgar.jpg",
-      options: ["Elgar", "Holst", "Vaughan Williams", "Britten"],
-      correct: 0,
-      explanation: "Edward Elgar schrieb die Enigma Variations als Variationen über ein eigenes Thema. Jede Variation porträtiert eine Person aus seinem Umfeld."
-    },
-    {
-      question: "Wer komponierte das berühmte Klavierkonzert Nr. 2 c-Moll?",
-      image: "rachmaninoff.jpg",
-      options: ["Rachmaninoff", "Scriabin", "Tschaikowsky", "Prokofjew"],
-      correct: 0,
-      explanation: "Sergei Rachmaninoffs Klavierkonzert Nr. 2 c-Moll gehört zu den populärsten Klavierkonzerten der Spätromantik und ist berühmt für seine weit gespannten Melodien."
-    },
-    {
-      question: "Welcher Komponist schrieb zahlreiche Liederzyklen und war mit Clara Schumann verheiratet?",
-      image: "schumann.jpg",
-      options: ["Robert Schumann", "Johannes Brahms", "Felix Mendelssohn", "Franz Schubert"],
-      correct: 0,
-      explanation: "Robert Schumann ist eine zentrale Figur der deutschen Romantik. Seine Liederzyklen, Klavierwerke und sinfonischen Werke zeigen eine sehr poetische Klangsprache."
-    },
-    {
-      question: "Wer komponierte 'Ein deutsches Requiem'?",
-      image: "brahms.jpg",
-      options: ["Brahms", "Schumann", "Bruckner", "Mahler"],
-      correct: 0,
-      explanation: "Ein deutsches Requiem ist eines der wichtigsten Chorwerke von Johannes Brahms. Anders als die lateinische Totenmesse verwendet es deutschsprachige Bibeltexte."
-    }
-  ]
-},
-     {
-  id: 6,
-  title: "Barock & Alte Musik",
-  description: "Monteverdi, Palestrina, Schütz, Lully, Corelli.",
-  active: true,
-  questions: [
-    {
-      question: "Wer komponierte die berühmte 'Marienvesper' von 1610?",
-      image: "monteverdi.jpg",
-      options: ["Monteverdi", "Palestrina", "Gabrieli", "Lully"],
-      correct: 0,
-      explanation: "Claudio Monteverdis Marienvesper von 1610 verbindet alte polyphone Tradition mit dem neuen expressiven Stil des Frühbarock. Sie ist eines der bedeutendsten geistlichen Werke ihrer Zeit."
-    },
-    {
-      question: "Welcher Komponist gilt als zentraler Vertreter der römischen Vokalpolyphonie der Renaissance?",
-      image: "palestrina.jpg",
-      options: ["Palestrina", "Monteverdi", "Schütz", "Purcell"],
-      correct: 0,
-      explanation: "Giovanni Pierluigi da Palestrina steht für eine klare, ausgewogene Vokalpolyphonie der Renaissance. Sein Stil wurde später oft als Ideal kirchenmusikalischer Satzkunst betrachtet."
-    },
-    {
-      question: "Wer komponierte 'Dido and Aeneas'?",
-      image: "purcell.jpg",
-      options: ["Purcell", "Händel", "Lully", "Monteverdi"],
-      correct: 0,
-      explanation: "Dido and Aeneas ist eine englische Barockoper von Henry Purcell. Besonders berühmt ist Didos Lamento, eines der ergreifendsten Stücke der frühen Operngeschichte."
-    },
-    {
-      question: "Welcher Komponist ist besonders mit der französischen Hofoper unter Ludwig XIV. verbunden?",
-      image: "lully.jpg",
-      options: ["Lully", "Corelli", "Vivaldi", "Buxtehude"],
-      correct: 0,
-      explanation: "Jean-Baptiste Lully prägte die französische Oper am Hof Ludwigs XIV. Er entwickelte die Tragédie lyrique und spielte eine zentrale Rolle im Musikleben von Versailles."
-    },
-    {
-      question: "Wer gilt als einer der wichtigsten Meister des Concerto grosso?",
-      image: "corelli.jpg",
-      options: ["Corelli", "Palestrina", "Schütz", "Cage"],
-      correct: 0,
-      explanation: "Arcangelo Corelli war ein bedeutender italienischer Violinist und Komponist. Seine Concerti grossi wurden stilbildend für die Instrumentalmusik des Barock."
-    },
-    {
-      question: "Welcher norddeutsche Komponist und Organist war ein wichtiger Vorgänger Bachs?",
-      image: "buxtehude.jpg",
-      options: ["Buxtehude", "Lully", "Rossini", "Elgar"],
-      correct: 0,
-      explanation: "Dieterich Buxtehude war ein bedeutender Organist und Komponist in Lübeck. Johann Sebastian Bach soll als junger Mann zu ihm gereist sein, um ihn zu hören."
-    },
-    {
-      question: "Wer komponierte die 'Musikalischen Exequien'?",
-      image: "schuetz.jpg",
-      options: ["Heinrich Schütz", "Johann Sebastian Bach", "Giovanni Gabrieli", "Georg Friedrich Händel"],
-      correct: 0,
-      explanation: "Heinrich Schütz schrieb die Musikalischen Exequien als geistliche Begräbnismusik. Er gilt als einer der wichtigsten deutschen Komponisten vor Bach."
-    },
-    {
-      question: "Welcher Komponist schrieb das Oratorium 'Messiah'?",
-      image: "handel.jpg",
-      options: ["Händel", "Bach", "Vivaldi", "Purcell"],
-      correct: 0,
-      explanation: "Georg Friedrich Händels Messiah ist eines der berühmtesten Oratorien der Musikgeschichte. Besonders bekannt ist der Halleluja-Chor."
-    },
-    {
-      question: "Welcher Komponist wird stark mit venezianischer Mehrchörigkeit verbunden?",
-      image: "ggabrieli.jpg",
-      options: ["Giovanni Gabrieli", "Joseph Haydn", "Franz Liszt", "Carl Orff"],
-      correct: 0,
-      explanation: "Giovanni Gabrieli wirkte an San Marco in Venedig. Seine mehrchörige Musik nutzt räumlich getrennte Klanggruppen und beeinflusste die Entwicklung des konzertierenden Stils."
-    },
-    {
-      question: "Welcher Bach-Sohn steht besonders für den empfindsamen Stil zwischen Barock und Klassik?",
-      image: "cpebach.jpg",
-      options: ["Carl Philipp Emanuel Bach", "Johann Christian Bach", "Wilhelm Friedemann Bach", "Johann Sebastian Bach"],
-      correct: 0,
-      explanation: "Carl Philipp Emanuel Bach war einer der wichtigsten Vertreter des empfindsamen Stils. Seine Musik steht zwischen barocker Tradition und klassischer Ausdruckswelt."
-    }
-  ]
-},
-      {
-        id: 7,
-        title: "Moderne & 20. Jahrhundert",
-        description: "Debussy, Ravel, Strawinsky, Schönberg, Cage.",
-        active: true,
-        questions: [
-          {
-            question: "Welcher Komponist wird häufig mit dem musikalischen Impressionismus verbunden?",
-            image: "debussy.jpg",
-            options: ["Claude Debussy", "Johannes Brahms", "Antonio Vivaldi", "Joseph Haydn"],
-            correct: 0,
-            explanation: "Claude Debussy wird oft mit dem musikalischen Impressionismus verbunden. Seine Musik arbeitet stark mit Klangfarben, schwebenden Harmonien und freieren Formen."
-          },
-          {
-            question: "Wer komponierte den berühmten 'Boléro'?",
-            image: "ravel.jpg",
-            options: ["Maurice Ravel", "Claude Debussy", "Erik Satie", "Gabriel Fauré"],
-            correct: 0,
-            explanation: "Maurice Ravels Boléro beruht auf einer fast durchgehenden rhythmischen und melodischen Wiederholung. Die Wirkung entsteht vor allem durch die stetig wachsende Orchestrierung."
-          },
-          {
-            question: "Welcher Komponist schrieb 'Le Sacre du printemps'?",
-            image: "stravinsky.jpg",
-            options: ["Igor Strawinsky", "Arnold Schönberg", "Sergei Prokofjew", "Dmitri Schostakowitsch"],
-            correct: 0,
-            explanation: "Igor Strawinskys Le Sacre du printemps wurde 1913 in Paris uraufgeführt und gilt als eines der Schlüsselwerke der musikalischen Moderne."
-          },
-          {
-            question: "Wer entwickelte die Zwölftontechnik?",
-            image: "schoenberg.jpg",
-            options: ["Arnold Schönberg", "Anton Webern", "Alban Berg", "John Cage"],
-            correct: 0,
-            explanation: "Arnold Schönberg entwickelte die Zwölftontechnik. Sie ordnet die zwölf Töne der chromatischen Skala in einer Reihe und wurde für die Musik des 20. Jahrhunderts sehr einflussreich."
-          },
-          {
-            question: "Welcher Komponist gehört zur Zweiten Wiener Schule?",
-            image: "webern.jpg",
-            options: ["Anton Webern", "Giuseppe Verdi", "Franz Schubert", "Anton Bruckner"],
-            correct: 0,
-            explanation: "Anton Webern gehört zusammen mit Arnold Schönberg und Alban Berg zur Zweiten Wiener Schule. Seine Musik ist oft extrem konzentriert, kurz und klanglich fein gearbeitet."
-          },
-          {
-            question: "Wer komponierte die Oper 'Wozzeck'?",
-            image: "albanberg.jpg",
-            options: ["Alban Berg", "Richard Strauss", "Paul Hindemith", "Benjamin Britten"],
-            correct: 0,
-            explanation: "Alban Bergs Wozzeck ist ein zentrales Werk des musikalischen Expressionismus. Die Oper verbindet moderne Tonsprache mit streng gearbeiteten Formen."
-          },
-          {
-            question: "Welcher Komponist ist besonders mit experimenteller Musik und dem Stück '4′33″' verbunden?",
-            image: "cage.jpg",
-            options: ["John Cage", "Carl Orff", "Edward Elgar", "Jean Sibelius"],
-            correct: 0,
-            explanation: "John Cage stellte die Frage, was überhaupt Musik sein kann. In 4′33″ erklingt kein absichtlich gespielter Ton; die Umgebungsgeräusche werden zum eigentlichen Ereignis."
-          },
-          {
-            question: "Wer komponierte 'Carmina Burana'?",
-            image: "orff.jpg",
-            options: ["Carl Orff", "Benjamin Britten", "Aaron Copland", "Leonard Bernstein"],
-            correct: 0,
-            explanation: "Carl Orffs Carmina Burana ist ein grosses szenisches Chorwerk. Der Eingangschor O Fortuna gehört zu den bekanntesten Chorstücken des 20. Jahrhunderts."
-          },
-          {
-            question: "Welcher amerikanische Komponist schrieb 'Appalachian Spring'?",
-            image: "copland.jpg",
-            options: ["Aaron Copland", "Leonard Bernstein", "George Gershwin", "John Cage"],
-            correct: 0,
-            explanation: "Aaron Copland entwickelte einen klaren, weiträumigen amerikanischen Orchesterstil. Appalachian Spring gehört zu seinen bekanntesten Werken."
-          },
-          {
-            question: "Wer komponierte das 'War Requiem'?",
-            image: "britten.jpg",
-            options: ["Benjamin Britten", "Dmitri Schostakowitsch", "Igor Strawinsky", "Maurice Ravel"],
-            correct: 0,
-            explanation: "Benjamin Brittens War Requiem verbindet den lateinischen Requiemtext mit Gedichten von Wilfred Owen. Es ist eines der bedeutenden pazifistischen Werke des 20. Jahrhunderts."
-          }
-        ]
-      },
-      {
-        id: 8,
-        title: "Kirchenmusik & Chor",
-        description: "Messe, Motette, Passion, Oratorium.",
-        active: true,
-        questions: [
-          {
-            question: "Welche Gattung vertont normalerweise die festen Teile der katholischen Liturgie wie Kyrie, Gloria, Credo, Sanctus und Agnus Dei?",
-            image: "palestrina.jpg",
-            options: ["Messe", "Sinfonie", "Oper", "Nocturne"],
-            correct: 0,
-            explanation: "Die Messe vertont die zentralen festen Teile der Liturgie. Zu den klassischen Ordinariumsteilen gehören Kyrie, Gloria, Credo, Sanctus und Agnus Dei."
-          },
-          {
-            question: "Welche Gattung ist eine Vertonung der Totenmesse?",
-            image: "verdi.jpg",
-            options: ["Requiem", "Motette", "Walzer", "Scherzo"],
-            correct: 0,
-            explanation: "Das Requiem ist die musikalische Vertonung der Totenmesse. Berühmte Requiem-Vertonungen stammen unter anderem von Mozart, Verdi, Fauré und Britten."
-          },
-          {
-            question: "Welche Gattung erzählt musikalisch die Leidensgeschichte Jesu?",
-            image: "bach.jpg",
-            options: ["Passion", "Sonate", "Madrigal", "Etüde"],
-            correct: 0,
-            explanation: "Eine Passion vertont die Leidensgeschichte Jesu. Besonders im protestantischen Barock wurden Passionen mit Evangelientext, Chorälen, Arien und Chören ausgestaltet."
-          },
-          {
-            question: "Was unterscheidet ein Oratorium typischerweise von einer Oper?",
-            image: "handel.jpg",
-            options: ["Es ist meist konzertant und nicht szenisch gespielt", "Es hat nie einen Chor", "Es ist immer rein instrumental", "Es wird nur für Klavier geschrieben"],
-            correct: 0,
-            explanation: "Ein Oratorium ist meist ein grosses geistliches oder dramatisches Werk für Solisten, Chor und Orchester, wird aber normalerweise konzertant und nicht als Bühnenoper gespielt."
-          },
-          {
-            question: "Welche Gattung ist besonders eng mit mehrstimmiger geistlicher Vokalmusik verbunden?",
-            image: "schuetz.jpg",
-            options: ["Motette", "Konzertwalzer", "Klaviersonate", "Ouvertüre"],
-            correct: 0,
-            explanation: "Die Motette ist eine wichtige geistliche Vokalgattung. Besonders in Renaissance und Barock spielte sie in der Kirchenmusik eine zentrale Rolle."
-          },
-          {
-            question: "Was meint 'a cappella' im Chorkontext?",
-            image: "tallis.jpg",
-            options: ["Gesang ohne instrumentale Begleitung", "Gesang mit grossem Orchester", "Ein Werk nur für Orgel", "Eine Opernszene"],
-            correct: 0,
-            explanation: "A cappella bedeutet im heutigen Sprachgebrauch meist Chorgesang ohne instrumentale Begleitung. Der Begriff wird besonders häufig bei Vokalensembles und Chormusik verwendet."
-          },
-          {
-            question: "Welche Aussage beschreibt eine Kantate am besten?",
-            image: "bach.jpg",
-            options: ["Ein mehrsätziges Vokalwerk, oft mit Chor, Solisten und Instrumenten", "Eine reine Klavierübung", "Ein Tanz im Dreiertakt", "Eine kurze Orchesterouvertüre"],
-            correct: 0,
-            explanation: "Eine Kantate ist meist ein mehrsätziges Vokalwerk. Im Barock begegnet sie häufig mit Chor, Solisten, Rezitativen, Arien und Instrumentalbegleitung."
-          },
-          {
-            question: "Was ist ein Choral im protestantischen Kirchenmusik-Kontext?",
-            image: "bach.jpg",
-            options: ["Ein geistliches Gemeindelied", "Ein virtuoses Klavierstück", "Ein Opernfinale", "Eine italienische Tanzform"],
-            correct: 0,
-            explanation: "Ein Choral ist im protestantischen Kontext ein geistliches Gemeindelied. Bach verwendet Choräle oft als theologische und musikalische Säulen in Kantaten und Passionen."
-          },
-          {
-            question: "Welche Besetzung meint die Abkürzung SATB im Chor?",
-            image: "palestrina.jpg",
-            options: ["Sopran, Alt, Tenor, Bass", "Solo, Arie, Tutti, Bass", "Streicher, Alt, Trompete, Basso continuo", "Sopran, Akkord, Thema, Basslinie"],
-            correct: 0,
-            explanation: "SATB steht für Sopran, Alt, Tenor und Bass. Diese vierstimmige Grundbesetzung ist in der Chorliteratur besonders verbreitet."
-          },
-          {
-            question: "Welche Musikform ist besonders typisch für die Renaissance-Vokalpolyphonie?",
-            image: "palestrina.jpg",
-            options: ["Mehrstimmige, oft imitative Vokalmusik", "Elektronische Klangcollage", "Sinfonische Dichtung", "Klavierkonzert"],
-            correct: 0,
-            explanation: "Die Renaissance-Vokalpolyphonie arbeitet häufig mit mehreren selbständigen Stimmen und Imitation. Komponisten wie Palestrina oder Tallis stehen exemplarisch für diese Klangwelt."
-          }
-        ]
-      },
-      {
-        id: 9,
-        title: "Formen, Gattungen & Begriffe",
-        description: "Sonate, Sinfonie, Fuge, Variation, Konzert und mehr.",
-        active: true,
-        questions: [
-          {
-            question: "Welche Gattung ist typischerweise ein mehrsätziges Werk für Orchester?",
-            image: "beethoven.jpg",
-            options: ["Sinfonie", "Nocturne", "Motette", "Arie"],
-            correct: 0,
-            explanation: "Die Sinfonie ist in der Klassik und Romantik meist ein mehrsätziges Werk für Orchester. Typisch sind vier Sätze mit unterschiedlichen Charakteren und Tempi."
-          },
-          {
-            question: "Was bezeichnet eine Sonate im klassischen Sinn meistens?",
-            image: "mozart.jpg",
-            options: ["Ein mehrsätziges Instrumentalwerk", "Ein geistliches Chorwerk", "Eine Opernszene", "Ein Tanzlied"],
-            correct: 0,
-            explanation: "Eine Sonate ist meist ein mehrsätziges Instrumentalwerk, zum Beispiel für Klavier solo oder für ein Melodieinstrument mit Klavier. Die Sonate wurde besonders in Klassik und Romantik wichtig."
-          },
-          {
-            question: "Welche Form arbeitet besonders mit einem Thema, das nacheinander in verschiedenen Stimmen einsetzt?",
-            image: "bach.jpg",
-            options: ["Fuge", "Walzer", "Nocturne", "Ouvertüre"],
-            correct: 0,
-            explanation: "In einer Fuge wird ein Thema nacheinander von verschiedenen Stimmen aufgegriffen und kontrapunktisch verarbeitet. Johann Sebastian Bach gilt als einer der grössten Meister dieser Form."
-          },
-          {
-            question: "Was ist eine Variation?",
-            image: "brahms.jpg",
-            options: ["Eine veränderte Wiederholung eines Themas", "Ein Opernrezitativ", "Ein reines Schlagzeugstück", "Ein liturgischer Messteil"],
-            correct: 0,
-            explanation: "Bei Variationen wird ein Thema mehrfach wiederholt, aber jeweils verändert. Verändert werden können Melodie, Rhythmus, Harmonie, Tempo, Begleitung oder Charakter."
-          },
-          {
-            question: "Was ist ein Konzert im klassischen Sinn?",
-            image: "vivaldi.jpg",
-            options: ["Ein Werk mit solistischem Instrument und Orchester", "Ein Werk nur für Chor", "Eine Oper ohne Handlung", "Eine reine Tanzfolge"],
-            correct: 0,
-            explanation: "Ein Konzert stellt meist ein oder mehrere Soloinstrumente dem Orchester gegenüber. Besonders bekannt sind Klavierkonzerte, Violinkonzerte und die barocken Solokonzerte Vivaldis."
-          },
-          {
-            question: "Was meint 'Concerto grosso'?",
-            image: "corelli.jpg",
-            options: ["Ein barockes Konzert mit kleiner Solistengruppe und Orchester", "Eine romantische Klaviersonate", "Eine geistliche Messe", "Ein Opernfinale"],
-            correct: 0,
-            explanation: "Im Concerto grosso steht eine kleine Solistengruppe, das Concertino, einem grösseren Ensemble gegenüber. Diese Gattung ist typisch für den Barock."
-          },
-          {
-            question: "Welche Gattung ist eine Folge von Tänzen oder tanzartigen Sätzen?",
-            image: "handel.jpg",
-            options: ["Suite", "Sinfonische Dichtung", "Requiem", "Kanon"],
-            correct: 0,
-            explanation: "Eine Suite besteht aus mehreren Tänzen oder tanzartigen Sätzen. Im Barock finden sich häufig Sätze wie Allemande, Courante, Sarabande und Gigue."
-          },
-          {
-            question: "Was ist eine Ouvertüre?",
-            image: "rossini.jpg",
-            options: ["Ein eröffnendes Instrumentalstück", "Ein Schlusschor", "Ein geistliches Gemeindelied", "Eine Klavieretüde"],
-            correct: 0,
-            explanation: "Eine Ouvertüre ist ein eröffnendes Instrumentalstück, oft zu einer Oper, einem Oratorium oder einem Schauspiel. Manche Ouvertüren wurden später auch als Konzertstücke beliebt."
-          },
-          {
-            question: "Was ist der Unterschied zwischen Rezitativ und Arie in der Oper?",
-            image: "mozart.jpg",
-            options: ["Das Rezitativ treibt die Handlung voran, die Arie verweilt stärker im Ausdruck", "Die Arie ist immer gesprochen", "Das Rezitativ ist immer rein instrumental", "Es gibt keinen Unterschied"],
-            correct: 0,
-            explanation: "Das Rezitativ ist oft sprachähnlicher und bringt die Handlung voran. Die Arie ist meist melodischer ausgeformt und gibt einer Figur Raum für Gefühl, Reflexion oder virtuosen Ausdruck."
-          },
-          {
-            question: "Was ist eine sinfonische Dichtung?",
-            image: "liszt.jpg?v=3",
-            options: ["Ein einsätziges Orchesterwerk mit aussermusikalischem Programm", "Eine Messe für Chor", "Eine barocke Tanzsuite", "Ein Klavierlied ohne Text"],
-            correct: 0,
-            explanation: "Die sinfonische Dichtung ist ein meist einsätziges Orchesterwerk mit einem literarischen, bildlichen oder philosophischen Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert besonders stark."
-          }
-        ]
-      },
-      {
-        id: 10,
-        title: "Boss-Level",
-        description: "Fies, aber fair. Die grosse Mischung aus Werken, Epochen, Gattungen und Stil.",
-        active: true,
-        questions: [
-          {
-            question: "Welcher Komponist steht besonders am Übergang von Renaissance zu Barock und ist für die frühe Oper wichtig?",
-            image: "monteverdi.jpg",
-            options: ["Claudio Monteverdi", "Giovanni Pierluigi da Palestrina", "Joseph Haydn", "Frédéric Chopin"],
-            correct: 0,
-            explanation: "Monteverdi steht genau an dieser stilgeschichtlichen Schwelle. Mit Werken wie L'Orfeo wurde er zu einer Schlüsselfigur der frühen Oper und des Frühbarock."
-          },
-          {
-            question: "Welches Werk gilt als Schlüsselwerk der musikalischen Moderne und wurde 1913 in Paris uraufgeführt?",
-            image: "stravinsky.jpg",
-            options: ["Le Sacre du printemps", "Die Moldau", "Ein deutsches Requiem", "Die vier Jahreszeiten"],
-            correct: 0,
-            explanation: "Le Sacre du printemps von Igor Strawinsky wurde 1913 uraufgeführt und gilt wegen Rhythmik, Harmonik und Klangsprache als ein Schlüsselwerk der Moderne."
-          },
-          {
-            question: "Welche Kombination ist korrekt?",
-            image: "bach.jpg",
-            options: ["Bach – Barock – Matthäus-Passion", "Mozart – Romantik – Boléro", "Verdi – Renaissance – Motette", "Debussy – Barock – Messiah"],
-            correct: 0,
-            explanation: "Johann Sebastian Bach gehört zum Barock, und die Matthäus-Passion ist eines seiner bedeutendsten geistlichen Werke."
-          },
-          {
-            question: "Welche Aussage beschreibt eine Fuge am besten?",
-            image: "bach.jpg",
-            options: ["Ein Thema wird nacheinander in verschiedenen Stimmen imitiert und verarbeitet", "Ein Solo singt eine Opernarie", "Ein Orchester spielt eine Tanzfolge", "Ein Chor singt ohne Text"],
-            correct: 0,
-            explanation: "Die Fuge ist eine kontrapunktische Form. Ein Thema erscheint nacheinander in verschiedenen Stimmen und wird kunstvoll weiterverarbeitet."
-          },
-          {
-            question: "Welche Komponisten gehören zur Zweiten Wiener Schule?",
-            image: "schoenberg.jpg",
-            options: ["Schönberg, Berg und Webern", "Haydn, Mozart und Beethoven", "Bach, Händel und Vivaldi", "Verdi, Puccini und Rossini"],
-            correct: 0,
-            explanation: "Die Zweite Wiener Schule umfasst vor allem Arnold Schönberg, Alban Berg und Anton Webern. Sie ist zentral für Atonalität, Expressionismus und Zwölftontechnik."
-          },
-          {
-            question: "Welche Gattung ist typischerweise konzertant, oft geistlich und nicht szenisch gespielt?",
-            image: "handel.jpg",
-            options: ["Oratorium", "Oper", "Ballett", "Sinfonie"],
-            correct: 0,
-            explanation: "Das Oratorium ist meist ein grosses Werk für Solisten, Chor und Orchester. Im Unterschied zur Oper wird es normalerweise nicht szenisch aufgeführt."
-          },
-          {
-            question: "Welche Zuordnung ist falsch?",
-            image: "ravel.jpg",
-            options: ["Ravel – Renaissance", "Debussy – Impressionismus", "Schönberg – Zwölftontechnik", "Strawinsky – Moderne"],
-            correct: 0,
-            explanation: "Ravel gehört nicht zur Renaissance, sondern zur Musik des späten 19. und frühen 20. Jahrhunderts. Er wird oft im Umfeld von Impressionismus und Moderne genannt."
-          },
-          {
-            question: "Welches Werk gehört besonders zur tschechischen Nationalmusik?",
-            image: "smetana.jpg",
-            options: ["Die Moldau", "Finlandia", "Peer Gynt", "Enigma Variations"],
-            correct: 0,
-            explanation: "Die Moldau von Bedřich Smetana ist Teil des Zyklus Mein Vaterland und wurde zu einem Symbol tschechischer Nationalmusik."
-          },
-          {
-            question: "Welche Aussage zu einem Requiem ist richtig?",
-            image: "verdi.jpg",
-            options: ["Es ist eine musikalische Vertonung der Totenmesse", "Es ist immer eine komische Oper", "Es ist ein Klavierstück ohne Text", "Es ist eine barocke Tanzsuite"],
-            correct: 0,
-            explanation: "Ein Requiem ist eine Vertonung der Totenmesse. Bekannte Requien stammen unter anderem von Mozart, Verdi, Fauré, Brahms in freierer Form und Britten."
-          },
-          {
-            question: "Welche Kombination passt am besten zum Begriff 'sinfonische Dichtung'?",
-            image: "liszt.jpg?v=3",
-            options: ["Programmmusik – Orchester – 19. Jahrhundert", "A-cappella – Messe – Renaissance", "Zwölftonreihe – Barock – Generalbass", "Opera buffa – Fuge – Choral"],
-            correct: 0,
-            explanation: "Die sinfonische Dichtung ist meist ein einsätziges Orchesterwerk mit aussermusikalischem Programm. Franz Liszt prägte diese Gattung im 19. Jahrhundert."
-          }
-        ]
+      premium: {
+        label: "Premium",
+        price: "CHF 20",
+        maxLevel: Infinity,
+        questionTiers: ["free", "learning", "premium"],
+        categoryMode: true,
+        examMode: true,
+        examQuestionCount: 20
       }
-    ];
+    };
+
+    const APP_ACCESS = {
+      currentTier: "free",
+      defaultTier: "free",
+      tierSource: "default"
+    };
+
+    // Interner Testschalter ab Version 2.8:
+    // Standard bleibt immer "free". Für interne Tests kann die Lernversion oder Premium
+    // direkt per URL simuliert werden, ohne im Code herumzuschreiben:
+    // ?tier=learning  oder  ?tier=premium
+
+    function updateOfferCardsForAccessTier() {
+      const tier = APP_ACCESS.currentTier;
+      const learningCard = document.getElementById("learningOfferCard");
+      const learningTitle = document.getElementById("learningOfferTitle");
+      const learningTag = document.getElementById("learningOfferTag");
+      const premiumCard = document.getElementById("premiumOfferCard");
+      const premiumTitle = document.getElementById("premiumOfferTitle");
+      const premiumTag = document.getElementById("premiumOfferTag");
+
+      if (tier === "learning") {
+        if (learningCard) learningCard.classList.add("active-tier-card");
+        if (learningTitle) learningTitle.textContent = "🎓 Lernversion aktiv";
+        if (learningTag) {
+          learningTag.textContent = "Aktiv im Testmodus · 300 Fragen";
+          learningTag.classList.add("active-tier-tag");
+        }
+        if (premiumCard) premiumCard.classList.add("preview-tier-card");
+        if (premiumTitle) premiumTitle.textContent = "🚀 Premium-Vorschau";
+        if (premiumTag) premiumTag.textContent = "CHF 20 einmalig · 500+ geplant";
+      }
+
+      if (tier === "premium") {
+        if (learningCard) learningCard.classList.add("active-tier-card");
+        if (learningTitle) learningTitle.textContent = "🎓 Lernversion enthalten";
+        if (learningTag) {
+          learningTag.textContent = "In Premium enthalten · 300 Fragen";
+          learningTag.classList.add("active-tier-tag");
+        }
+        if (premiumCard) premiumCard.classList.add("active-tier-card");
+        if (premiumTitle) premiumTitle.textContent = "🚀 Premium aktiv";
+        if (premiumTag) {
+          premiumTag.textContent = "Aktiv im Testmodus · 500+ Struktur";
+          premiumTag.classList.add("active-tier-tag");
+        }
+      }
+    }
+
+    function initializeAccessTierFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const requestedTier = (params.get("tier") || params.get("access") || "").toLowerCase();
+
+      if (requestedTier && ACCESS_TIERS[requestedTier]) {
+        APP_ACCESS.currentTier = requestedTier;
+        APP_ACCESS.tierSource = "url";
+      }
+    }
+
+    initializeAccessTierFromUrl();
+    updateOfferCardsForAccessTier();
+
+    const FREE_LEVEL_LIMIT = ACCESS_TIERS.free.maxLevel;
+    const LEARNING_VERSION_PRICE = ACCESS_TIERS.learning.price;
+    const PREMIUM_VERSION_PRICE = ACCESS_TIERS.premium.price;
+
+    function getCurrentTierName() {
+      return APP_ACCESS.currentTier || "free";
+    }
+
+    function getCurrentTier() {
+      return ACCESS_TIERS[getCurrentTierName()] || ACCESS_TIERS.free;
+    }
+
+    function getTierRank(tierName) {
+      const order = ["free", "learning", "premium"];
+      const index = order.indexOf(tierName || "free");
+      return index === -1 ? 0 : index;
+    }
+
+    function hasTierAccess(requiredTier) {
+      return getTierRank(getCurrentTierName()) >= getTierRank(requiredTier || "free");
+    }
+
+    function isQuestionAccessible(question) {
+      const questionTier = question.tier || "free";
+      return getCurrentTier().questionTiers.includes(questionTier) || hasTierAccess(questionTier);
+    }
+
+    function canAccessLevel(level) {
+      return level.id <= getCurrentTier().maxLevel;
+    }
+
+    function isFreeLevel(level) {
+      return canAccessLevel(level);
+    }
+
+    function getAccessibleLevels() {
+      return levels.filter(level => canAccessLevel(level));
+    }
+
+    function getAccessibleQuestions() {
+      return getAccessibleLevels()
+        .flatMap(level => level.questions)
+        .filter(question => isQuestionAccessible(question));
+    }
+
+    function getAccessibleLevelQuestions(level) {
+      return (level.questions || []).filter(question => isQuestionAccessible(question));
+    }
+
+    function getAccessLabel() {
+      return getCurrentTier().label;
+    }
+
+    function getCategoryModeLabel(count) {
+      if (getCurrentTierName() === "free") {
+        return "Gratis: " + count + " Fragen";
+      }
+
+      return getAccessLabel() + ": " + count + " Fragen";
+    }
+
+    function updateAccessUi() {
+      const tierName = getCurrentTierName();
+      const accessBadge = document.getElementById("accessBadge");
+      const banner = document.getElementById("accessTestBanner");
+      const levelSubtitle = document.getElementById("levelSubtitle");
+      const categorySubtitle = document.getElementById("categorySubtitle");
+
+      if (accessBadge) {
+        if (tierName === "free") {
+          accessBadge.textContent = "Freemium · 30 Fragen gratis";
+        } else if (tierName === "learning") {
+          accessBadge.textContent = "Interner Testmodus · Lernversion · 300 Fragen";
+        } else if (tierName === "premium") {
+          accessBadge.textContent = "Interner Testmodus · Premium";
+        }
+      }
+
+      if (banner) {
+        if (APP_ACCESS.tierSource === "url" && tierName !== "free") {
+          banner.classList.remove("hidden");
+          banner.innerHTML = "<strong>Interner Testmodus aktiv:</strong> " + getAccessLabel() + " ist per URL freigeschaltet. Normale Besucher:innen sehen weiterhin die Gratisversion.";
+        } else {
+          banner.classList.add("hidden");
+          banner.innerHTML = "";
+        }
+      }
+
+      if (levelSubtitle) {
+        levelSubtitle.textContent = tierName === "free"
+          ? "Gratis spielbar sind Level 1–3. Im Lernversion-Test sind alle 10 Level und 300 Fragen verfügbar."
+          : getAccessLabel() + " aktiv: Die freigeschalteten Level können zu Testzwecken gespielt werden.";
+      }
+
+      if (categorySubtitle) {
+        categorySubtitle.textContent = tierName === "free"
+          ? "Wähle eine Kategorie und übe gezielt. In der Gratisversion erscheinen freie Fragen; im Lernversion-Test stehen die erweiterten 300 Fragen bereit."
+          : "Wähle eine Kategorie und teste die aktuell freigeschaltete Fragebank nach Thema.";
+      }
+    }
+
+
+    // Bild-Fallbacks ab Version 3.3.3:
+    // 1) Wenn eine Frage ein eigenes Bild hat, wird dieses zuerst versucht.
+    // 2) Falls die Datei in einem Unterordner "Bilder" liegt, wird automatisch auch dieser Pfad versucht.
+    // 3) Falls kein Bild definiert ist oder ein Bild fehlt, erscheint ein passendes Symbol-/Ersatzbild.
+    const categoryFallbackImages = {
+      "Komponisten": "icon-512.png",
+      "Werkkunde": "icon-512.png",
+      "Epochen & Stil": "icon-512.png",
+      "Formen & Gattungen": "icon-512.png",
+      "Oper & Musiktheater": "icon-512.png",
+      "Kirchenmusik & Chor": "icon-512.png",
+      "Musiktheorie-Basics": "icon-512.png",
+      "Instrumente & Besetzungen": "icon-512.png",
+      "Musikleben & Praxis": "icon-512.png",
+      "Hören & Begriffe": "icon-512.png"
+    };
+
+    function addImageCandidate(candidates, imageName) {
+      if (!imageName || typeof imageName !== "string") return;
+
+      const cleanName = imageName.split("?")[0];
+      const cacheSuffix = imageName.includes("?") ? imageName.slice(imageName.indexOf("?")) : "";
+      const baseName = cleanName.split(/[\\/]/).pop() + cacheSuffix;
+
+      const possibleNames = [
+        imageName,
+        baseName,
+        "images/" + baseName,
+        "Bilder/" + baseName
+      ];
+
+      possibleNames.forEach(candidate => {
+        if (candidate && !candidates.includes(candidate)) {
+          candidates.push(candidate);
+        }
+      });
+    }
+
+    function getQuestionImageCandidates(question) {
+      const candidates = [];
+
+      if (question && question.image) {
+        addImageCandidate(candidates, question.image);
+      }
+
+      if (question && question.category && categoryFallbackImages[question.category]) {
+        addImageCandidate(candidates, categoryFallbackImages[question.category]);
+      }
+
+      addImageCandidate(candidates, "icon-512.png");
+      addImageCandidate(candidates, "icon-192.png");
+
+      return candidates;
+    }
+
+    function setQuestionImage(question) {
+      const img = document.getElementById("composerImage");
+      const imageError = document.getElementById("imageError");
+      const candidates = getQuestionImageCandidates(question);
+      let candidateIndex = 0;
+
+      function tryNextImage() {
+        if (candidateIndex >= candidates.length) {
+          img.removeAttribute("src");
+          img.alt = "Kein Bild verfügbar";
+          imageError.textContent = "Bild nicht gefunden.";
+          imageError.classList.remove("hidden");
+          return;
+        }
+
+        const candidate = candidates[candidateIndex];
+        candidateIndex += 1;
+        img.src = candidate;
+        img.alt = "Bild: " + (question.category || "Maestro Quiz");
+      }
+
+      imageError.classList.add("hidden");
+      imageError.textContent = "";
+
+      img.onerror = function() {
+        tryNextImage();
+      };
+
+      img.onload = function() {
+        imageError.classList.add("hidden");
+        imageError.textContent = "";
+      };
+
+      tryNextImage();
+    }
+
+
+    // Die Fragebank wird seit Version 2.3 extern aus questions.js geladen.
+    // Die Freischaltung wird seit Version 2.7 zentral über APP_ACCESS/ACCESS_TIERS gesteuert.
 
     let currentLevelIndex = 0;
     let currentQuestion = 0;
@@ -1974,6 +2221,10 @@
     let currentLevelQuestions = [];
     let currentOptions = [];
     let selectedPreviewLevelIndex = null;
+    let currentSessionType = "level";
+    let currentSessionTitle = "";
+    let currentSessionCategory = null;
+    let examAnswers = [];
 
     function shuffleArray(array) {
       const shuffled = [...array];
@@ -2057,21 +2308,233 @@
       };
     }
 
+
+    const categoryData = [
+      { icon: "🎼", title: "Komponisten", description: "Bach, Mozart, Beethoven, Debussy und weitere zentrale Namen der Musikgeschichte.", status: "Level 1–3" },
+      { icon: "📚", title: "Werkkunde", description: "Bekannte Werke erkennen und mit Komponisten, Gattungen und Kontext verbinden.", status: "Lernversion geplant" },
+      { icon: "🕰️", title: "Epochen & Stil", description: "Barock, Klassik, Romantik, Moderne: Merkmale, Zusammenhänge und Einordnung.", status: "Level 1–3" },
+      { icon: "🧠", title: "Formen & Gattungen", description: "Sonate, Sinfonie, Fuge, Variation, Konzert, Messe, Motette und mehr.", status: "Lernversion geplant" },
+      { icon: "🎭", title: "Oper & Musiktheater", description: "Opern, Figuren, Komponisten, Ouvertüren und Musiktheater-Grundwissen.", status: "Lernversion geplant" },
+      { icon: "🎶", title: "Kirchenmusik & Chor", description: "Messe, Passion, Motette, Oratorium, SATB, Chorstimmen und Kirchenmusikpraxis.", status: "Lernversion geplant" },
+      { icon: "🎹", title: "Musiktheorie-Basics", description: "Grundbegriffe der allgemeinen Musiklehre: Intervalle, Tonarten, Dynamik und Akkorde.", status: "Lernversion geplant" },
+      { icon: "🎻", title: "Instrumente & Besetzungen", description: "Orchester, Instrumentenfamilien, Kammermusik, Stimmen und Besetzungen.", status: "Lernversion geplant" },
+      { icon: "🎟️", title: "Musikleben & Praxis", description: "Partitur, Dirigat, Probenbegriffe, Uraufführung und Musikleben im DACH-Raum.", status: "Lernversion geplant" },
+      { icon: "👂", title: "Hören & Begriffe", description: "Tempoangaben, Spielweisen, Takt, Wiederholungszeichen und musikalische Praxisbegriffe.", status: "Lernversion geplant" }
+    ];
+
+
+
+    function getFreeCategoryQuestions(categoryTitle) {
+      return getAccessibleQuestions()
+        .filter(question => question.category === categoryTitle);
+    }
+
+    function getCategoryStorageKey(categoryTitle) {
+      return "bestScoreCategory" + categoryTitle.replace(/[^a-zA-Z0-9äöüÄÖÜß]/g, "_");
+    }
+
+    function startCategoryMode(category) {
+      const availableQuestions = getFreeCategoryQuestions(category.title);
+
+      if (!availableQuestions.length) {
+        showCategoryInfo(category);
+        return;
+      }
+
+      currentSessionType = "category";
+      currentSessionTitle = category.title;
+      currentSessionCategory = category;
+      currentQuestion = 0;
+      score = 0;
+      answered = false;
+      selectedPreviewLevelIndex = null;
+      currentLevelQuestions = shuffleArray(availableQuestions);
+
+      document.getElementById("levelScreen").classList.add("hidden");
+      document.getElementById("previewScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("quizScreen").classList.remove("hidden");
+
+      document.getElementById("levelBadge").textContent = category.icon + " Kategorie";
+      document.getElementById("levelTitle").textContent = category.title;
+      document.getElementById("totalQuestions").textContent = currentLevelQuestions.length;
+
+      showQuestion();
+    }
+
+
+    function getFreeQuestions() {
+      return getAccessibleQuestions();
+    }
+
+    function getWeakCategorySuggestion() {
+      const wrongCounts = {};
+
+      examAnswers.forEach(answer => {
+        if (!answer.isCorrect) {
+          const category = answer.category || "Allgemeines Musikwissen";
+          wrongCounts[category] = (wrongCounts[category] || 0) + 1;
+        }
+      });
+
+      const weakest = Object.entries(wrongCounts).sort((a, b) => b[1] - a[1])[0];
+
+      if (!weakest) {
+        return "Alle Antworten waren richtig — wunderbar. Als nächstes kannst du die freien Kategorien wiederholen oder Level 1–3 nochmals spielen.";
+      }
+
+      return "Wiederholungsempfehlung: Schau dir besonders das Thema „" + weakest[0] + "“ nochmals an.";
+    }
+
+    function startFreeExamMode() {
+      const freeQuestions = getFreeQuestions();
+      const examCount = getCurrentTier().examQuestionCount || 10;
+      const examQuestions = shuffleArray(freeQuestions).slice(0, Math.min(examCount, freeQuestions.length));
+
+      if (!getCurrentTier().examMode || !examQuestions.length) {
+        alert("Der Prüfungsmodus ist für diese Freischaltungsstufe noch nicht verfügbar.");
+        return;
+      }
+
+      currentSessionType = "exam";
+      currentSessionTitle = "Gratis-Prüfungsmodus";
+      currentSessionCategory = null;
+      currentQuestion = 0;
+      score = 0;
+      answered = false;
+      selectedPreviewLevelIndex = null;
+      examAnswers = [];
+      currentLevelQuestions = examQuestions;
+
+      document.getElementById("levelScreen").classList.add("hidden");
+      document.getElementById("previewScreen").classList.add("hidden");
+      document.getElementById("resultScreen").classList.add("hidden");
+      document.getElementById("quizScreen").classList.remove("hidden");
+
+      document.getElementById("levelBadge").textContent = "🏆 Prüfung";
+      document.getElementById("levelTitle").textContent = getAccessLabel() + "-Prüfungsmodus";
+      document.getElementById("totalQuestions").textContent = currentLevelQuestions.length;
+
+      showQuestion();
+    }
+
+    function showExamModeInfo() {
+      alert(
+        "🏆 Prüfungsmodus-Vorschau\n\n" +
+        "Aktuell spielbar: " + (getCurrentTier().examQuestionCount || 10) + " zufällige Fragen aus der aktuell freigeschalteten Fragebank. Während des Tests gibt es keine Soforthilfe; die Auswertung erscheint am Schluss.\n\n" +
+        "Ziel: Vorbereitung auf Schule, Musiktest, Aufnahmeprüfung oder Selbsttest.\n\n" +
+        "In der späteren Lern-/Premiumversion wird der Prüfungsmodus mit mehr Fragen und gezielteren Themen erweitert."
+      );
+    }
+
+    function showCategoryInfo(category) {
+      const freeCount = getFreeCategoryQuestions(category.title).length;
+      const extraLine = freeCount > 0
+        ? "Diese Kategorie ist mit " + freeCount + " Gratisfragen spielbar. Klicke auf die Kategorie-Karte, um zu starten."
+        : "Diese Kategorie ist für Lernversion/Premium vorbereitet und aktuell noch nicht frei spielbar.";
+
+      alert(
+        category.icon + " " + category.title + "\n\n" +
+        category.description + "\n\n" +
+        extraLine + "\n\n" +
+        "Aktuell frei: Level 1–3 mit 30 Fragen."
+      );
+    }
+
+    function renderCategoryGrid() {
+      const grid = document.getElementById("categoryGrid");
+      if (grid) {
+        grid.innerHTML = "";
+
+        categoryData.forEach((category, index) => {
+          const freeCount = getFreeCategoryQuestions(category.title).length;
+          const isPlayable = freeCount > 0;
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className = "category-card" + (isPlayable ? " free-category" : "");
+          card.onclick = () => isPlayable ? startCategoryMode(category) : showCategoryInfo(category);
+
+          const statusText = isPlayable ? getCategoryModeLabel(freeCount) : category.status;
+          const actionText = isPlayable ? "▶ Kategorie starten" : "Vorschau anzeigen";
+
+          card.innerHTML = `
+            <h3>${category.icon} ${category.title}</h3>
+            <p>${category.description}</p>
+            <span class="category-status">${statusText}</span>
+            <span class="category-action">${actionText}</span>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      document.querySelectorAll(".category-chip[data-category-index]").forEach(chip => {
+        chip.onclick = () => {
+          const index = Number(chip.dataset.categoryIndex);
+          const category = categoryData[index];
+          if (!category) return;
+          const freeCount = getFreeCategoryQuestions(category.title).length;
+          if (freeCount > 0) {
+            startCategoryMode(category);
+          } else {
+            showCategoryInfo(category);
+          }
+        };
+      });
+    }
+
+
+    function startFreeMode() {
+      showLevelPreview(0);
+    }
+
+    function showLearningVersionInfo() {
+      alert(
+        "🔒 Die Lernversion ist vorbereitet.\n\n" +
+        "Geplant: alle 10 Level mit 300 Fragen für " + LEARNING_VERSION_PRICE + " einmalig.\n\n" +
+        "Aktuell frei spielbar: Level 1–3 mit 30 Fragen."
+      );
+    }
+
+    function showPremiumInfo() {
+      alert(
+        "🚀 Premium ist vorbereitet.\n\n" +
+        "Geplant: 500+ Fragen, Kategorien, Prüfungsmodus, Lernstatistik und gezielte Wiederholung für " + PREMIUM_VERSION_PRICE + " einmalig.\n\n" +
+        "Aktuell ist dies eine Vorschau ohne Zahlungsfunktion."
+      );
+    }
+
+    function showLockedOffer(level) {
+      const meta = getLevelMeta(level.id);
+      alert(
+        "🔒 Dieses Level gehört zur geplanten Lernversion.\n\n" +
+        "Level " + level.id + " – " + level.title + " (" + meta.type + ")\n" +
+        "Die aktuelle Gratis-Beta enthält Level 1–3 mit 30 Fragen.\n\n" +
+        "Geplant: Lernversion mit 300 Fragen für " + LEARNING_VERSION_PRICE + " einmalig; Premium mit 500+ Fragen für " + PREMIUM_VERSION_PRICE + " einmalig."
+      );
+    }
+
     function renderLevelScreen() {
       const grid = document.getElementById("levelGrid");
       grid.innerHTML = "";
 
       levels.forEach((level, index) => {
+        const free = isFreeLevel(level);
         const card = document.createElement("div");
-        card.className = "level-card" + (level.active ? "" : " locked");
+        card.className = "level-card" + (free ? "" : " locked") + (level.id === 1 ? " start-level" : "");
 
         const meta = getLevelMeta(level.id);
         const best = localStorage.getItem("bestScoreLevel" + level.id);
-        const bestText = best ? `<div class="best-score">Beste Punktzahl: ${best}/${level.questions.length}</div>` : "";
+        const accessibleQuestionCount = getAccessibleLevelQuestions(level).length;
+        const bestText = best ? `<div class="best-score">Beste Punktzahl: ${best}/${accessibleQuestionCount}</div>` : "";
+        const statusText = free
+          ? (level.id === 1 && !bestText
+              ? '<div class="start-callout">▶ Empfohlen zum Start: hier klicken</div>'
+              : (bestText || '<div class="best-score">Noch nicht gespielt</div>'))
+          : '<div class="locked-hint">🔒 Lernversion · CHF 5 geplant</div>';
 
         card.innerHTML = `
           <div>
-            <span class="badge">Level ${level.id}</span>
+            <span class="badge">Level ${level.id}</span>${level.id === 1 ? '<span class="start-ribbon">START HIER</span>' : ''}
             <div class="level-meta">
               <span class="mini-tag">${meta.type}</span>
               <span class="mini-tag gold">${meta.difficulty}</span>
@@ -2079,14 +2542,16 @@
             <h3>${level.title}</h3>
             <p>${level.description}</p>
           </div>
-          <div>
-            ${level.active ? bestText || '<div class="best-score">Noch nicht gespielt</div>' : '<div class="best-score">Kommt bald</div>'}
-          </div>
+          <div>${statusText}</div>
         `;
 
-        if (level.active) {
-          card.onclick = () => showLevelPreview(index);
-        }
+        card.onclick = () => {
+          if (free) {
+            showLevelPreview(index);
+          } else {
+            showLockedOffer(level);
+          }
+        };
 
         grid.appendChild(card);
       });
@@ -2111,7 +2576,7 @@
         <span class="mini-tag">${meta.type}</span>
         <span class="mini-tag gold">${meta.difficulty}</span>
       `;
-      document.getElementById("previewQuestions").innerHTML = level.questions.length + "<span>Fragen</span>";
+      document.getElementById("previewQuestions").innerHTML = getAccessibleLevelQuestions(level).length + "<span>Fragen</span>";
       document.getElementById("previewGoal").innerHTML = "<strong>Lernziel:</strong> " + meta.goal;
     }
 
@@ -2125,14 +2590,17 @@
     }
 
     function startLevel(index) {
+      currentSessionType = "level";
+      currentSessionCategory = null;
       currentLevelIndex = index;
       currentQuestion = 0;
       score = 0;
       answered = false;
 
       const level = levels[currentLevelIndex];
+      currentSessionTitle = level.title;
 
-      currentLevelQuestions = shuffleArray(level.questions);
+      currentLevelQuestions = shuffleArray(getAccessibleLevelQuestions(level));
 
       document.getElementById("levelScreen").classList.add("hidden");
       document.getElementById("previewScreen").classList.add("hidden");
@@ -2156,22 +2624,7 @@
       document.getElementById("currentQuestion").textContent = currentQuestion + 1;
       document.getElementById("feedback").innerHTML = "";
 
-      const imageError = document.getElementById("imageError");
-      imageError.classList.add("hidden");
-      imageError.textContent = "";
-
-      const img = document.getElementById("composerImage");
-      img.src = q.image;
-      img.alt = "Bild: " + q.image;
-
-      img.onerror = function() {
-        imageError.textContent = "Bild nicht gefunden: " + q.image;
-        imageError.classList.remove("hidden");
-      };
-
-      img.onload = function() {
-        imageError.classList.add("hidden");
-      };
+      setQuestionImage(q);
 
       const progress = ((currentQuestion + 1) / currentLevelQuestions.length) * 100;
       document.getElementById("progress").style.width = progress + "%";
@@ -2204,6 +2657,27 @@
         btn.disabled = true;
       });
 
+      if (currentSessionType === "exam") {
+        if (selectedOption.isCorrect) {
+          score++;
+        }
+
+        button.classList.add("selected");
+        examAnswers.push({
+          question: q.question,
+          selected: selectedOption.text,
+          correct: currentOptions[correctIndex].text,
+          isCorrect: selectedOption.isCorrect,
+          category: q.category || "Allgemeines Musikwissen"
+        });
+
+        feedback.innerHTML = `
+          <div>Antwort gespeichert. Im Prüfungsmodus kommt die Auswertung erst am Schluss.</div>
+        `;
+        document.getElementById("nextBtn").classList.remove("hidden");
+        return;
+      }
+
       if (selectedOption.isCorrect) {
         button.classList.add("correct");
         score++;
@@ -2234,13 +2708,23 @@
     }
 
     function showResult() {
-      const level = levels[currentLevelIndex];
+      const isCategorySession = currentSessionType === "category" && currentSessionCategory;
+      const isExamSession = currentSessionType === "exam";
+      const level = (isCategorySession || isExamSession) ? null : levels[currentLevelIndex];
 
       document.getElementById("quizScreen").classList.add("hidden");
       document.getElementById("resultScreen").classList.remove("hidden");
 
-      document.getElementById("resultLevelBadge").textContent = "Level " + level.id + " abgeschlossen";
-      document.getElementById("resultTitle").textContent = "Lernstand: " + level.title;
+      if (isCategorySession) {
+        document.getElementById("resultLevelBadge").textContent = "Kategorie abgeschlossen";
+        document.getElementById("resultTitle").textContent = "Lernstand: " + currentSessionCategory.title;
+      } else if (isExamSession) {
+        document.getElementById("resultLevelBadge").textContent = "Prüfung abgeschlossen";
+        document.getElementById("resultTitle").textContent = "Prüfungsmodus: " + getAccessLabel() + "-Test";
+      } else {
+        document.getElementById("resultLevelBadge").textContent = "Level " + level.id + " abgeschlossen";
+        document.getElementById("resultTitle").textContent = "Lernstand: " + level.title;
+      }
 
       const percentage = Math.round((score / currentLevelQuestions.length) * 100);
       const rank = getResultRank(percentage);
@@ -2249,9 +2733,13 @@
       document.getElementById("scoreText").textContent = score + "/" + currentLevelQuestions.length;
       document.getElementById("pointsStat").innerHTML = score + "/" + currentLevelQuestions.length + "<span>Punkte</span>";
       document.getElementById("percentStat").innerHTML = percentage + "%<span>Ergebnis</span>";
-      document.getElementById("levelStat").innerHTML = "Level " + level.id + "<span>Bereich</span>";
+      document.getElementById("levelStat").innerHTML = isCategorySession
+        ? currentSessionCategory.title + "<span>Kategorie</span>"
+        : (isExamSession ? getAccessLabel() + "-Test<span>Prüfung</span>" : "Level " + level.id + "<span>Bereich</span>");
 
-      const storageKey = "bestScoreLevel" + level.id;
+      const storageKey = isCategorySession
+        ? getCategoryStorageKey(currentSessionCategory.title)
+        : (isExamSession ? "bestScoreExam" + getCurrentTierName() : "bestScoreLevel" + level.id);
       const oldBest = Number(localStorage.getItem(storageKey) || 0);
       const isNewBest = score > oldBest;
 
@@ -2267,8 +2755,29 @@
 
       document.getElementById("comment").textContent = comment + " Du hast " + percentage + "% erreicht.";
 
-      const nextIndex = getNextActiveLevelIndex();
       const nextButton = document.getElementById("nextLevelBtn");
+      const restartButton = document.getElementById("restartBtn");
+
+      if (restartButton) {
+        restartButton.textContent = isExamSession
+          ? "Prüfungsmodus nochmals spielen"
+          : (isCategorySession ? "Diese Kategorie nochmals spielen" : "Dieses Level nochmals spielen");
+      }
+
+      if (isExamSession) {
+        nextButton.classList.add("hidden");
+        document.getElementById("nextSuggestion").textContent = getWeakCategorySuggestion();
+        return;
+      }
+
+      if (isCategorySession) {
+        nextButton.classList.add("hidden");
+        document.getElementById("nextSuggestion").textContent =
+          "Kategorie-Modus abgeschlossen. Du kannst eine weitere Kategorie wählen oder über die Level 1–3 weiterspielen.";
+        return;
+      }
+
+      const nextIndex = getNextActiveLevelIndex();
 
       if (nextIndex !== null) {
         const nextLevel = levels[nextIndex];
@@ -2280,13 +2789,13 @@
       } else {
         nextButton.classList.add("hidden");
         document.getElementById("nextSuggestion").textContent =
-          "Du hast alle aktiven Level erreicht. Das ist die vollständige Basisversion mit 100 Fragen — bereit für Wiederholung, Feinschliff oder spätere Premium-Erweiterungen.";
+          "Du hast die aktuelle Gratis-Beta geschafft: 3 Level, 30 Fragen. Die Lernversion mit allen 10 Leveln und 300 Fragen ist als nächster Ausbauschritt vorbereitet.";
       }
     }
 
     function getNextActiveLevelIndex() {
       for (let i = currentLevelIndex + 1; i < levels.length; i++) {
-        if (levels[i].active) {
+        if (isFreeLevel(levels[i])) {
           return i;
         }
       }
@@ -2303,6 +2812,15 @@
     }
 
     function restartCurrentLevel() {
+      if (currentSessionType === "exam") {
+        startFreeExamMode();
+        return;
+      }
+
+      if (currentSessionType === "category" && currentSessionCategory) {
+        startCategoryMode(currentSessionCategory);
+        return;
+      }
       startLevel(currentLevelIndex);
     }
 
@@ -2312,6 +2830,7 @@
       document.getElementById("resultScreen").classList.add("hidden");
       document.getElementById("levelScreen").classList.remove("hidden");
       renderLevelScreen();
+      renderCategoryGrid();
     }
 
     function resetBestScores() {
@@ -2325,10 +2844,21 @@
         localStorage.removeItem("bestScoreLevel" + level.id);
       });
 
+      categoryData.forEach(category => {
+        localStorage.removeItem(getCategoryStorageKey(category.title));
+      });
+
+      localStorage.removeItem("bestScoreExamfree");
+      localStorage.removeItem("bestScoreExamlearning");
+      localStorage.removeItem("bestScoreExampremium");
+      localStorage.removeItem("bestScoreExamFree");
+
       renderLevelScreen();
     }
 
+    updateAccessUi();
     renderLevelScreen();
+    renderCategoryGrid();
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -2340,4 +2870,3 @@
   </script>
 </body>
 </html>
-Version 1.8.1 – Deploy Reset

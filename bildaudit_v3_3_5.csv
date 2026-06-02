@@ -1,0 +1,401 @@
+id,level,category,question,correct,image,reason
+L1-1,1,Formen & Gattungen,Wer komponierte die 'Mondscheinsonate'?,Beethoven,images/beethoven.webp,correct-answer:beethoven->beethoven
+L1-2,1,Komponisten,Welcher Komponist wurde im Laufe seines Lebens zunehmend taub?,Beethoven,images/beethoven.webp,correct-answer:beethoven->beethoven
+L1-3,1,Werkkunde,Welches Werk stammt von Antonio Vivaldi?,Die vier Jahreszeiten,images/vivaldi.webp,correct-answer:vier jahreszeiten->vivaldi
+L1-4,1,Komponisten,In welcher Stadt wurde Mozart geboren?,Salzburg,images/Mozart.jpg,text:mozart->mozart
+L1-5,1,Komponisten,"Welcher Komponist ist besonders bekannt für Nocturnes, Mazurken und Polonaisen?",Chopin,images/chopin.jpg,correct-answer:chopin->chopin
+L1-6,1,Werkkunde,Wer komponierte 'Also sprach Zarathustra'?,Richard Strauss,images/rstrauss.jpg,correct-answer:richard strauss->rstrauss
+L1-7,1,Formen & Gattungen,Wie viele Sinfonien schrieb Beethoven?,9,images/beethoven.webp,text:beethoven->beethoven
+L1-8,1,Formen & Gattungen,Wer gilt oft als 'Vater der Sinfonie'?,Joseph Haydn,images/jhaydn.jpg,correct-answer:joseph haydn->jhaydn
+L1-9,1,Komponisten,Welches Instrument spielte Franz Liszt virtuos?,Klavier,images/liszt.png,text:franz liszt->liszt
+L1-10,1,Epochen & Stil,Wer komponierte den berühmten Hochzeitsmarsch aus 'Ein Sommernachtstraum'?,Mendelssohn,images/mendelssohn.jpg,correct-answer:mendelssohn->mendelssohn
+L1-11,1,Komponisten,Welcher Komponist schrieb die „Sinfonia da Requiem“?,Britten,images/britten.jpg,correct-answer:britten->britten
+L1-12,1,Komponisten,Welcher Komponist war Mitglied der französischen Gruppe „Les Six“?,Poulenc,images/poulenc.jpg,correct-answer:poulenc->poulenc
+L1-13,1,Oper & Musiktheater,Wer komponierte die Oper „Peter Grimes“?,Benjamin Britten,images/britten.jpg,correct-answer:benjamin britten->britten
+L1-14,1,Komponisten,Welcher Komponist schrieb viele „Gnossiennes“ und „Gymnopédies“?,Erik Satie,images/satie.jpg,correct-answer:erik satie->satie
+L1-15,1,Komponisten,Welcher Komponist gilt als wichtiger Vertreter der ungarischen Moderne und sammelte Volksmusik?,Bartók,images/bartok.jpg,correct-answer:bartók->bartok
+L1-16,1,Oper & Musiktheater,Welcher Komponist schrieb die Oper „Wozzeck“?,Alban Berg,images/albanberg.jpg,correct-answer:alban berg->albanberg
+L1-17,1,Werkkunde,Wer komponierte „Carmina Burana“?,Carl Orff,images/orff.jpg,correct-answer:carl orff->orff
+L1-18,1,Werkkunde,Welcher Komponist schrieb das Orchesterwerk „The Planets“?,Gustav Holst,images/holst.jpg,correct-answer:gustav holst->holst
+L1-19,1,Oper & Musiktheater,Welcher Komponist schrieb die Oper „Pelléas et Mélisande“?,Debussy,images/debussy.jpg,correct-answer:debussy->debussy
+L1-20,1,Werkkunde,Wer komponierte die „Alpensinfonie“?,Richard Strauss,images/rstrauss.jpg,correct-answer:richard strauss->rstrauss
+L1-21,1,Werkkunde,Welcher Komponist schrieb die „Variationen über ein Thema von Haydn“?,Brahms,images/brahms.jpg,correct-answer:brahms->brahms
+L1-22,1,Komponisten,Welcher Komponist war besonders eng mit dem „Mächtigen Häuflein“ in Russland verbunden?,Mussorgsky,images/mussorgsky.jpg,correct-answer:mussorgsky->mussorgsky
+L1-23,1,Kirchenmusik & Chor,Wer komponierte die „Glagolitische Messe“?,Janáček,images/janacek.jpg,correct-answer:janáček->janacek
+L1-24,1,Komponisten,Welcher Komponist schrieb viele Lieder nach Gedichten von Wilhelm Müller?,Schubert,images/schubert.png,correct-answer:schubert->schubert
+L1-25,1,Werkkunde,Welcher Komponist schrieb das Orchesterwerk „Prélude à l’après-midi d’un faune“?,Debussy,images/debussy.jpg,correct-answer:debussy->debussy
+L1-26,1,Werkkunde,Welcher Komponist schrieb die „Enigma-Variationen“?,Elgar,images/elgar.jpg,correct-answer:elgar->elgar
+L1-27,1,Komponisten,Welcher Komponist war ein wichtiger Vertreter der tschechischen Nationalmusik und schrieb „Mein Vaterland“?,Smetana,images/smetana.jpg,correct-answer:smetana->smetana
+L1-28,1,Werkkunde,Welcher Komponist schrieb die „Ungarischen Tänze“?,Brahms,images/brahms.jpg,correct-answer:brahms->brahms
+L1-29,1,Oper & Musiktheater,Welcher Komponist schrieb die Oper „Porgy and Bess“?,Gershwin,images/gershwin.jpg,correct-answer:gershwin->gershwin
+L1-30,1,Werkkunde,Welcher Komponist schrieb die „Kindertotenlieder“?,Mahler,images/mahler.jpg,correct-answer:mahler->mahler
+L1-31,1,Komponisten,Welcher Komponist wurde 1685 in Eisenach geboren?,Bach,images/bach.jpg,correct-answer:bach->bach
+L1-32,1,Komponisten,Welcher Komponist war ein Zeitgenosse Bachs und wurde ebenfalls 1685 geboren?,Händel,images/handel.jpg,correct-answer:händel->handel
+L1-33,1,Komponisten,Welcher Komponist wurde wegen seiner langen Tätigkeit in London auch mit den „Londoner Sinfonien“ verbunden?,Haydn,images/jhaydn.jpg,correct-answer:haydn->jhaydn
+L1-34,1,Komponisten,"Welcher Komponist schrieb besonders viele Lieder, darunter „Erlkönig“?",Schubert,images/schubert.png,correct-answer:schubert->schubert
+L1-35,1,Komponisten,Welcher Komponist schrieb die 9. Sinfonie mit dem berühmten Schlusschor „Ode an die Freude“?,Beethoven,images/beethoven.webp,correct-answer:beethoven->beethoven
+L1-36,1,Komponisten,"Welche Oper von Verdi enthält den berühmten Gefangenenchor „Va, pensiero“?",Nabucco,images/verdi.jpg,correct-answer:nabucco->verdi
+L1-37,1,Komponisten,Welcher Komponist schrieb viele Werke für Klavier und lebte lange in Paris?,Chopin,images/chopin.jpg,correct-answer:chopin->chopin
+L1-38,1,Komponisten,Welcher Komponist schrieb die Oper „Der Freischütz“?,Carl Maria von Weber,images/weber.jpg,correct-answer:carl maria von weber->weber
+L1-39,1,Komponisten,Welcher Komponist stammt aus Norwegen?,Grieg,images/grieg.jpg,correct-answer:grieg->grieg
+L1-40,1,Komponisten,Welcher Komponist schrieb „Carmina Burana“?,Carl Orff,images/orff.jpg,correct-answer:carl orff->orff
+L2-1,2,Kirchenmusik & Chor,Wer komponierte die 'Matthäus-Passion'?,Johann Sebastian Bach,images/bach.jpg,correct-answer:johann sebastian bach->bach
+L2-2,2,Oper & Musiktheater,Wer komponierte die Oper 'La Traviata'?,Verdi,images/verdi.jpg,correct-answer:verdi->verdi
+L2-3,2,Werkkunde,Welcher Komponist schrieb 'Die Moldau'?,Smetana,images/smetana.jpg,correct-answer:smetana->smetana
+L2-4,2,Werkkunde,Von wem stammt der berühmte 'Boléro'?,Ravel,images/ravel.jpg,correct-answer:ravel->ravel
+L2-5,2,Werkkunde,Wer komponierte 'Carmina Burana'?,Carl Orff,images/orff.jpg,correct-answer:carl orff->orff
+L2-6,2,Oper & Musiktheater,Wer komponierte das Musical 'West Side Story'?,Leonard Bernstein,images/bernstein.jpg,correct-answer:leonard bernstein->bernstein
+L2-7,2,Kirchenmusik & Chor,Wer schrieb 'Ein deutsches Requiem'?,Brahms,images/brahms.jpg,correct-answer:brahms->brahms
+L2-8,2,Werkkunde,Wer komponierte 'Le Sacre du printemps'?,Strawinsky,images/stravinsky.jpg,correct-answer:strawinsky->stravinsky
+L2-9,2,Oper & Musiktheater,Wer komponierte den Opernzyklus 'Der Ring des Nibelungen'?,Richard Wagner,images/wagner.jpg,correct-answer:richard wagner->wagner
+L2-10,2,Werkkunde,Zu welchem Komponisten gehört die Schauspielmusik 'Peer Gynt'?,Grieg,images/grieg.jpg,correct-answer:grieg->grieg
+L2-11,2,Werkkunde,Welches Werk beginnt mit dem berühmten Orchester- und Chor-Ausbruch „O Fortuna“?,Carmina Burana,images/orff.jpg,correct-answer:carmina burana->orff
+L2-12,2,Oper & Musiktheater,"Aus welchem Werk stammt der Chor „Va, pensiero“?",Nabucco,images/verdi.jpg,correct-answer:nabucco->verdi
+L2-13,2,Kirchenmusik & Chor,Welches Werk ist ein berühmtes Oratorium von Mendelssohn?,Elias,images/mendelssohn.jpg,correct-answer:elias->mendelssohn
+L2-14,2,Werkkunde,Welches Werk ist eine Ballettmusik von Tschaikowsky?,Dornröschen,images/Tchaikovsky.jpg,correct-answer:dornröschen->tchaikovsky
+L2-15,2,Werkkunde,Welches Werk stammt von Mussorgsky und wurde später von Ravel orchestriert?,Bilder einer Ausstellung,images/mussorgsky.jpg,correct-answer:bilder einer ausstellung->mussorgsky
+L2-16,2,Werkkunde,Welches Werk ist eine sinfonische Dichtung von Smetana?,Die Moldau,images/smetana.jpg,correct-answer:moldau->smetana
+L2-17,2,Werkkunde,Welches Werk ist ein Klavierzyklus von Schumann?,Kinderszenen,images/schumann.jpg,correct-answer:kinderszenen->schumann
+L2-18,2,Werkkunde,Welches Werk ist ein berühmter Liederzyklus von Schubert?,Winterreise,images/schubert.png,correct-answer:winterreise->schubert
+L2-19,2,Oper & Musiktheater,Welche Oper stammt von Leoš Janáček?,Jenůfa,images/janacek.jpg,correct-answer:jenůfa->janacek
+L2-20,2,Werkkunde,Welches Werk gehört zu Ravels bekanntesten Orchesterstücken?,Boléro,images/ravel.jpg,correct-answer:boléro->ravel
+L2-21,2,Werkkunde,Welches Werk ist ein berühmtes Orchesterwerk von Debussy?,La Mer,images/debussy.jpg,correct-answer:la mer->debussy
+L2-22,2,Kirchenmusik & Chor,Welches Werk von Brahms ist kein Requiem im liturgisch-lateinischen Sinn?,Ein deutsches Requiem,images/brahms.jpg,correct-answer:deutsches requiem->brahms
+L2-23,2,Werkkunde,Welches Werk ist eine berühmte sinfonische Dichtung von Richard Strauss?,Don Juan,images/rstrauss.jpg,correct-answer:don juan->rstrauss
+L2-24,2,Werkkunde,Welches Werk von Sibelius gilt als musikalisches Symbol Finnlands?,Finlandia,images/sibelius.jpg,correct-answer:finlandia->sibelius
+L2-25,2,Werkkunde,Welches Werk stammt nicht von Felix Mendelssohn Bartholdy?,Die Moldau,images/smetana.jpg,correct-answer:moldau->smetana
+L2-26,2,Werkkunde,Welches Werk ist ein berühmtes Klavierkonzert von Grieg?,a-Moll-Konzert,images/grieg.jpg,correct-answer:a-moll-konzert->grieg
+L2-27,2,Kirchenmusik & Chor,Welches Werk stammt von Fauré?,Requiem,images/faure.jpg,text:gabriel fauré->faure
+L2-28,2,Werkkunde,Welches Werk ist ein Liederzyklus von Robert Schumann?,Dichterliebe,images/schumann.jpg,correct-answer:dichterliebe->schumann
+L2-29,2,Oper & Musiktheater,Welches Werk ist eine Oper von Gershwin?,Porgy and Bess,images/gershwin.jpg,correct-answer:porgy and bess->gershwin
+L2-30,2,Oper & Musiktheater,Welches Werk gehört zu Mussorgskys bekanntesten Bühnenwerken?,Boris Godunow,images/mussorgsky.jpg,correct-answer:boris godunow->mussorgsky
+L2-31,2,Werkkunde,Wer schrieb das berühmteste Weihnachtsoratorium?,Bach,images/bach.jpg,correct-answer:bach->bach
+L2-32,2,Werkkunde,Wer komponierte „Die Zauberflöte“?,Mozart,images/Mozart.jpg,correct-answer:mozart->mozart
+L2-33,2,Werkkunde,Zu welchem Werk gehört der berühmte „Halleluja“-Chor?,Messias,images/handel.jpg,correct-answer:messias->handel
+L2-34,2,Werkkunde,Wer schrieb „Ein deutsches Requiem“?,Brahms,images/brahms.jpg,correct-answer:brahms->brahms
+L2-35,2,Werkkunde,Wer komponierte „Die Moldau“?,Smetana,images/smetana.jpg,correct-answer:smetana->smetana
+L2-36,2,Werkkunde,Wer schrieb die „Kinderszenen“?,Schumann,images/schumann.jpg,correct-answer:schumann->schumann
+L2-37,2,Werkkunde,Wer komponierte „Peter und der Wolf“?,Prokofjew,images/prokofiev.jpg,correct-answer:prokofjew->prokofiev
+L2-38,2,Werkkunde,Wer schrieb „The Young Person’s Guide to the Orchestra“?,Britten,images/britten.jpg,correct-answer:britten->britten
+L2-39,2,Werkkunde,Wer komponierte „Boléro“?,Ravel,images/ravel.jpg,correct-answer:ravel->ravel
+L2-40,2,Werkkunde,Wer schrieb die Oper „Carmen“?,Bizet,images/bizet.jpg,correct-answer:bizet->bizet
+L3-1,3,Epochen & Stil,Johann Sebastian Bach gehört hauptsächlich zu welcher Epoche?,Barock,images/bach.jpg,text:johann sebastian bach->bach
+L3-2,3,Epochen & Stil,Wolfgang Amadeus Mozart ist ein zentraler Komponist welcher Epoche?,Wiener Klassik,images/jhaydn.jpg,correct-answer:wiener klassik->jhaydn
+L3-3,3,Epochen & Stil,Frédéric Chopin wird vor allem welcher Epoche zugeordnet?,Romantik,images/chopin.jpg,text:frédéric chopin->chopin
+L3-4,3,Epochen & Stil,Claude Debussy wird besonders mit welcher Stilrichtung verbunden?,Impressionismus,images/debussy.jpg,correct-answer:impressionismus->debussy
+L3-5,3,Epochen & Stil,Arnold Schönberg ist eng verbunden mit welcher musikalischen Entwicklung?,Zwölftontechnik,images/schoenberg.jpg,correct-answer:zwölftontechnik->schoenberg
+L3-6,3,Epochen & Stil,Giovanni Pierluigi da Palestrina steht besonders für welche Epoche?,Renaissance,images/palestrina.jpg,text:giovanni pierluigi da palestrina->palestrina
+L3-7,3,Epochen & Stil,Claudio Monteverdi steht musikgeschichtlich besonders an der Schwelle zwischen ...,Renaissance und Barock,images/monteverdi.jpg,text:claudio monteverdi->monteverdi
+L3-8,3,Epochen & Stil,Igor Strawinsky gehört vor allem zur Musik welcher Zeit?,20. Jahrhundert / Moderne,images/stravinsky.jpg,text:igor strawinsky->stravinsky
+L3-9,3,Epochen & Stil,Joseph Haydn gilt als wichtiger Vertreter welcher Epoche?,Wiener Klassik,images/jhaydn.jpg,correct-answer:wiener klassik->jhaydn
+L3-10,3,Epochen & Stil,John Cage wird besonders mit welcher Richtung verbunden?,Experimentelle Musik / Avantgarde,images/cage.jpg,correct-answer:avantgarde->cage
+L3-11,3,Epochen & Stil,Welche Epoche verbindet man besonders mit Generalbass und Affektenlehre?,Barock,images/icon-512.png,neutral-logo
+L3-12,3,Epochen & Stil,Welche Stilrichtung arbeitet oft mit schwebenden Klangfarben und Ganztonleitern?,Impressionismus,images/debussy.jpg,correct-answer:impressionismus->debussy
+L3-13,3,Epochen & Stil,Welche Epoche bevorzugte häufig klare Periodik und ausgewogene Formen?,Klassik,images/jhaydn.jpg,text:wiener klassik->jhaydn
+L3-14,3,Epochen & Stil,Welche musikalische Richtung ist eng mit Arnold Schönberg verbunden?,Zweite Wiener Schule,images/schoenberg.jpg,correct-answer:zweite wiener schule->schoenberg
+L3-15,3,Epochen & Stil,Welche Epoche steht zeitlich vor dem Barock?,Renaissance,images/icon-512.png,neutral-logo
+L3-16,3,Epochen & Stil,"Welche Epoche wird häufig mit gesteigerter Subjektivität, Naturbildern und Sehnsucht verbunden?",Romantik,images/icon-512.png,neutral-logo
+L3-17,3,Epochen & Stil,Welcher Begriff passt besonders zur Musik um 1900 mit stark erweiterter Harmonik?,Spätromantik,images/schoenberg.jpg,text:schönberg->schoenberg
+L3-18,3,Epochen & Stil,Welche Stilrichtung verwendet oft wiederholte Muster und langsame Veränderungen?,Minimal Music,images/icon-512.png,neutral-logo
+L3-19,3,Kirchenmusik & Chor,Welche Epoche brachte die Mehrchörigkeit der venezianischen Schule hervor?,Renaissance,images/icon-512.png,neutral-logo
+L3-20,3,Epochen & Stil,Welche Epoche liegt ungefähr zwischen Renaissance und Klassik?,Barock,images/icon-512.png,neutral-logo
+L3-21,3,Werkkunde,Welches Werk ist eine berühmte Tondichtung von Dukas?,Der Zauberlehrling,images/dukas.jpg,correct-answer:zauberlehrling->dukas
+L3-22,3,Kirchenmusik & Chor,Welches Werk von Britten ist ein grosser Beitrag zur Chorliteratur des 20. Jahrhunderts?,War Requiem,images/britten.jpg,correct-answer:war requiem->britten
+L3-23,3,Werkkunde,Welches Werk ist ein berühmter Klavierzyklus von Debussy?,Préludes,images/debussy.jpg,correct-answer:préludes->debussy
+L3-24,3,Kirchenmusik & Chor,Welches Werk gehört zur Kirchenmusik von Rossini?,Petite Messe solennelle,images/rossini.jpg,correct-answer:petite messe->rossini
+L3-25,3,Werkkunde,Welches Werk ist eine sinfonische Dichtung von Liszt?,Les Préludes,images/liszt.png,correct-answer:les préludes->liszt
+L3-26,3,Oper & Musiktheater,Welche Oper stammt von Verdi und spielt im alten Ägypten?,Aida,images/verdi.jpg,correct-answer:aida->verdi
+L3-27,3,Oper & Musiktheater,Was bezeichnet man in Wagners Musikdramen häufig als „Leitmotiv“?,"Ein wiederkehrendes Motiv für Figur, Idee oder Situation",images/wagner.jpg,text:leitmotiv->wagner
+L3-28,3,Oper & Musiktheater,"Welche Oper von Mozart enthält die Figuren Susanna, Figaro und die Gräfin?",Le nozze di Figaro,images/Mozart.jpg,correct-answer:figaro->mozart
+L3-29,3,Oper & Musiktheater,Welche Oper stammt von Rossini?,La Cenerentola,images/rossini.jpg,correct-answer:cenerentola->rossini
+L3-30,3,Oper & Musiktheater,Welche Oper von Puccini spielt in Japan?,Madama Butterfly,images/puccini.jpg,correct-answer:madama butterfly->puccini
+L3-31,3,Epochen & Stil,Zu welcher Epoche gehört Johann Sebastian Bach?,Barock,images/bach.jpg,text:johann sebastian bach->bach
+L3-32,3,Epochen & Stil,Zu welcher Epoche gehört Wolfgang Amadeus Mozart?,Klassik,images/Mozart.jpg,text:wolfgang amadeus mozart->mozart
+L3-33,3,Epochen & Stil,Welche Epoche folgt historisch ungefähr auf den Barock?,Klassik,images/icon-512.png,neutral-logo
+L3-34,3,Epochen & Stil,Welche Epoche verbindet man oft mit grossen Gefühlen und Naturbildern?,Romantik,images/icon-512.png,neutral-logo
+L3-35,3,Epochen & Stil,Welcher Komponist steht oft an der Schwelle von Klassik zu Romantik?,Beethoven,images/beethoven.webp,correct-answer:beethoven->beethoven
+L3-36,3,Epochen & Stil,Welche Stilrichtung verbindet man besonders mit Debussy und Ravel?,Impressionismus,images/debussy.jpg,correct-answer:impressionismus->debussy
+L3-37,3,Epochen & Stil,Welche Musikrichtung arbeitet häufig mit Wiederholung und kleinen Veränderungen?,Minimal Music,images/icon-512.png,neutral-logo
+L3-38,3,Epochen & Stil,Welche Epoche liegt ungefähr vor dem Barock?,Renaissance,images/icon-512.png,neutral-logo
+L3-39,3,Epochen & Stil,"Welche Epoche ist besonders mit Komponisten wie Schubert, Schumann und Chopin verbunden?",Romantik,images/schubert.png,text:schubert->schubert
+L3-40,3,Epochen & Stil,Mit welcher Technik verbindet man Arnold Schönberg besonders?,Zwölftontechnik,images/schoenberg.jpg,correct-answer:zwölftontechnik->schoenberg
+L4-1,4,Oper & Musiktheater,Wer komponierte die Oper 'Don Giovanni'?,Mozart,images/Mozart.jpg,correct-answer:mozart->mozart
+L4-2,4,Oper & Musiktheater,Wer komponierte die Oper 'Carmen'?,Bizet,images/bizet.jpg,correct-answer:bizet->bizet
+L4-3,4,Oper & Musiktheater,Wer komponierte 'La Bohème'?,Puccini,images/puccini.jpg,correct-answer:puccini->puccini
+L4-4,4,Oper & Musiktheater,Wer komponierte 'Il barbiere di Siviglia'?,Rossini,images/rossini.jpg,correct-answer:rossini->rossini
+L4-5,4,Werkkunde,Wer komponierte 'Der Ring des Nibelungen'?,Richard Wagner,images/wagner.jpg,correct-answer:richard wagner->wagner
+L4-6,4,Oper & Musiktheater,Wer komponierte 'Der Rosenkavalier'?,Richard Strauss,images/rstrauss.jpg,correct-answer:richard strauss->rstrauss
+L4-7,4,Oper & Musiktheater,Wer komponierte die Oper 'Wozzeck'?,Alban Berg,images/albanberg.jpg,correct-answer:alban berg->albanberg
+L4-8,4,Oper & Musiktheater,Wer komponierte 'Dido and Aeneas'?,Henry Purcell,images/purcell.jpg,correct-answer:henry purcell->purcell
+L4-9,4,Oper & Musiktheater,Wer gilt als einer der wichtigsten frühen Opernkomponisten um 1600?,Monteverdi,images/monteverdi.jpg,correct-answer:monteverdi->monteverdi
+L4-10,4,Oper & Musiktheater,Welche Oper stammt von Giuseppe Verdi?,Aida,images/verdi.jpg,correct-answer:aida->verdi
+L4-11,4,Formen & Gattungen,Was ist eine Passacaglia?,Variationsform über Bassmodell,images/icon-512.png,neutral-logo
+L4-12,4,Formen & Gattungen,Was bezeichnet ein „Rondo“?,Wiederkehr eines Hauptteils,images/icon-512.png,neutral-logo
+L4-13,4,Formen & Gattungen,Was ist ein Madrigal?,Mehrstimmiges weltliches Vokalstück,images/icon-512.png,neutral-logo
+L4-14,4,Formen & Gattungen,Was ist eine Suite?,Folge mehrerer Tanz- oder Charakterstücke,images/icon-512.png,neutral-logo
+L4-15,4,Oper & Musiktheater,Was ist ein Rezitativ?,Sprechnahe Gesangsform in Oper/Oratorium,images/icon-512.png,neutral-logo
+L4-16,4,Formen & Gattungen,Was ist ein Divertimento?,Unterhaltendes mehrsätziges Instrumentalwerk,images/icon-512.png,neutral-logo
+L4-17,4,Formen & Gattungen,Was bedeutet „Da capo“ in einer Arie?,Zurück zum Anfang,images/icon-512.png,neutral-logo
+L4-18,4,Kirchenmusik & Chor,Was ist eine Kantate?,Mehrteiliges Vokalwerk mit Instrumenten,images/icon-512.png,neutral-logo
+L4-19,4,Formen & Gattungen,Was ist ein Scherzo?,"Schneller, oft humorvoller Satz",images/icon-512.png,neutral-logo
+L4-20,4,Formen & Gattungen,Was ist eine Toccata?,Virtuoses Instrumentalstück,images/icon-512.png,neutral-logo
+L4-21,4,Oper & Musiktheater,Welche Oper von Strauss spielt mit einem bürgerlich-adligen Wiener Milieu und einer berühmten Marschallin?,Der Rosenkavalier,images/rstrauss.jpg,correct-answer:rosenkavalier->rstrauss
+L4-22,4,Oper & Musiktheater,Welche Oper von Beethoven steht für Freiheits- und Rettungsthematik?,Fidelio,images/beethoven.webp,correct-answer:fidelio->beethoven
+L4-23,4,Oper & Musiktheater,Welche Oper von Mussorgsky behandelt eine russische Herrscherfigur?,Boris Godunow,images/mussorgsky.jpg,correct-answer:boris godunow->mussorgsky
+L4-24,4,Oper & Musiktheater,Welche Oper von Debussy verzichtet weitgehend auf traditionelle Nummernoper und wirkt sprachnahe?,Pelléas et Mélisande,images/debussy.jpg,correct-answer:pelléas->debussy
+L4-25,4,Oper & Musiktheater,Was ist ein „Libretto“?,Textbuch einer Oper oder eines Oratoriums,images/icon-512.png,neutral-logo
+L4-26,4,Kirchenmusik & Chor,Was bedeutet „cantus firmus“?,Vorgegebene Melodie als Grundlage,images/icon-512.png,neutral-logo
+L4-27,4,Kirchenmusik & Chor,Was ist eine Choralmotette?,Motette auf Grundlage eines Chorals,images/icon-512.png,neutral-logo
+L4-28,4,Kirchenmusik & Chor,Was bedeutet „antiphonal“ im Chorsingen?,Wechselgesang zwischen Gruppen,images/icon-512.png,neutral-logo
+L4-29,4,Kirchenmusik & Chor,Was ist ein Introitus?,Eingangsgesang der Messe,images/icon-512.png,neutral-logo
+L4-30,4,Kirchenmusik & Chor,Was ist ein Graduale?,Messgesang zwischen Lesungen,images/icon-512.png,neutral-logo
+L4-31,4,Oper & Musiktheater,Was ist eine Arie?,Ein solistisches Gesangsstück in Oper oder Oratorium,images/icon-512.png,neutral-logo
+L4-32,4,Oper & Musiktheater,Was ist ein Rezitativ?,Sprechähnlicher Gesang,images/icon-512.png,neutral-logo
+L4-33,4,Oper & Musiktheater,In welcher Oper kommt die Arie „Nessun dorma“ vor?,Turandot,images/puccini.jpg,correct-answer:turandot->puccini
+L4-34,4,Oper & Musiktheater,Wer komponierte „La bohème“?,Puccini,images/puccini.jpg,correct-answer:puccini->puccini
+L4-35,4,Oper & Musiktheater,Welche Wagner-Oper spielt rund um den Sängerwettstreit auf der Wartburg?,Tannhäuser,images/wagner.jpg,correct-answer:tannhäuser->wagner
+L4-36,4,Oper & Musiktheater,Welche Stimmlage singt oft jugendliche Heldinnen oder lyrische Frauenrollen?,Sopran,images/icon-512.png,neutral-logo
+L4-37,4,Oper & Musiktheater,Was bezeichnet ein Ensemble in der Oper?,Eine Szene mit mehreren gleichzeitig singenden Figuren,images/icon-512.png,neutral-logo
+L4-38,4,Oper & Musiktheater,Welche Opernfigur gehört zu Bizets „Carmen“?,Don José,images/bizet.jpg,correct-answer:don josé->bizet
+L4-39,4,Oper & Musiktheater,In welcher Oper kommt Papageno vor?,Die Zauberflöte,images/Mozart.jpg,correct-answer:zauberflöte->mozart
+L4-40,4,Oper & Musiktheater,Was ist ein Libretto?,Der Text einer Oper,images/icon-512.png,neutral-logo
+L5-1,5,Werkkunde,"Welcher Komponist schrieb besonders viele Mazurken, Polonaisen und Nocturnes?",Chopin,images/chopin.jpg,correct-answer:chopin->chopin
+L5-2,5,Werkkunde,Wer komponierte die 'Slawischen Tänze'?,Dvořák,images/dvorak.jpg,correct-answer:dvořák->dvorak
+L5-3,5,Formen & Gattungen,Welcher Komponist schrieb die sinfonische Dichtung 'Die Moldau'?,Smetana,images/smetana.jpg,correct-answer:smetana->smetana
+L5-4,5,Werkkunde,Wer komponierte die Schauspielmusik 'Peer Gynt'?,Grieg,images/grieg.jpg,correct-answer:grieg->grieg
+L5-5,5,Werkkunde,Welcher Komponist schrieb 'Finlandia'?,Sibelius,images/sibelius.jpg,correct-answer:sibelius->sibelius
+L5-6,5,Werkkunde,Wer komponierte die 'Bilder einer Ausstellung'?,Mussorgsky,images/mussorgsky.jpg,correct-answer:mussorgsky->mussorgsky
+L5-7,5,Formen & Gattungen,Welcher Komponist schrieb die 'Enigma Variations'?,Elgar,images/elgar.jpg,correct-answer:elgar->elgar
+L5-8,5,Formen & Gattungen,Wer komponierte das berühmte Klavierkonzert Nr. 2 c-Moll?,Rachmaninoff,images/rachmaninoff.jpg,correct-answer:rachmaninoff->rachmaninoff
+L5-9,5,Werkkunde,Welcher Komponist schrieb zahlreiche Liederzyklen und war mit Clara Schumann verheiratet?,Robert Schumann,images/schumann.jpg,correct-answer:robert schumann->schumann
+L5-10,5,Kirchenmusik & Chor,Wer komponierte 'Ein deutsches Requiem'?,Brahms,images/brahms.jpg,correct-answer:brahms->brahms
+L5-11,5,Oper & Musiktheater,Welche Oper stammt von Carl Maria von Weber?,Der Freischütz,images/weber.jpg,correct-answer:freischütz->weber
+L5-12,5,Oper & Musiktheater,Welche Figur singt „Der Hölle Rache“?,Königin der Nacht,images/Mozart.jpg,text:zauberflöte->mozart
+L5-13,5,Oper & Musiktheater,Welche Oper spielt teilweise in Sevilla und handelt von einer freiheitsliebenden Frau?,Carmen,images/bizet.jpg,correct-answer:carmen->bizet
+L5-14,5,Oper & Musiktheater,Wer komponierte „Hänsel und Gretel“?,Humperdinck,images/humperdinck.jpg,correct-answer:humperdinck->humperdinck
+L5-15,5,Oper & Musiktheater,Welche Oper stammt von Richard Strauss?,Salome,images/rstrauss.jpg,correct-answer:salome->rstrauss
+L5-16,5,Oper & Musiktheater,Welche Oper basiert auf einem Stoff von Shakespeare und wurde von Verdi komponiert?,Otello,images/verdi.jpg,correct-answer:otello->verdi
+L5-17,5,Oper & Musiktheater,In welcher Oper tritt die Figur Sarastro auf?,Die Zauberflöte,images/Mozart.jpg,correct-answer:zauberflöte->mozart
+L5-18,5,Oper & Musiktheater,Welche Oper von Puccini spielt im Künstler- und Studentenmilieu von Paris?,La Bohème,images/puccini.jpg,correct-answer:la bohème->puccini
+L5-19,5,Oper & Musiktheater,Welche Oper von Dvořák enthält das berühmte „Lied an den Mond“?,Rusalka,images/dvorak.jpg,correct-answer:rusalka->dvorak
+L5-20,5,Oper & Musiktheater,Welche Oper ist ein zentrales Werk des deutschen romantischen Musiktheaters?,Der Freischütz,images/weber.jpg,correct-answer:freischütz->weber
+L5-21,5,Kirchenmusik & Chor,Was bedeutet „responsorial“?,Wechsel zwischen Vorsänger und Antwortgruppe,images/icon-512.png,neutral-logo
+L5-22,5,Kirchenmusik & Chor,Was ist ein „Credo“ in der Messe?,Glaubensbekenntnis,images/icon-512.png,neutral-logo
+L5-23,5,Kirchenmusik & Chor,Was bezeichnet „Basso continuo“ in barocker Kirchenmusik?,fortlaufende Bass- und Harmoniestütze,images/icon-512.png,neutral-logo
+L5-24,5,Kirchenmusik & Chor,Was ist ein „Offertorium“?,Gesang zur Gabenbereitung,images/icon-512.png,neutral-logo
+L5-25,5,Kirchenmusik & Chor,Was ist ein „Vesperpsalm“?,Psalm im Abendgebet,images/icon-512.png,neutral-logo
+L5-26,5,Formen & Gattungen,Was ist eine „sinfonische Dichtung“?,Orchesterwerk mit aussermusikalischem Programm,images/liszt.png,text:sinfonische dichtung->liszt
+L5-27,5,Formen & Gattungen,Was ist ein „Charakterstück“?,kurzes Stück mit bestimmter Stimmung oder Idee,images/icon-512.png,neutral-logo
+L5-28,5,Formen & Gattungen,Was bedeutet „Variationsform“?,Ein Thema wird verändert wiederholt,images/icon-512.png,neutral-logo
+L5-29,5,Formen & Gattungen,Was ist eine „Ouvertüre“?,Eröffnungsstück zu Oper oder Konzertwerk,images/icon-512.png,neutral-logo
+L5-30,5,Formen & Gattungen,Was ist eine „Etüde“?,Übungs- oder Konzertstück mit technischem Schwerpunkt,images/icon-512.png,neutral-logo
+L5-31,5,Musikleben & Praxis,Welcher Schweizer Komponist schrieb das Oratorium „Le Roi David“?,Arthur Honegger,images/honegger.jpg,correct-answer:arthur honegger->honegger
+L5-32,5,Musikleben & Praxis,Welcher Komponist wurde in Bonn geboren?,Beethoven,images/beethoven.webp,correct-answer:beethoven->beethoven
+L5-33,5,Musikleben & Praxis,Welcher Komponist stammt aus Salzburg?,Mozart,images/Mozart.jpg,correct-answer:mozart->mozart
+L5-34,5,Musikleben & Praxis,Welcher Komponist ist besonders mit Wien verbunden und schrieb viele Lieder?,Schubert,images/schubert.png,correct-answer:schubert->schubert
+L5-35,5,Musikleben & Praxis,Was ist die Aufgabe der Konzertmeisterin oder des Konzertmeisters im Orchester?,Führung der ersten Violinen und wichtige Vermittlung zum Dirigat,images/icon-512.png,neutral-logo
+L5-36,5,Musikleben & Praxis,Was ist ein Laienchor?,Chor mit nicht-beruflichen Sänger:innen,images/icon-512.png,neutral-logo
+L5-37,5,Musikleben & Praxis,Was bedeutet „Uraufführung“?,Erste öffentliche Aufführung eines Werkes,images/icon-512.png,neutral-logo
+L5-38,5,Musikleben & Praxis,Was ist ein Dirigent?,Musikalischer Leiter eines Ensembles,images/icon-512.png,neutral-logo
+L5-39,5,Musikleben & Praxis,Was ist eine Partitur?,Notentext mit allen Stimmen eines Werkes,images/icon-512.png,neutral-logo
+L5-40,5,Musikleben & Praxis,Was ist eine Generalprobe?,Letzte grosse Probe vor der Aufführung,images/icon-512.png,neutral-logo
+L6-1,6,Kirchenmusik & Chor,Wer komponierte die berühmte 'Marienvesper' von 1610?,Monteverdi,images/monteverdi.jpg,correct-answer:monteverdi->monteverdi
+L6-2,6,Epochen & Stil,Welcher Komponist gilt als zentraler Vertreter der römischen Vokalpolyphonie der Renaissance?,Palestrina,images/palestrina.jpg,correct-answer:palestrina->palestrina
+L6-3,6,Oper & Musiktheater,Wer komponierte 'Dido and Aeneas'?,Purcell,images/purcell.jpg,correct-answer:purcell->purcell
+L6-4,6,Oper & Musiktheater,Welcher Komponist ist besonders mit der französischen Hofoper unter Ludwig XIV. verbunden?,Lully,images/lully.jpg,correct-answer:lully->lully
+L6-5,6,Formen & Gattungen,Wer gilt als einer der wichtigsten Meister des Concerto grosso?,Corelli,images/corelli.jpg,correct-answer:corelli->corelli
+L6-6,6,Komponisten,Welcher norddeutsche Komponist und Organist war ein wichtiger Vorgänger Bachs?,Buxtehude,images/buxtehude.jpg,correct-answer:buxtehude->buxtehude
+L6-7,6,Kirchenmusik & Chor,Wer komponierte die 'Musikalischen Exequien'?,Heinrich Schütz,images/schuetz.jpg,correct-answer:heinrich schütz->schuetz
+L6-8,6,Kirchenmusik & Chor,Welcher Komponist schrieb das Oratorium 'Messiah'?,Händel,images/handel.jpg,correct-answer:händel->handel
+L6-9,6,Komponisten,Welcher Komponist wird stark mit venezianischer Mehrchörigkeit verbunden?,Giovanni Gabrieli,images/ggabrieli.jpg,correct-answer:giovanni gabrieli->ggabrieli
+L6-10,6,Epochen & Stil,Welcher Bach-Sohn steht besonders für den empfindsamen Stil zwischen Barock und Klassik?,Carl Philipp Emanuel Bach,images/cpebach.jpg,correct-answer:carl philipp emanuel bach->cpebach
+L6-11,6,Instrumente & Besetzungen,Was bedeuten „con sordino“ und „senza sordino“ bei Streichinstrumenten?,mit Dämpfer / ohne Dämpfer,images/icon-512.png,neutral-logo
+L6-12,6,Kirchenmusik & Chor,Welcher Text gehört fest zum lateinischen Messordinarium?,Kyrie,images/icon-512.png,neutral-logo
+L6-13,6,Kirchenmusik & Chor,Welcher Satz gehört nicht zum gewöhnlichen Messordinarium?,Magnificat,images/icon-512.png,neutral-logo
+L6-14,6,Kirchenmusik & Chor,Was ist ein Choral im evangelischen Kontext?,Gemeindelied,images/icon-512.png,neutral-logo
+L6-15,6,Kirchenmusik & Chor,Was bedeutet „divisi“ in Chornoten?,Eine Stimmgruppe teilt sich auf,images/icon-512.png,neutral-logo
+L6-16,6,Kirchenmusik & Chor,Was ist ein Requiem?,Totenmesse,images/icon-512.png,neutral-logo
+L6-17,6,Kirchenmusik & Chor,Welcher Lobgesang beginnt mit „Magnificat anima mea Dominum“?,Magnificat,images/icon-512.png,neutral-logo
+L6-18,6,Kirchenmusik & Chor,Was ist ein „Stabat Mater“?,Geistlicher Text über Maria unter dem Kreuz,images/icon-512.png,neutral-logo
+L6-19,6,Kirchenmusik & Chor,Was ist ein „Te Deum“?,Feierlicher lateinischer Lobgesang,images/icon-512.png,neutral-logo
+L6-20,6,Kirchenmusik & Chor,Was bezeichnet „Psalmvertonung“?,Musikalische Vertonung eines biblischen Psalms,images/icon-512.png,neutral-logo
+L6-21,6,Formen & Gattungen,Was ist ein „Nocturne“?,meist lyrisches Nachtstück,images/chopin.jpg,text:chopin->chopin
+L6-22,6,Formen & Gattungen,Was ist ein „Impromptu“?,Charakterstück mit improvisatorischem Eindruck,images/icon-512.png,neutral-logo
+L6-23,6,Formen & Gattungen,Was bezeichnet „Thema mit Variationen“?,Thema wird mehrfach verändert,images/icon-512.png,neutral-logo
+L6-24,6,Formen & Gattungen,Was ist eine „Serenade“?,oft unterhaltendes mehrsätziges Werk,images/icon-512.png,neutral-logo
+L6-25,6,Formen & Gattungen,Was ist ein „Liedzyklus“?,Sammlung zusammengehöriger Lieder,images/icon-512.png,neutral-logo
+L6-26,6,Epochen & Stil,"Welche Schule ist mit Komponisten wie Haydn, Mozart und Beethoven verbunden?",Wiener Klassik,images/jhaydn.jpg,correct-answer:wiener klassik->jhaydn
+L6-27,6,Epochen & Stil,Welche Stilrichtung steht oft für extreme Ausdrucksspannung und Auflösung der traditionellen Tonalität?,Expressionismus,images/icon-512.png,neutral-logo
+L6-28,6,Epochen & Stil,Welche Epoche ist stark mit Polyphonie und Vokalwerken von Palestrina verbunden?,Renaissance,images/palestrina.jpg,text:palestrina->palestrina
+L6-29,6,Epochen & Stil,Welche Richtung steht für mathematisch organisierte Reihenprinzipien nach 1945?,Serialismus,images/cage.jpg,text:avantgarde->cage
+L6-30,6,Oper & Musiktheater,Welche Stilrichtung der Oper betont schönen Gesang und Virtuosität?,Belcanto,images/icon-512.png,neutral-logo
+L6-31,6,Hören & Begriffe,Was bedeutet allegro?,schnell,images/icon-512.png,neutral-logo
+L6-32,6,Hören & Begriffe,Was bedeutet adagio?,langsam,images/icon-512.png,neutral-logo
+L6-33,6,Hören & Begriffe,Was bedeutet legato?,gebunden,images/icon-512.png,neutral-logo
+L6-34,6,Hören & Begriffe,Was bedeutet staccato?,kurz und getrennt,images/icon-512.png,neutral-logo
+L6-35,6,Hören & Begriffe,Was ist ein Takt?,Ein rhythmischer Abschnitt mit regelmässiger Betonung,images/icon-512.png,neutral-logo
+L6-36,6,Hören & Begriffe,Was bedeutet Auftakt?,Unvollständiger Takt vor dem ersten Volltakt,images/icon-512.png,neutral-logo
+L6-37,6,Hören & Begriffe,Was bedeutet ritardando?,langsamer werden,images/icon-512.png,neutral-logo
+L6-38,6,Hören & Begriffe,Was bedeutet accelerando?,schneller werden,images/icon-512.png,neutral-logo
+L6-39,6,Hören & Begriffe,Was bedeutet Da capo?,Von Anfang an wiederholen,images/icon-512.png,neutral-logo
+L6-40,6,Hören & Begriffe,Was bedeutet Fine in Noten?,Ende,images/icon-512.png,neutral-logo
+L7-1,7,Epochen & Stil,Welcher Komponist wird häufig mit dem musikalischen Impressionismus verbunden?,Claude Debussy,images/debussy.jpg,correct-answer:claude debussy->debussy
+L7-2,7,Werkkunde,Wer komponierte den berühmten 'Boléro'?,Maurice Ravel,images/ravel.jpg,correct-answer:maurice ravel->ravel
+L7-3,7,Epochen & Stil,Welcher Komponist schrieb 'Le Sacre du printemps'?,Igor Strawinsky,images/stravinsky.jpg,correct-answer:igor strawinsky->stravinsky
+L7-4,7,Epochen & Stil,Wer entwickelte die Zwölftontechnik?,Arnold Schönberg,images/schoenberg.jpg,correct-answer:arnold schönberg->schoenberg
+L7-5,7,Epochen & Stil,Welcher Komponist gehört zur Zweiten Wiener Schule?,Anton Webern,images/webern.jpg,correct-answer:anton webern->webern
+L7-6,7,Oper & Musiktheater,Wer komponierte die Oper 'Wozzeck'?,Alban Berg,images/albanberg.jpg,correct-answer:alban berg->albanberg
+L7-7,7,Komponisten,Welcher Komponist ist besonders mit experimenteller Musik und dem Stück '4′33″' verbunden?,John Cage,images/cage.jpg,correct-answer:john cage->cage
+L7-8,7,Werkkunde,Wer komponierte 'Carmina Burana'?,Carl Orff,images/orff.jpg,correct-answer:carl orff->orff
+L7-9,7,Epochen & Stil,Welcher amerikanische Komponist schrieb 'Appalachian Spring'?,Aaron Copland,images/copland.jpg,correct-answer:aaron copland->copland
+L7-10,7,Kirchenmusik & Chor,Wer komponierte das 'War Requiem'?,Benjamin Britten,images/britten.jpg,correct-answer:benjamin britten->britten
+L7-11,7,Musiktheorie-Basics,Wie viele Halbtöne hat eine reine Quinte?,7,images/icon-512.png,neutral-logo
+L7-12,7,Musiktheorie-Basics,Wie viele Halbtöne hat eine grosse Terz?,4,images/icon-512.png,neutral-logo
+L7-13,7,Musiktheorie-Basics,Welches Intervall liegt zwischen C und F?,Quarte,images/icon-512.png,neutral-logo
+L7-14,7,Musiktheorie-Basics,Welche Tonart hat drei Kreuze?,A-Dur,images/icon-512.png,neutral-logo
+L7-15,7,Musiktheorie-Basics,Welche Tonart hat zwei B?,B-Dur,images/icon-512.png,neutral-logo
+L7-16,7,Hören & Begriffe,Was bedeutet „legato“?,Gebunden,images/icon-512.png,neutral-logo
+L7-17,7,Hören & Begriffe,Was bedeutet „staccato“?,Kurz getrennt,images/icon-512.png,neutral-logo
+L7-18,7,Hören & Begriffe,Was bedeutet „crescendo“?,Lauter werden,images/icon-512.png,neutral-logo
+L7-19,7,Hören & Begriffe,Was bedeutet „diminuendo“?,Leiser werden,images/icon-512.png,neutral-logo
+L7-20,7,Musiktheorie-Basics,Was ist eine Synkope?,Betonungsverschiebung,images/icon-512.png,neutral-logo
+L7-21,7,Epochen & Stil,Was bedeutet „atonal“ vereinfacht gesagt?,ohne festes tonales Zentrum,images/icon-512.png,neutral-logo
+L7-22,7,Epochen & Stil,Welche Epoche entwickelte die Sonatenhauptsatzform besonders stark weiter?,Klassik,images/icon-512.png,neutral-logo
+L7-23,7,Epochen & Stil,Welche Richtung ist mit Komponisten wie Steve Reich und Philip Glass verbunden?,Minimal Music,images/icon-512.png,neutral-logo
+L7-24,7,Epochen & Stil,Was meint „Historismus“ in der Musik grob?,bewusster Rückgriff auf ältere Stile,images/icon-512.png,neutral-logo
+L7-25,7,Epochen & Stil,"Welche Epoche ist besonders mit höfischen Tänzen, Generalbass und Concerto grosso verbunden?",Barock,images/icon-512.png,neutral-logo
+L7-26,7,Instrumente & Besetzungen,Was ist ein Englischhorn?,tieferes Oboeninstrument,images/icon-512.png,neutral-logo
+L7-27,7,Instrumente & Besetzungen,Welches Instrument ist die tiefere Schwester der Oboe?,Englischhorn,images/icon-512.png,neutral-logo
+L7-28,7,Instrumente & Besetzungen,Welches Instrument spielt häufig die Basslinie im Barock-Continuo?,Violoncello,images/icon-512.png,neutral-logo
+L7-29,7,Instrumente & Besetzungen,Was ist eine Celesta?,Tasteninstrument mit glockenartigem Klang,images/Tchaikovsky.jpg,text:tschaikowsky->tchaikovsky
+L7-30,7,Instrumente & Besetzungen,Welches Instrument gehört zu den Doppelrohrblattinstrumenten?,Oboe,images/icon-512.png,neutral-logo
+L7-31,7,Musiktheorie-Basics,Wie viele Halbtöne hat eine Oktave?,12,images/icon-512.png,neutral-logo
+L7-32,7,Musiktheorie-Basics,Welches Intervall umfasst acht Tonstufen?,Oktave,images/icon-512.png,neutral-logo
+L7-33,7,Musiktheorie-Basics,Was bedeutet forte?,laut,images/icon-512.png,neutral-logo
+L7-34,7,Musiktheorie-Basics,Was bedeutet piano?,leise,images/icon-512.png,neutral-logo
+L7-35,7,Musiktheorie-Basics,Was bedeutet crescendo?,lauter werden,images/icon-512.png,neutral-logo
+L7-36,7,Musiktheorie-Basics,Was bedeutet diminuendo?,leiser werden,images/icon-512.png,neutral-logo
+L7-37,7,Musiktheorie-Basics,Welche Tonart hat ein Kreuz als Vorzeichen?,G-Dur,images/icon-512.png,neutral-logo
+L7-38,7,Musiktheorie-Basics,Welche Tonart hat ein b als Vorzeichen?,F-Dur,images/icon-512.png,neutral-logo
+L7-39,7,Musiktheorie-Basics,Was ist ein Dreiklang?,Akkord aus drei verschiedenen Tönen,images/icon-512.png,neutral-logo
+L7-40,7,Musiktheorie-Basics,Was ist eine Dur-Tonleiter?,Tonleiter mit charakteristischer grosser Terz,images/icon-512.png,neutral-logo
+L8-1,8,Formen & Gattungen,"Welche Gattung vertont normalerweise die festen Teile der katholischen Liturgie wie Kyrie, Gloria, Credo, Sanctus und Agnus Dei?",Messe,images/icon-512.png,neutral-logo
+L8-2,8,Kirchenmusik & Chor,Welche Gattung ist eine Vertonung der Totenmesse?,Requiem,images/britten.jpg,text:britten->britten
+L8-3,8,Formen & Gattungen,Welche Gattung erzählt musikalisch die Leidensgeschichte Jesu?,Passion,images/bach.jpg,correct-answer:passion->bach
+L8-4,8,Kirchenmusik & Chor,Was unterscheidet ein Oratorium typischerweise von einer Oper?,Es ist meist konzertant und nicht szenisch gespielt,images/icon-512.png,neutral-logo
+L8-5,8,Formen & Gattungen,Welche Gattung ist besonders eng mit mehrstimmiger geistlicher Vokalmusik verbunden?,Motette,images/icon-512.png,neutral-logo
+L8-6,8,Kirchenmusik & Chor,Was meint 'a cappella' im Chorkontext?,Gesang ohne instrumentale Begleitung,images/icon-512.png,neutral-logo
+L8-7,8,Kirchenmusik & Chor,Welche Aussage beschreibt eine Kantate am besten?,"Ein mehrsätziges Vokalwerk, oft mit Chor, Solisten und Instrumenten",images/icon-512.png,neutral-logo
+L8-8,8,Kirchenmusik & Chor,Was ist ein Choral im protestantischen Kirchenmusik-Kontext?,Ein geistliches Gemeindelied,images/bach.jpg,text:passion->bach
+L8-9,8,Kirchenmusik & Chor,Welche Besetzung meint die Abkürzung SATB im Chor?,"Sopran, Alt, Tenor, Bass",images/icon-512.png,neutral-logo
+L8-10,8,Formen & Gattungen,Welche Musikform ist besonders typisch für die Renaissance-Vokalpolyphonie?,"Mehrstimmige, oft imitative Vokalmusik",images/palestrina.jpg,text:palestrina->palestrina
+L8-11,8,Instrumente & Besetzungen,Zu welcher Instrumentenfamilie gehört die Oboe?,Holzbläser,images/icon-512.png,neutral-logo
+L8-12,8,Instrumente & Besetzungen,Welches Instrument verwendet ein Doppelrohrblatt?,Fagott,images/icon-512.png,neutral-logo
+L8-13,8,Instrumente & Besetzungen,Welches Instrument ist das tiefste reguläre Streichinstrument im Sinfonieorchester?,Kontrabass,images/icon-512.png,neutral-logo
+L8-14,8,Instrumente & Besetzungen,Welches Blechblasinstrument besitzt meist einen Zug?,Posaune,images/icon-512.png,neutral-logo
+L8-15,8,Instrumente & Besetzungen,Welches Instrument ist ein Tasteninstrument mit gezupften Saiten?,Cembalo,images/icon-512.png,neutral-logo
+L8-16,8,Instrumente & Besetzungen,Welches Instrument kann besonders lange Töne durch Luftreservoir und Tasten erzeugen?,Orgel,images/icon-512.png,neutral-logo
+L8-17,8,Instrumente & Besetzungen,Welches Schlaginstrument kann bestimmte Tonhöhen spielen und wird mit Pedal gestimmt?,Pauke,images/icon-512.png,neutral-logo
+L8-18,8,Instrumente & Besetzungen,Welches Instrument gehört zu den tiefen Holzblasinstrumenten?,Kontrafagott,images/icon-512.png,neutral-logo
+L8-19,8,Instrumente & Besetzungen,Welches Instrument ist eine tiefer klingende Bauform der Klarinette?,Bassklarinette,images/icon-512.png,neutral-logo
+L8-20,8,Instrumente & Besetzungen,Welches Instrument spielt im Orchester häufig die Stimmgabel-Rolle beim Einstimmen?,Oboe,images/icon-512.png,neutral-logo
+L8-21,8,Instrumente & Besetzungen,Was bedeutet „pizzicato“ bei Streichinstrumenten?,gezupft,images/icon-512.png,neutral-logo
+L8-22,8,Instrumente & Besetzungen,Was bedeutet „arco“ bei Streichinstrumenten?,mit dem Bogen,images/icon-512.png,neutral-logo
+L8-23,8,Instrumente & Besetzungen,Welches Instrument gehört nicht zu den klassischen Holzbläsern des Sinfonieorchesters?,Saxophon,images/icon-512.png,neutral-logo
+L8-24,8,Instrumente & Besetzungen,Was ist ein „Register“ bei der Orgel?,Klangfarbe/Pfeifenreihe,images/icon-512.png,neutral-logo
+L8-25,8,Instrumente & Besetzungen,Welche Besetzung entspricht dem klassischen Streichquartett?,"zwei Violinen, Viola, Violoncello",images/icon-512.png,neutral-logo
+L8-26,8,Musiktheorie-Basics,Was ist eine Kadenz in der Harmonielehre?,Schlusswendung von Akkorden,images/icon-512.png,neutral-logo
+L8-27,8,Musiktheorie-Basics,Welche Stufe ist in C-Dur die Dominante?,G,images/icon-512.png,neutral-logo
+L8-28,8,Musiktheorie-Basics,Welche Stufe ist in C-Dur die Subdominante?,F,images/icon-512.png,neutral-logo
+L8-29,8,Musiktheorie-Basics,Was ist ein Leitton in Dur?,siebte Stufe mit Zug zur Tonika,images/icon-512.png,neutral-logo
+L8-30,8,Musiktheorie-Basics,Was ist eine enharmonische Verwechslung?,derselbe Ton anders benannt,images/icon-512.png,neutral-logo
+L8-31,8,Kirchenmusik & Chor,In welcher Sprache sind viele klassische Messvertonungen geschrieben?,Latein,images/icon-512.png,neutral-logo
+L8-32,8,Kirchenmusik & Chor,Was ist ein Magnificat?,Der Lobgesang Marias,images/icon-512.png,neutral-logo
+L8-33,8,Kirchenmusik & Chor,Welcher Komponist schrieb das Oratorium „Elias“?,Mendelssohn,images/mendelssohn.jpg,correct-answer:mendelssohn->mendelssohn
+L8-34,8,Kirchenmusik & Chor,Was ist ein Psalm?,Ein biblischer Gebets- oder Gesangstext,images/icon-512.png,neutral-logo
+L8-35,8,Kirchenmusik & Chor,Was meint „gemischter Chor“?,Chor mit Frauen- und Männerstimmen,images/icon-512.png,neutral-logo
+L8-36,8,Kirchenmusik & Chor,Was bedeutet homophon im Chorsatz?,Die Stimmen bewegen sich rhythmisch weitgehend gemeinsam,images/icon-512.png,neutral-logo
+L8-37,8,Kirchenmusik & Chor,Welcher Teil gehört typischerweise zur Messe?,Kyrie,images/icon-512.png,neutral-logo
+L8-38,8,Kirchenmusik & Chor,Was ist ein Orgelpunkt?,"Ein lang gehaltener Ton, oft im Bass",images/icon-512.png,neutral-logo
+L8-39,8,Kirchenmusik & Chor,Was ist ein Kanon?,Stimmen setzen nacheinander mit derselben Melodie ein,images/icon-512.png,neutral-logo
+L8-40,8,Kirchenmusik & Chor,Welche Stimme liegt im gemischten Chor meist am tiefsten?,Bass,images/icon-512.png,neutral-logo
+L9-1,9,Formen & Gattungen,Welche Gattung ist typischerweise ein mehrsätziges Werk für Orchester?,Sinfonie,images/icon-512.png,neutral-logo
+L9-2,9,Formen & Gattungen,Was bezeichnet eine Sonate im klassischen Sinn meistens?,Ein mehrsätziges Instrumentalwerk,images/icon-512.png,neutral-logo
+L9-3,9,Formen & Gattungen,"Welche Form arbeitet besonders mit einem Thema, das nacheinander in verschiedenen Stimmen einsetzt?",Fuge,images/bach.jpg,text:johann sebastian bach->bach
+L9-4,9,Formen & Gattungen,Was ist eine Variation?,Eine veränderte Wiederholung eines Themas,images/icon-512.png,neutral-logo
+L9-5,9,Formen & Gattungen,Was ist ein Konzert im klassischen Sinn?,Ein Werk mit solistischem Instrument und Orchester,images/vivaldi.webp,text:vivaldi->vivaldi
+L9-6,9,Formen & Gattungen,Was meint 'Concerto grosso'?,Ein barockes Konzert mit kleiner Solistengruppe und Orchester,images/icon-512.png,neutral-logo
+L9-7,9,Formen & Gattungen,Welche Gattung ist eine Folge von Tänzen oder tanzartigen Sätzen?,Suite,images/icon-512.png,neutral-logo
+L9-8,9,Formen & Gattungen,Was ist eine Ouvertüre?,Ein eröffnendes Instrumentalstück,images/icon-512.png,neutral-logo
+L9-9,9,Oper & Musiktheater,Was ist der Unterschied zwischen Rezitativ und Arie in der Oper?,"Das Rezitativ treibt die Handlung voran, die Arie verweilt stärker im Ausdruck",images/icon-512.png,neutral-logo
+L9-10,9,Formen & Gattungen,Was ist eine sinfonische Dichtung?,Ein einsätziges Orchesterwerk mit aussermusikalischem Programm,images/liszt.png,text:sinfonische dichtung->liszt
+L9-11,9,Musikleben & Praxis,Was macht ein Konzertmeister oder eine Konzertmeisterin im Orchester?,Führt die ersten Violinen und vermittelt zur Leitung,images/icon-512.png,neutral-logo
+L9-12,9,Musikleben & Praxis,Was bedeutet „Stimmton A = 440 Hz“?,Referenzton zum Stimmen,images/icon-512.png,neutral-logo
+L9-13,9,Musikleben & Praxis,Was ist eine Generalprobe?,Letzte grosse Probe vor der Aufführung,images/icon-512.png,neutral-logo
+L9-14,9,Musikleben & Praxis,Was bedeutet „Besetzung“ in der Musikpraxis?,Welche Stimmen/Instrumente benötigt werden,images/icon-512.png,neutral-logo
+L9-15,9,Formen & Gattungen,Was ist eine Kadenz im Solokonzert?,Virtuose solistische Passage,images/icon-512.png,neutral-logo
+L9-16,9,Musikleben & Praxis,Was bedeutet „vom Blatt spielen“?,Ohne vorheriges Üben direkt lesen und spielen,images/icon-512.png,neutral-logo
+L9-17,9,Hören & Begriffe,Was bezeichnet „Intonation“?,Genauigkeit der Tonhöhe,images/icon-512.png,neutral-logo
+L9-18,9,Musikleben & Praxis,Was ist ein Stimmführer im Chor?,Leitende Person einer Stimme,images/icon-512.png,neutral-logo
+L9-19,9,Musikleben & Praxis,Was ist ein Programmheft?,Begleittext zum Konzert,images/icon-512.png,neutral-logo
+L9-20,9,Hören & Begriffe,Was bedeutet „Tutti“?,Alle zusammen,images/icon-512.png,neutral-logo
+L9-21,9,Musiktheorie-Basics,Welche Taktart hat drei Viertel pro Takt?,3/4,images/icon-512.png,neutral-logo
+L9-22,9,Musiktheorie-Basics,Was bedeutet „alla breve“?,meist Zweiertakt mit halber Note als Zähleinheit,images/icon-512.png,neutral-logo
+L9-23,9,Musiktheorie-Basics,Was ist eine Triole?,drei Noten im Raum von zwei gleichwertigen Noten,images/icon-512.png,neutral-logo
+L9-24,9,Musiktheorie-Basics,Was bedeutet „chromatisch“?,in Halbtonschritten,images/icon-512.png,neutral-logo
+L9-25,9,Musiktheorie-Basics,Was bedeutet „diatonisch“?,innerhalb einer Tonleiter,images/icon-512.png,neutral-logo
+L9-26,9,Musikleben & Praxis,Was bedeutet „Transposition“?,Übertragung in eine andere Tonhöhe oder Tonart,images/icon-512.png,neutral-logo
+L9-27,9,Musikleben & Praxis,Was ist ein „Korrepetitor“?,musikalischer Begleiter und Probenpartner am Klavier,images/icon-512.png,neutral-logo
+L9-28,9,Musikleben & Praxis,Was bedeutet „Einsingen“ im Chor nicht?,Ein vollständiges Durchsingen des Konzertprogramms,images/icon-512.png,neutral-logo
+L9-29,9,Musikleben & Praxis,Was ist eine „Stimmprobe“?,Probe einer einzelnen Chor- oder Instrumentengruppe,images/icon-512.png,neutral-logo
+L9-30,9,Musikleben & Praxis,Was ist ein sinnvoller Zweck eines Probenplans?,"Prioritäten, Zeit und schwierige Stellen gezielt zu strukturieren",images/icon-512.png,neutral-logo
+L9-31,9,Formen & Gattungen,"Wie nennt man eine klassische Form mit Exposition, Durchführung und Reprise?",Sonatenhauptsatzform,images/icon-512.png,neutral-logo
+L9-32,9,Formen & Gattungen,"Wie nennt man ein Orchesterwerk, das eine Geschichte, ein Bild oder eine Idee musikalisch darstellt?",Sinfonische Dichtung,images/liszt.png,correct-answer:sinfonische dichtung->liszt
+L9-33,9,Formen & Gattungen,"Welche Form ist typisch, wenn ein Hauptthema immer wiederkehrt und von Zwischenteilen unterbrochen wird?",Rondo,images/icon-512.png,neutral-logo
+L9-34,9,Formen & Gattungen,"Wie nennt man eine Folge von stilisierten Tänzen, besonders im Barock?",Suite,images/icon-512.png,neutral-logo
+L9-35,9,Formen & Gattungen,Welche Gattung ist im Barock oft für zwei Oberstimmen und Basso continuo geschrieben?,Triosonate,images/icon-512.png,neutral-logo
+L9-36,9,Formen & Gattungen,"Wie nennt man ein virtuoses Übungs- oder Vortragsstück, oft für Klavier?",Etüde,images/icon-512.png,neutral-logo
+L9-37,9,Formen & Gattungen,"Welche Gattung bezeichnet ein mehrstimmiges weltliches Vokalstück, besonders in Renaissance und Frühbarock?",Madrigal,images/icon-512.png,neutral-logo
+L9-38,9,Formen & Gattungen,"Wie nennt man ein freies, oft improvisatorisch wirkendes Instrumentalstück?",Fantasie,images/icon-512.png,neutral-logo
+L9-39,9,Formen & Gattungen,"Welche Gattung ist ein kurzes lyrisches Klavierstück, besonders in der Romantik?",Charakterstück,images/icon-512.png,neutral-logo
+L9-40,9,Formen & Gattungen,Was ist ein Streichquartett?,"Zwei Violinen, Viola und Violoncello",images/icon-512.png,neutral-logo
+L10-1,10,Oper & Musiktheater,Welcher Komponist steht besonders am Übergang von Renaissance zu Barock und ist für die frühe Oper wichtig?,Claudio Monteverdi,images/monteverdi.jpg,correct-answer:claudio monteverdi->monteverdi
+L10-2,10,Epochen & Stil,Welches Werk gilt als Schlüsselwerk der musikalischen Moderne und wurde 1913 in Paris uraufgeführt?,Le Sacre du printemps,images/stravinsky.jpg,correct-answer:le sacre->stravinsky
+L10-3,10,Werkkunde,Welche Kombination ist korrekt?,Bach – Barock – Matthäus-Passion,images/bach.jpg,correct-answer:matthäus->bach
+L10-4,10,Formen & Gattungen,Welche Aussage beschreibt eine Fuge am besten?,Ein Thema wird nacheinander in verschiedenen Stimmen imitiert und verarbeitet,images/icon-512.png,neutral-logo
+L10-5,10,Epochen & Stil,Welche Komponisten gehören zur Zweiten Wiener Schule?,"Schönberg, Berg und Webern",images/schoenberg.jpg,correct-answer:schönberg->schoenberg
+L10-6,10,Oper & Musiktheater,"Welche Gattung ist typischerweise konzertant, oft geistlich und nicht szenisch gespielt?",Oratorium,images/icon-512.png,neutral-logo
+L10-7,10,Werkkunde,Welche Zuordnung ist falsch?,Ravel – Renaissance,images/ravel.jpg,correct-answer:ravel->ravel
+L10-8,10,Werkkunde,Welches Werk gehört besonders zur tschechischen Nationalmusik?,Die Moldau,images/smetana.jpg,correct-answer:moldau->smetana
+L10-9,10,Kirchenmusik & Chor,Welche Aussage zu einem Requiem ist richtig?,Es ist eine musikalische Vertonung der Totenmesse,images/britten.jpg,text:britten->britten
+L10-10,10,Formen & Gattungen,Welche Kombination passt am besten zum Begriff 'sinfonische Dichtung'?,Programmmusik – Orchester – 19. Jahrhundert,images/liszt.png,text:sinfonische dichtung->liszt
+L10-11,10,Hören & Begriffe,Welche Aussage beschreibt eine homophone Satzweise am besten?,Die Stimmen bewegen sich meist gemeinsam im gleichen oder ähnlichen Rhythmus,images/icon-512.png,neutral-logo
+L10-12,10,Hören & Begriffe,Was bedeutet „polyphon“?,Mehrere selbständige Stimmen,images/icon-512.png,neutral-logo
+L10-13,10,Hören & Begriffe,Was ist ein Ostinato?,Wiederholtes musikalisches Muster,images/icon-512.png,neutral-logo
+L10-14,10,Hören & Begriffe,Was ist ein Leitmotiv?,Wiedererkennbares Motiv für Figur/Idee,images/wagner.jpg,text:leitmotiv->wagner
+L10-15,10,Hören & Begriffe,Was bedeutet „Klangfarbe“?,Charakter des Klangs,images/icon-512.png,neutral-logo
+L10-16,10,Hören & Begriffe,Was ist ein Thema in der Musik?,Prägnanter musikalischer Gedanke,images/icon-512.png,neutral-logo
+L10-17,10,Musiktheorie-Basics,Was ist eine Sequenz?,Wiederholung eines Motivs auf anderer Tonhöhe,images/icon-512.png,neutral-logo
+L10-18,10,Hören & Begriffe,Was bedeutet „konsonant“ im musikalischen Sinn?,Ruhig/zusammenklingend wirkend,images/icon-512.png,neutral-logo
+L10-19,10,Hören & Begriffe,Was bedeutet „dissonant“ im musikalischen Sinn?,Spannungsreich/reibend wirkend,images/icon-512.png,neutral-logo
+L10-20,10,Hören & Begriffe,Was ist ein Cluster?,Dicht nebeneinanderliegende Töne,images/icon-512.png,neutral-logo
+L10-21,10,Hören & Begriffe,Was bedeutet „Tremolo“?,schnelle Wiederholung oder Wechselbewegung,images/icon-512.png,neutral-logo
+L10-22,10,Hören & Begriffe,Was bedeutet „Vibrato“?,leichte Tonhöhenschwankung zur Klangbelebung,images/icon-512.png,neutral-logo
+L10-23,10,Hören & Begriffe,Was ist ein „Glissando“?,gleitende Bewegung zwischen Tönen,images/icon-512.png,neutral-logo
+L10-24,10,Hören & Begriffe,Was bedeutet „sforzato“?,plötzlich betont,images/icon-512.png,neutral-logo
+L10-25,10,Hören & Begriffe,Was bedeutet „subito piano“?,plötzlich leise,images/icon-512.png,neutral-logo
+L10-26,10,Hören & Begriffe,Was bedeutet „rubato“?,freier Umgang mit Tempo,images/icon-512.png,neutral-logo
+L10-27,10,Hören & Begriffe,Was ist eine „Klangfläche“?,"ausgedehnter, flächiger Klangzustand",images/icon-512.png,neutral-logo
+L10-28,10,Hören & Begriffe,Was bedeutet „monophon“?,einstimmig,images/icon-512.png,neutral-logo
+L10-29,10,Formen & Gattungen,Was ist ein „Kanon“?,versetzte Nachahmung derselben Melodie,images/icon-512.png,neutral-logo
+L10-30,10,Hören & Begriffe,Was bedeutet „Unisono“?,alle singen oder spielen dieselbe Tonhöhe/Melodie,images/icon-512.png,neutral-logo
+L10-31,10,Instrumente & Besetzungen,Welches Instrument gehört zu den Holzbläsern?,Oboe,images/icon-512.png,neutral-logo
+L10-32,10,Instrumente & Besetzungen,Welches Instrument gehört zu den Blechbläsern?,Horn,images/icon-512.png,neutral-logo
+L10-33,10,Instrumente & Besetzungen,Welches Instrument ist das tiefste Streichinstrument im Orchester?,Kontrabass,images/icon-512.png,neutral-logo
+L10-34,10,Instrumente & Besetzungen,Welche Instrumente bilden ein klassisches Klaviertrio?,"Klavier, Violine, Violoncello",images/icon-512.png,neutral-logo
+L10-35,10,Instrumente & Besetzungen,Welche Stimme ist höher: Tenor oder Bass?,Tenor,images/icon-512.png,neutral-logo
+L10-36,10,Instrumente & Besetzungen,Welches Instrument verwendet ein Doppelrohrblatt?,Oboe,images/icon-512.png,neutral-logo
+L10-37,10,Instrumente & Besetzungen,Welches Instrument ist ein Tasteninstrument?,Klavier,images/icon-512.png,neutral-logo
+L10-38,10,Instrumente & Besetzungen,Welche Gruppe sitzt im Orchester meist vorne?,Streicher,images/icon-512.png,neutral-logo
+L10-39,10,Instrumente & Besetzungen,Was bedeutet „Kammermusik“?,Musik für kleine Besetzungen,images/icon-512.png,neutral-logo
+L10-40,10,Instrumente & Besetzungen,Welches Instrument gehört zur Schlagwerkgruppe?,Pauke,images/icon-512.png,neutral-logo
