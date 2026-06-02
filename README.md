@@ -1,2 +1,2 @@
-# komponisten-quiz
-quiz about famoust composers
+# Maestro Musik Quiz
+classical music quiz for pupils and students
