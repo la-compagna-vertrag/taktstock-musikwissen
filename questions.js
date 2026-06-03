@@ -1,10 +1,10 @@
 // Maestro Quiz – ausgelagerte Fragebank
-// Version 3.3.4 – Bildaudit: alle Fragen erhalten entweder ein passendes Komponistenbild oder bewusst das neutrale Maestro-Logo.
+// Version 3.3.6 – Bildfix: alle personen- und werkbezogenen Fragen erhalten ein konkretes Komponistenbild.
 //
 // Regel:
-// - Komponisten-/Werkfragen: Bild des passenden Komponisten bzw. der passenden Komponistin.
-// - Theorie-, Praxis-, Instrumenten- und Begriffsfragen: neutrales Maestro-Logo.
-// - Wenn ein echtes Bild fehlt: lieber Logo als ein falscher Komponist.
+// - Komponisten-/Werk-/Opernfragen: Bild des passenden Komponisten bzw. der passenden Komponistin.
+// - Theorie-, Praxis-, Instrumenten- und reine Begriffsfragen: neutrales Maestro-Logo.
+// - Wenn ein Bildpfad nicht gefunden wird, behandelt index.html den Fallback robust.
 
 const levels = [
   {
@@ -69,7 +69,7 @@ const levels = [
         "category": "Komponisten",
         "tier": "free",
         "difficulty": "leicht",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Wien",
           "Berlin",
@@ -149,7 +149,7 @@ const levels = [
         "category": "Komponisten",
         "tier": "free",
         "difficulty": "leicht",
-        "image": "liszt.png",
+        "image": "liszt.jpg",
         "options": [
           "Geige",
           "Klavier",
@@ -889,7 +889,7 @@ const levels = [
         "correct": 0,
         "explanation": "Dornröschen ist eines der grossen Ballette von Tschaikowsky, neben Schwanensee und Der Nussknacker.",
         "levelId": 2,
-        "image": "Tchaikovsky.jpg"
+        "image": "tchaikovsky.jpg"
       },
       {
         "question": "Welches Werk stammt von Mussorgsky und wurde später von Ravel orchestriert?",
@@ -1065,7 +1065,7 @@ const levels = [
         "correct": 3,
         "explanation": "Die Moldau stammt von Bedřich Smetana. Italienische Sinfonie, Elias und Lieder ohne Worte gehören zu Mendelssohns Werk.",
         "levelId": 2,
-        "image": "smetana.jpg"
+        "image": "mendelssohn.jpg"
       },
       {
         "question": "Welches Werk ist ein berühmtes Klavierkonzert von Grieg?",
@@ -1168,7 +1168,7 @@ const levels = [
         "category": "Werkkunde",
         "tier": "learning",
         "difficulty": "leicht",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Mozart",
           "Beethoven",
@@ -1339,7 +1339,7 @@ const levels = [
         "category": "Epochen & Stil",
         "tier": "free",
         "difficulty": "mittel",
-        "image": "jhaydn.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Barock",
           "Wiener Klassik",
@@ -1508,7 +1508,7 @@ const levels = [
         "correct": 0,
         "explanation": "Der musikalische Impressionismus wird häufig mit Klangfarben, Ganztonleitern, modalen Wendungen und fliessenden Konturen verbunden.",
         "levelId": 3,
-        "image": "debussy.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Welche Epoche bevorzugte häufig klare Periodik und ausgewogene Formen?",
@@ -1524,7 +1524,7 @@ const levels = [
         "correct": 0,
         "explanation": "Die Wiener Klassik wird oft mit Klarheit, Symmetrie, periodischem Aufbau und ausgewogenen Formen verbunden.",
         "levelId": 3,
-        "image": "jhaydn.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Welche musikalische Richtung ist eng mit Arnold Schönberg verbunden?",
@@ -1716,7 +1716,7 @@ const levels = [
         "correct": 0,
         "explanation": "Les Préludes ist eine der bekanntesten sinfonischen Dichtungen von Franz Liszt.",
         "levelId": 3,
-        "image": "liszt.png"
+        "image": "liszt.jpg"
       },
       {
         "question": "Welche Oper stammt von Verdi und spielt im alten Ägypten?",
@@ -1748,7 +1748,7 @@ const levels = [
         "correct": 0,
         "explanation": "Ein Leitmotiv ist ein wiederkehrendes musikalisches Motiv, das mit einer Figur, Idee, Situation oder einem Gegenstand verbunden sein kann.",
         "levelId": 3,
-        "image": "wagner.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Welche Oper von Mozart enthält die Figuren Susanna, Figaro und die Gräfin?",
@@ -1764,7 +1764,7 @@ const levels = [
         "correct": 0,
         "explanation": "Susanna, Figaro und die Gräfin sind zentrale Figuren in Mozarts Le nozze di Figaro.",
         "levelId": 3,
-        "image": "Mozart.jpg"
+        "image": "mozart.jpg"
       },
       {
         "question": "Welche Oper stammt von Rossini?",
@@ -1819,7 +1819,7 @@ const levels = [
         "category": "Epochen & Stil",
         "tier": "learning",
         "difficulty": "leicht",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Klassik",
           "Renaissance",
@@ -1974,7 +1974,7 @@ const levels = [
         "category": "Oper & Musiktheater",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Mozart",
           "Rossini",
@@ -2582,7 +2582,7 @@ const levels = [
         "category": "Oper & Musiktheater",
         "tier": "learning",
         "difficulty": "leicht",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Die Zauberflöte",
           "Carmen",
@@ -2810,7 +2810,7 @@ const levels = [
         "correct": 0,
         "explanation": "„Der Hölle Rache“ ist die berühmte zweite Arie der Königin der Nacht aus Mozarts Zauberflöte.",
         "levelId": 5,
-        "image": "Mozart.jpg"
+        "image": "mozart.jpg"
       },
       {
         "question": "Welche Oper spielt teilweise in Sevilla und handelt von einer freiheitsliebenden Frau?",
@@ -2890,7 +2890,7 @@ const levels = [
         "correct": 0,
         "explanation": "Sarastro ist eine wichtige Bassfigur in Mozarts Zauberflöte.",
         "levelId": 5,
-        "image": "Mozart.jpg"
+        "image": "mozart.jpg"
       },
       {
         "question": "Welche Oper von Puccini spielt im Künstler- und Studentenmilieu von Paris?",
@@ -3034,7 +3034,7 @@ const levels = [
         "correct": 0,
         "explanation": "Eine sinfonische Dichtung ist ein meist einsätziges Orchesterwerk mit programmatischem oder aussermusikalischem Bezug.",
         "levelId": 5,
-        "image": "liszt.png"
+        "image": "icon-512.png"
       },
       {
         "question": "Was ist ein „Charakterstück“?",
@@ -3137,7 +3137,7 @@ const levels = [
         "category": "Musikleben & Praxis",
         "tier": "learning",
         "difficulty": "leicht",
-        "image": "Mozart.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Mozart",
           "Brahms",
@@ -3525,7 +3525,7 @@ const levels = [
         "correct": 0,
         "explanation": "Ein Requiem ist eine Totenmesse. Viele Komponisten haben Requiem-Vertonungen geschrieben.",
         "levelId": 6,
-        "image": "icon-512.png"
+        "image": "mozart.jpg"
       },
       {
         "question": "Welcher Lobgesang beginnt mit „Magnificat anima mea Dominum“?",
@@ -3605,7 +3605,7 @@ const levels = [
         "correct": 0,
         "explanation": "Ein Nocturne ist meist ein lyrisches, nachtbezogenes Charakterstück, besonders bekannt bei Chopin.",
         "levelId": 6,
-        "image": "chopin.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Was ist ein „Impromptu“?",
@@ -3685,7 +3685,7 @@ const levels = [
         "correct": 0,
         "explanation": "Haydn, Mozart und Beethoven werden häufig als zentrale Komponisten der Wiener Klassik bezeichnet.",
         "levelId": 6,
-        "image": "jhaydn.jpg"
+        "image": "beethoven.webp"
       },
       {
         "question": "Welche Stilrichtung steht oft für extreme Ausdrucksspannung und Auflösung der traditionellen Tonalität?",
@@ -3733,7 +3733,7 @@ const levels = [
         "correct": 0,
         "explanation": "Der Serialismus organisiert musikalische Parameter nach Reihenprinzipien, besonders in der Nachkriegsavantgarde.",
         "levelId": 6,
-        "image": "cage.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Welche Stilrichtung der Oper betont schönen Gesang und Virtuosität?",
@@ -4384,7 +4384,7 @@ const levels = [
         "correct": 0,
         "explanation": "Die Celesta ist ein Tasteninstrument mit hellem, glockenartigem Klang, bekannt etwa aus Tschaikowskys Nussknacker.",
         "levelId": 7,
-        "image": "Tchaikovsky.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Welches Instrument gehört zu den Doppelrohrblattinstrumenten?",
@@ -4594,7 +4594,7 @@ const levels = [
         "category": "Kirchenmusik & Chor",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "britten.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Requiem",
           "Motette",
@@ -4610,7 +4610,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "bach.jpg",
+        "image": "icon-512.png",
         "options": [
           "Passion",
           "Sonate",
@@ -4690,7 +4690,7 @@ const levels = [
         "category": "Kirchenmusik & Chor",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "bach.jpg",
+        "image": "icon-512.png",
         "options": [
           "Ein geistliches Gemeindelied",
           "Ein virtuoses Klavierstück",
@@ -4722,7 +4722,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "palestrina.jpg",
+        "image": "icon-512.png",
         "options": [
           "Mehrstimmige, oft imitative Vokalmusik",
           "Elektronische Klangcollage",
@@ -5261,7 +5261,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "mittel-fortgeschritten",
-        "image": "bach.jpg",
+        "image": "icon-512.png",
         "options": [
           "Fuge",
           "Walzer",
@@ -5293,7 +5293,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "mittel-fortgeschritten",
-        "image": "vivaldi.webp",
+        "image": "icon-512.png",
         "options": [
           "Ein Werk mit solistischem Instrument und Orchester",
           "Ein Werk nur für Chor",
@@ -5373,7 +5373,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "mittel-fortgeschritten",
-        "image": "liszt.png",
+        "image": "icon-512.png",
         "options": [
           "Ein einsätziges Orchesterwerk mit aussermusikalischem Programm",
           "Eine Messe für Chor",
@@ -5725,7 +5725,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "leicht",
-        "image": "liszt.png",
+        "image": "icon-512.png",
         "options": [
           "Sinfonische Dichtung",
           "Messe",
@@ -6008,7 +6008,7 @@ const levels = [
         "category": "Kirchenmusik & Chor",
         "tier": "learning",
         "difficulty": "boss",
-        "image": "britten.jpg",
+        "image": "mozart.jpg",
         "options": [
           "Es ist eine musikalische Vertonung der Totenmesse",
           "Es ist immer eine komische Oper",
@@ -6024,7 +6024,7 @@ const levels = [
         "category": "Formen & Gattungen",
         "tier": "learning",
         "difficulty": "boss",
-        "image": "liszt.png",
+        "image": "icon-512.png",
         "options": [
           "Programmmusik – Orchester – 19. Jahrhundert",
           "A-cappella – Messe – Renaissance",
@@ -6036,20 +6036,20 @@ const levels = [
         "levelId": 10
       },
       {
-        "question": "Welche Aussage beschreibt eine homophone Satzweise am besten?",
+        "question": "Was bedeutet „homophon“?",
         "category": "Hören & Begriffe",
         "tier": "learning",
         "difficulty": "mittel",
-        "image": "icon-512.png",
         "options": [
-          "Die Stimmen bewegen sich meist gemeinsam im gleichen oder ähnlichen Rhythmus",
-          "Mehrere selbständige Stimmen verlaufen rhythmisch unabhängig nebeneinander",
-          "Es erklingt nur Schlagwerk",
-          "Die Musik hat keinen festen Rhythmus"
+          "Eine Hauptstimme mit Begleitung",
+          "Viele gleichberechtigte Stimmen",
+          "Ohne Rhythmus",
+          "Nur Schlagwerk"
         ],
         "correct": 0,
-        "explanation": "Homophonie bedeutet vereinfacht: Die Stimmen bewegen sich rhythmisch weitgehend gemeinsam, oft mit einer führenden Melodie und begleitenden Stimmen. Polyphonie meint dagegen mehrere relativ selbständige Stimmen.",
-        "levelId": 10
+        "explanation": "Homophonie bedeutet meist: Eine Hauptstimme steht im Vordergrund, andere Stimmen begleiten rhythmisch oder harmonisch.",
+        "levelId": 10,
+        "image": "icon-512.png"
       },
       {
         "question": "Was bedeutet „polyphon“?",
@@ -6097,7 +6097,7 @@ const levels = [
         "correct": 0,
         "explanation": "Ein Leitmotiv ist ein wiedererkennbares Motiv, das mit einer Figur, Idee, Situation oder einem Symbol verbunden sein kann.",
         "levelId": 10,
-        "image": "wagner.jpg"
+        "image": "icon-512.png"
       },
       {
         "question": "Was bedeutet „Klangfarbe“?",
@@ -6518,52 +6518,3 @@ const levels = [
     ]
   }
 ];
-
-// Automatische Metadaten-Ergänzung für zukünftige Fragen
-// -------------------------------------------------------
-// Wenn du später neue Fragen ergänzt, kannst du category/tier/difficulty weglassen.
-// Die App ergänzt fehlende Angaben automatisch anhand von Frage-Text und Level-Kontext.
-const CATEGORY_NAMES = [
-  "Komponisten",
-  "Werkkunde",
-  "Epochen & Stil",
-  "Formen & Gattungen",
-  "Oper & Musiktheater",
-  "Kirchenmusik & Chor",
-  "Musiktheorie-Basics",
-  "Instrumente & Besetzungen",
-  "Musikleben & Praxis",
-  "Hören & Begriffe"
-];
-
-function inferQuestionCategory(question, level) {
-  const text = `${question.question || ""} ${question.explanation || ""} ${(question.options || []).join(" ")}`.toLowerCase();
-  const has = words => words.some(word => text.includes(word));
-
-  if (has(["satb", "a cappella", "choral", "kantate", "requiem", "passion", "messe", "motette", "oratorium", "messiah", "marienvesper", "exequien", "chor"])) return "Kirchenmusik & Chor";
-  if (has(["oper", "traviata", "zauberflöte", "bohème", "barbiere", "rosenkavalier", "wozzeck", "dido", "carmen", "don giovanni", "arie", "rezitativ", "musiktheater", "szenisch", "musical", "west side story"])) return "Oper & Musiktheater";
-  if (has(["sinfonie", "sonate", "fuge", "variation", "konzert", "concerto grosso", "suite", "ouvertüre", "sinfonische dichtung", "gattung", "form"])) return "Formen & Gattungen";
-  if (has(["epoche", "renaissance", "barock", "klassik", "romantik", "moderne", "impressionismus", "expressionismus", "zwölfton", "zweite wiener schule", "avantgarde", "stilrichtung"])) return "Epochen & Stil";
-  if (has(["intervall", "notation", "tonart", "tonleiter", "akkord", "stimmen", "musiktheorie", "generalbass", "forte", "piano", "crescendo", "diminuendo"])) return "Musiktheorie-Basics";
-  if (has(["oboe", "horn", "kontrabass", "klaviertrio", "doppelrohrblatt", "kammermusik", "pauke", "orchestergruppe"])) return "Instrumente & Besetzungen";
-  if (has(["generalprobe", "partitur", "dirigent", "konzertmeister", "laienchor", "uraufführung", "musikhochschule", "wien", "salzburg", "bonn", "schweizer"])) return "Musikleben & Praxis";
-  if (has(["allegro", "adagio", "legato", "staccato", "auftakt", "ritardando", "accelerando", "da capo", "fine", "takt"])) return "Hören & Begriffe";
-  if (has(["geboren", "taub", "instrument", "vater der", "gilt als", "komponist ist", "komponisten gehören"])) return "Komponisten";
-  return level.defaultCategory || "Werkkunde";
-}
-
-function applyQuestionMetadata() {
-  levels.forEach(level => {
-    level.tier = level.tier || (level.id <= 3 ? "free" : "learning");
-    level.difficulty = level.difficulty || "mittel";
-    level.defaultCategory = level.defaultCategory || "Werkkunde";
-    level.questions.forEach(question => {
-      question.levelId = question.levelId || level.id;
-      question.tier = question.tier || level.tier;
-      question.difficulty = question.difficulty || level.difficulty;
-      question.category = question.category || inferQuestionCategory(question, level);
-    });
-  });
-}
-
-applyQuestionMetadata();
