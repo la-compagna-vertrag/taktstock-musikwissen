@@ -1,5 +1,5 @@
 // Maestro Quiz – ausgelagerte Fragebank
-// Version 3.3.6 – Bildfix: alle personen- und werkbezogenen Fragen erhalten ein konkretes Komponistenbild.
+// Version 3.3.7 stable – stabiler Bildstand: keine Bildpfade geändert, v3.3.6-Bildfix eingefroren.
 //
 // Regel:
 // - Komponisten-/Werk-/Opernfragen: Bild des passenden Komponisten bzw. der passenden Komponistin.
