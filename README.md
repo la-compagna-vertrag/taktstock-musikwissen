@@ -1,2 +1,2 @@
-# Maestro Musik Quiz
-classical music quiz for pupils and students
+# Takstock Musik Quiz
+A music knowledge quiz for music lovers, students, and musicians 
