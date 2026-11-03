@@ -8,16 +8,16 @@
   <link rel="apple-touch-icon" href="icon-192.png">
   <meta name="theme-color" content="#102a5c">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Maestro Quiz">
+  <meta name="apple-mobile-web-app-title" content="Taktstock">
   <meta name="mobile-web-app-capable" content="yes">
-  <title>Maestro Quiz – Allgemeines Musikwissen als Freemium-Lernapp</title>
-  <meta name="description" content="Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen: 30 Fragen gratis, 400 Fragen in der Lernversion und 500+ Fragen als Premium-Ausbau geplant.">
+  <title>Taktstock – Allgemeines Musikwissen als Freemium-Lernapp</title>
+  <meta name="description" content="Taktstock ist ein spielerischer Trainer für allgemeines Musikwissen: 30 Fragen gratis, 400 Fragen in der Lernversion und 500+ Fragen als Premium-Ausbau geplant.">
   <meta name="theme-color" content="#102a5c">
-  <meta property="og:title" content="Maestro Quiz – Allgemeines Musikwissen spielerisch lernen">
+  <meta property="og:title" content="Taktstock – Allgemeines Musikwissen spielerisch lernen">
   <meta property="og:description" content="30 Fragen gratis · 400 Fragen Lernversion · 500+ Premium-Ausbau geplant. Ein spielerischer Lerntrainer für allgemeines Musikwissen.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Maestro Quiz – Allgemeines Musikwissen als Freemium-Lernapp">
+  <meta name="twitter:title" content="Taktstock – Allgemeines Musikwissen als Freemium-Lernapp">
   <meta name="twitter:description" content="30 Fragen gratis, 400 Fragen Lernversion und 500+ Premium-Ausbau geplant.">
 
   <style>
@@ -1681,7 +1681,7 @@
 
 <body>
   <main class="app">
-    <h1>🎼 Maestro Quiz</h1>
+    <h1>🎼 Taktstock</h1>
     <p class="subtitle">Der spielerische Trainer für allgemeines Musikwissen</p>
 
     <section id="levelScreen">
@@ -1691,7 +1691,7 @@
       </div>
 
       <div class="intro-card">
-        Willkommen bei <strong>Maestro Quiz</strong>: Trainiere dein <strong>allgemeines Musikwissen</strong> über
+        Willkommen bei <strong>Taktstock</strong>: Trainiere dein <strong>allgemeines Musikwissen</strong> über
         <strong>Komponisten, Werke, Gattungen, Formenlehre, Instrumente und Musiktheorie-Grundlagen</strong>. 
         Die ersten 30 Fragen sind frei spielbar; die Lernversion ist als 400-Fragen-Ausbau vorbereitet.
         <div class="pill-row">
@@ -1796,9 +1796,9 @@
       <div class="level-grid" id="levelGrid"></div>
 
       <div class="about-card">
-        <h3>Über Maestro Quiz</h3>
+        <h3>Über Taktstock</h3>
         <p>
-          Maestro Quiz ist ein spielerischer Trainer für allgemeines Musikwissen – für Klassikfans, Chorsänger:innen,
+          Taktstock ist ein spielerischer Trainer für allgemeines Musikwissen – für Klassikfans, Chorsänger:innen,
           Schüler:innen, Musikinteressierte und angehende Musikstudierende. Die App verbindet Quizfragen, Lernziele,
           Kategorienmodus und Prüfungsmodus zu einem kompakten Lernwerkzeug.
         </p>
@@ -1923,7 +1923,7 @@
   <script>
     // Zentrale Freischaltungslogik ab Version 2.7
     // -------------------------------------------------------
-    // Aktuell bleibt Maestro Quiz bewusst in der Gratis-Beta.
+    // Aktuell bleibt Taktstock bewusst in der Gratis-Beta.
     // Für spätere Tests kann currentTier intern auf "learning" oder "premium" gesetzt werden,
     // ohne die ganze App-Logik umzubauen.
     const ACCESS_TIERS = {
@@ -2178,7 +2178,7 @@
     function getResultRank(percentage) {
       if (percentage === 100) {
         return {
-          title: "🏆 Maestro-Modus",
+          title: "🏆 Musikmeister",
           comment: "Perfekt! Du hast dieses Level souverän abgeschlossen.",
           suggestion: "Nächstes Ziel: Starte das nächste Level — oder wiederhole dieses Level mit neuer Reihenfolge."
         };
@@ -2186,7 +2186,7 @@
 
       if (percentage >= 90) {
         return {
-          title: "✨ Fast Maestro",
+          title: "✨ Fast perfekt",
           comment: "Sehr stark — nur ein kleiner Wackler trennt dich vom perfekten Lauf.",
           suggestion: "Wiederhole das Level einmal: Durch die Zufallsreihenfolge bleibt es frisch."
         };
@@ -2584,7 +2584,7 @@
       function tryNextImageCandidate() {
         if (imageCandidateIndex >= imageCandidates.length) {
           img.src = "icon-512.png";
-          img.alt = "Maestro Quiz";
+          img.alt = "Taktstock";
           imageError.classList.add("hidden");
           return;
         }
