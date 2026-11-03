@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maestro-quiz-v3-3-7-stable';
+const CACHE_NAME = 'taktstock-v3-3-7-branding';
 
 const CORE_ASSETS = [
   './',
