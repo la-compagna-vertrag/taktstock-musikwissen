@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Taktstock Logo">
+  <rect width="512" height="512" fill="#102a5c"/>
+  <circle cx="256" cy="256" r="236" fill="#2857a3" stroke="#60a5fa" stroke-width="12"/>
+  <circle cx="256" cy="256" r="187" fill="#1e417d" stroke="#d8e9ff" stroke-width="5"/>
+  <path d="M135 292 L350 143" stroke="#ffffff" stroke-width="12" stroke-linecap="square"/>
+  <path d="M119 299 L165 267" stroke="#facc15" stroke-width="20" stroke-linecap="round"/>
+  <text x="256" y="411" font-size="185" font-family="Arial,Helvetica,sans-serif" font-weight="bold" fill="#ffffff" text-anchor="middle">T</text>
+</svg>
