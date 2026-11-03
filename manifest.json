@@ -1,6 +1,6 @@
 {
-  "name": "Maestro Quiz – Allgemeines Musikwissen",
-  "short_name": "Maestro Quiz",
+  "name": "Taktstock – Allgemeines Musikwissen",
+  "short_name": "Taktstock",
   "description": "Spielerischer Trainer für allgemeines Musikwissen: Komponisten, Werke, Gattungen, Formenlehre und Musiktheorie-Grundlagen.",
   "start_url": "./index.html",
   "scope": "./",
